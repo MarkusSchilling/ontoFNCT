@@ -1,0 +1,369 @@
+@prefix : <https://w3id.org/ontofnct/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/ontofnct/> .
+
+<https://w3id.org/ontofnct> rdf:type owl:Ontology ;
+                             owl:versionIRI <https://w3id.org/ontofnct/1.0.0> ;
+                             owl:imports <https://w3id.org/pmd/co/2.0.5> ;
+                             <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0001-9753-345X> ,
+                                                                       <https://orcid.org/0000-0002-4970-7627> ,
+                                                                       <https://orcid.org/0000-0002-7094-5371> ,
+                                                                       <https://orcid.org/0009-0001-0315-3964> ;
+                             <http://purl.org/dc/elements/1.1/license> <http://creativecommons.org/licenses/by/4.0/> ;
+                             <http://purl.org/dc/terms/bibliographicCitation> "Markus Schilling, Niklas Marschall, Ute Niebergall, Martin Böhning. (December 04th, 2023) OntoFNCT: full-notch creep test ontology. Version 1.0.0, https://w3id.org/ontofnct/"@en ;
+                             <http://purl.org/dc/terms/created> "2023-12" ;
+                             <http://purl.org/dc/terms/title> "Full-notch creep test ontology (OntoFNCT)"@en ;
+                             rdfs:comment """This is the stable version of the full-notch creep test ontology (OntoFNCT) that ontologically represents the full-notch creep test. OntoFNCT has been developed in accordance with the corresponding test standard ISO 16770:2019-09 Plastics - Determination of environmental stress cracking (ESC) of polyethylene - Full-notch creep test (FNCT). 
+
+The OntoFNCT provides conceptualizations that are supposed to be valid for the description of full-notch creep tests and associated data in accordance with the corresponding test standard. By using OntoFNCT for storing full-notch creep test data, all data will be well structured and based on a common vocabulary agreed on by an expert group (generation of FAIR data) which is meant to lead to enhanced data interoperability. This comprises several data categories such as primary data, secondary data and metadata. Data will be human and machine readable. The usage of OntoFNCT facilitates data retrieval and downstream usage. Due to a close connection to the mid-level PMD core ontology (PMDco), the interoperability of full-notch creep test data is enhanced and querying in combination with other aspects and data within the broad field of materials science and engineering (MSE) is facilitated.
+
+The class structure of OntoFNCT forms a comprehensible and semantic layer for unified storage of data generated in a full-notch creep test including the possibility to record data from analysis and re-evaluation. Furthermore, extensive metadata allows to assess data quality and reliability. Following the open world assumption, object properties are deliberately low restrictive and sparse.
+
+OntoFNCT at GitHub: https://github.com/MarkusSchilling/ontoFNCT"""@en ;
+                             owl:versionInfo "1.0.0" ;
+                             <http://www.w3.org/ns/prov#editorialNote> "The full-notch creep test ontology (OntoFNCT) is based on the mid-level PMD Core Ontology (PMDco) that was created in the frame of the joint project of platform MaterialDigital (PMD). Therefore, OntoFNCT imports the PMDco, the namespace of which is to be found on: https://w3id.org/pmd/co."@en .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://w3id.org/ontofnct/ActualTensileStress
+<http://w3id.org/ontofnct/ActualTensileStress> rdf:type owl:Class ;
+                                               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <https://w3id.org/pmd/co/participant> ;
+                                                                     owl:someValuesFrom <http://w3id.org/ontofnct/MeasuredLigamentArea>
+                                                                   ] ,
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <https://w3id.org/pmd/co/participant> ;
+                                                                     owl:someValuesFrom <https://w3id.org/pmd/co/Force>
+                                                                   ] ;
+                                               rdfs:subClassOf <http://w3id.org/ontofnct/TensileStress> ;
+                                               rdfs:comment "Symbol: sigma_L" ;
+                                               rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
+                                               rdfs:label "Actual Tensile Stress"@en ,
+                                                          """Diese Klasse beschreibt die Normalkraft pro Flächeneinheit der gemessenen Ligamentfläche des Prüfkörpers.
+
+Anmerkung: Sie wird in Megapascal (MPa) angegeben."""@de ,
+                                                          "Tatsächliche Zugspannung"@de ,
+                                                          """This class describes the normal force per unit area of the measured ligament area of the test specimen.
+
+Note: It is expressed in megapascals (MPa)."""@en ;
+                                               <https://w3id.org/pmd/co/definitionSource> "ISO 16770:2019-09" .
+
+
+###  http://w3id.org/ontofnct/BrittleFailure
+<http://w3id.org/ontofnct/BrittleFailure> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://w3id.org/ontofnct/Failure> ;
+                                          owl:disjointWith <http://w3id.org/ontofnct/DuctileFailure> ;
+                                          rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
+                                          rdfs:label "Brittle Failure"@en ,
+                                                     "Sprödbruch"@de ;
+                                          <http://www.w3.org/2004/02/skos/core#definition> """Diese Klasse beschreibt eine Art des Versagens, bei der die Bruchfläche mit bloßem Auge keine bleibende Materialverformung, wie z. B. Dehnung, Streckung oder Einschnürung, erkennen lässt.
+
+Anmerkung: Wenn die spröde Fläche weniger als 20 % des gesamten Ligaments ausmacht, wird das Versagen als duktil eingestuft.
+
+Anmerkung: Der Beginn des Übergangs zum duktilen Versagensverhalten kann durch ein verlängertes Ligament angezeigt werden, das sich in der Mitte bilden kann (Zentralligament)."""@de ,
+                                                                                           """This class describes a sort of failure, in which the fracture surface exhibits no permanent material deformation to the naked human eye, such as, e.g. stretching, elongation or necking down
+
+Note: If the brittle area is less than 20 % of the total ligament, the failure is ranked as ductile.
+Note: The beginning of the transition to ductile failure behaviour may be indicated by an extended ligament, which may form in the centre."""@en ;
+                                          <https://w3id.org/pmd/co/definitionSource> "ISO 16770:2019-09" .
+
+
+###  http://w3id.org/ontofnct/ConditioningTime
+<http://w3id.org/ontofnct/ConditioningTime> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/pmd/co/Time> ;
+                                            rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
+                                            rdfs:label "Conditioning Time"@en ,
+                                                       "Konditionierungszeit"@de ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt die Zeit (Dauer), die verwendet wird, um ein Material vor der Prüfung kontrollierten Standard-Umgebungs- und/oder Belastungsbedingungen auszusetzen."@de ,
+                                                                                             "This class describes the time (duration) that is used to subject a material to standard and controlled environmental and/or stress conditions prior to testing."@en ;
+                                            <https://w3id.org/pmd/co/definitionSource> <https://maclellanrubber.com/definitions/conditioning> .
+
+
+###  http://w3id.org/ontofnct/Depth
+<http://w3id.org/ontofnct/Depth> rdf:type owl:Class ;
+                                 rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
+                                 rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
+                                 rdfs:label "Depth"@en ,
+                                            "Tiefe"@de ;
+                                 <http://www.w3.org/2004/02/skos/core#definition> """Diese Klasse beschreibt eine Dimension, die durch ein Objekt oder einen Körper aus einem Material genommen wird, normalerweise von einer oberen Oberfläche nach unten, von einer äußeren Oberfläche horizontal nach innen oder von oben nach unten von etwas, das als eine von mehreren Schichten betrachtet wird.
+
+
+Anmerkung: Tiefe bezeichnet die Eigenschaft, tief zu sein."""@de ,
+                                                                                  """This class describes a dimension taken through an object or body of material, usually downward from an upper surface, horizontally inward from an outer surface, or from top to bottom of something regarded as one of several layers.
+
+Note: Depth also denotes the quality of being deep."""@en ;
+                                 <https://w3id.org/pmd/co/definitionSource> <https://www.dictionary.com/browse/depth> .
+
+
+###  http://w3id.org/ontofnct/DuctileFailure
+<http://w3id.org/ontofnct/DuctileFailure> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://w3id.org/ontofnct/Failure> ;
+                                          rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
+                                          rdfs:label "Ductile Failure"@en ,
+                                                     "Duktilbruch"@de ;
+                                          <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt eine Art des Versagens, bei der die Bruchfläche deutlich eine dauerhafte Materialverformung mit Dehnung, Streckung und Einschnürung aufweist."@de ,
+                                                                                           "This class describes a sort of failure, in which the fracture surface clearly exhibits permanent material deformation with stretching, elongation and necking down."@en ;
+                                          <https://w3id.org/pmd/co/definitionSource> "ISO 16770:2019-09" .
+
+
+###  http://w3id.org/ontofnct/Elongation
+<http://w3id.org/ontofnct/Elongation> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
+                                      rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
+                                      rdfs:label "Elongation"@en ,
+                                                 "Verlängerung"@de ;
+                                      <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt die Zunahme der ursprünglichen Länge eines Objekts, z. B. eines Prüfkörpers, zu einem beliebigen Zeitpunkt während einer Prüfung."@de ,
+                                                                                       "This class describes the increase in the original length of an object, such as a test specimen, at any moment during a test."@en .
+
+
+###  http://w3id.org/ontofnct/ExtensometerCapacity
+<http://w3id.org/ontofnct/ExtensometerCapacity> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
+                                                rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
+                                                rdfs:label "Extensometer Capacity"@en ,
+                                                           "Extensometer-Kapazität"@de ;
+                                                <http://www.w3.org/2004/02/skos/core#definition> """Diese Klasse beschreibt die maximale Kapazität eines Längenänderungsaufnehmers, die Längenänderung eines Objekts, z. B. eines Probekörpers, zu messen. 
+
+Hinweis: Üblicherweise wird die maximale Länge des Aufnehmers (maximaler Messbereich) angegeben."""@de ,
+                                                                                                 """This class describes the maximal capability of an extensometer to measure changes in the length of an object, such as a test specimen. 
+
+Note: Typically, the maximum extensometer length (maximal measurement range) is given."""@en .
+
+
+###  http://w3id.org/ontofnct/Failure
+<http://w3id.org/ontofnct/Failure> rdf:type owl:Class ;
+                                   rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
+                                   rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
+                                   rdfs:label "Bruch"@de ,
+                                              "Failure"@en ;
+                                   <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt qualitativ die vollständige Trennung der beiden Hälften des Prüfkörpers. Diese qualitative Angabe soll durch einen booleschen Wert beschrieben werden, der angibt, ob der Probekörper vollständig versagt hat oder nicht."@de ,
+                                                                                    "This class describes qualitatively the complete separation of the two halves of the test specimen. The quality is intended to be described by a boolean value representing wheter or not the test specimen showed entire failure."@en ;
+                                   <https://w3id.org/pmd/co/definitionSource> "ISO 16770:2019-09" .
+
+
+###  http://w3id.org/ontofnct/FinalElongation
+<http://w3id.org/ontofnct/FinalElongation> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://w3id.org/ontofnct/Elongation> ;
+                                           rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
+                                           rdfs:label "Enddehnung"@de ,
+                                                      "Final Elongation"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt die Dehnung eines Prüfkörpers am Ende einer Prüfung. Diese Dehnung kann je nach Materialverhalten für das betrachtete Objekt permanent sein oder nicht."@de ,
+                                                                                            "This class describes the elongation of a test specimen at the end of a test. This elongation may or may not be permanent to the object under consideration, depending on the associated material behavior."@en .
+
+
+###  http://w3id.org/ontofnct/FullNotchCreepTest
+<http://w3id.org/ontofnct/FullNotchCreepTest> rdf:type owl:Class ;
+                                              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <https://w3id.org/pmd/co/participant> ;
+                                                                    owl:someValuesFrom <http://w3id.org/ontofnct/FullNotchCreepTestDevice>
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <https://w3id.org/pmd/co/participant> ;
+                                                                    owl:someValuesFrom <https://w3id.org/pmd/co/Specimen>
+                                                                  ] ;
+                                              rdfs:subClassOf <https://w3id.org/pmd/co/MechanicalTestingProcess> ;
+                                              rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
+                                              rdfs:label "Full-Notch Creep Test"@en ,
+                                                         "Medien-Zeitstand-Zugversuch"@de ;
+                                              <http://www.w3.org/2004/02/skos/core#definition> """Der Medien-Zeitstand-Zugversuch (FNCT) ist ein mechanisches Prüfverfahren, das zur Charakterisierung des Verhaltens von Polyethylen (PE) gegenüber des umgebungsbedingten Spannungsrisses verwendet wird. 
+Ein Probekörper in Form eines Vierkantstabs mit mittig (zentral) angebrachten koplanaren Kerben auf jeder Seite wird in einer temperaturgeregelten Umgebung, die eine oberflächenaktive Netzmittellösung enthält, einer statischen Belastung ausgesetzt. Die Geometrie des Probekörpers ist so beschaffen, dass sich ebene Dehnungsbedingungen ergeben und unter geeigneten Zugbelastungs- und Temperaturbedingungen ein Sprödbruch auftritt. Die Zeit bis zum Auftreten dieses Sprödbruchs infolge der Belastung wird aufgezeichnet.
+
+Anmerkung: Destilliertes Wasser ist ebenfalls eine geeignete Umgebung für die Durchführung dieser Prüfung.
+Hinweis: Für die Prüfung von Behältermaterialien auf PE-Basis können auch andere Umgebungen verwendet werden, z. B. Gefahrgut und Chemikalien oder geeignete flüssige Prüfmedien."""@de ,
+                                                                                               """The full-notch creep test (FNCT) is a mechanical test method that is used to characterize the environmental stress cracking (ESC) behavior of polyethylene (PE) materials. 
+A test specimen in the form of a square-section bar with coplanar notches in each face at the centre is subjected to a static load in a temperature-controlled environment containing a surface-active detergent solution. The geometry of the test specimen is such that plane strain conditions are obtained, and brittle failure occurs under appropriate tensile load and temperature conditions. The time for this brittle failure to occur after loading is recorded.
+
+Note: Distilled water is also a suitable environment for carrying out this test.
+Note: For testing of PE-based container materials, other environments can also be used, such as dangerous goods and chemicals or suitable liquid test media."""@en ;
+                                              <https://w3id.org/pmd/co/definitionSource> "ISO 16770:2019-09" .
+
+
+###  http://w3id.org/ontofnct/FullNotchCreepTestDevice
+<http://w3id.org/ontofnct/FullNotchCreepTestDevice> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <https://w3id.org/pmd/co/TestingMachine> ;
+                                                    rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
+                                                    rdfs:label "Full-notch creep test device"@en ,
+                                                               "Medien-Zeitstand-Zugprüfmaschine"@de ;
+                                                    <http://www.w3.org/2004/02/skos/core#definition> "Eine Medien-Zeitstand-Zugprüfmaschine ist eine Maschine zur Durchführung eines Medien-Zeitstand-Zugversuchs. Die Steuerung und Überwachung des Versuchs, die Messungen und die Datenverarbeitung erfolgen in der Regel per Computer. Dies kann jedoch auch manuell erfolgen."@de ,
+                                                                                                     "The full-notch creep test device is a machine to conduct a full-notch creep test. The control and monitoring of the test, the measurements, and the data processing are usually performed by computer. However, this may also be performed manually."@en .
+
+
+###  http://w3id.org/ontofnct/LeverArmRatio
+<http://w3id.org/ontofnct/LeverArmRatio> rdf:type owl:Class ;
+                                         rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
+                                         rdfs:comment "Der Abstand zwischen dem Drehpunkt eines Hebels und dem Punkt, an dem die Kraft aufgebracht wird, ist wichtig für die Bestimmung des mechanischen Vorteils eines Hebels, da er die Höhe der Kraft, die ausgeübt werden kann, und den Abstand, über den diese Kraft aufgebracht wird, beeinflusst."@de ,
+                                                      "The distance between the pivot point (or fulcrum) of a lever and the point where the force is applied is important in determining the mechanical advantage of a lever, as it affects the amount of force that can be exerted and the distance over which that force is applied."@en ;
+                                         rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
+                                         rdfs:label "Hebelarmverhältnis"@de ,
+                                                    "Lever-arm Ratio"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt das Verhältnis eines Hebelarms. Dieser Begriff wird in der Physik verwendet, um den Abstand zwischen dem Punkt, an dem eine Kraft angreift, und dem Punkt, an dem diese Kraft eine Rotationswirkung erzeugt, zu beschreiben. Mit anderen Worten ist es der Abstand zwischen dem Drehpunkt eines Hebels und dem Punkt, an dem die Kraft angreift."@de ,
+                                                                                          "This class describes the ratio of a lever arm which is a term used in physics to describe the distance between the point where a force is applied and the point where that force is producing a rotational effect. In other words, it is the distance between the pivot point (or fulcrum) of a lever and the point where the force is applied."@en .
+
+
+###  http://w3id.org/ontofnct/MeasuredLigamentArea
+<http://w3id.org/ontofnct/MeasuredLigamentArea> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/pmd/co/CrossSectionArea> ;
+                                                rdfs:comment "Symbol: A_L" ;
+                                                rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
+                                                rdfs:label "Gemessene Ligamentfläche"@de ,
+                                                           "Measured Ligament Area"@en ;
+                                                <http://www.w3.org/2004/02/skos/core#definition> """Diese Klasse beschreibt die nach der Prüfung ermittelte tatsächliche verbleibenden Querschnittsfläche des Probekörpers nach der Kerbung .
+
+Anmerkung: Sie wird in Quadratmillimetern (mm2) angegeben."""@de ,
+                                                                                                 """This class describes the actual cross-sectional area of the test specimen remaining after notching determined after testing.
+
+Note: It is expressed in square millimetres (mm2)."""@en ;
+                                                <https://w3id.org/pmd/co/definitionSource> "ISO 16770:2019-09" .
+
+
+###  http://w3id.org/ontofnct/NominalLigamentArea
+<http://w3id.org/ontofnct/NominalLigamentArea> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/pmd/co/CrossSectionArea> ;
+                                               rdfs:comment "Symbol: A_n" ;
+                                               rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
+                                               rdfs:label "Nominal Ligament Area"@en ,
+                                                          "Nominelle Ligamentfläche"@de ;
+                                               <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt die nach der Kerbung verbleibende Querschnittsfläche des Probekörpers."@de ,
+                                                                                                "This class describes the cross-sectional area of the test specimen remaining after notching."@en ;
+                                               <https://w3id.org/pmd/co/definitionSource> "ISO 16770:2019-09" .
+
+
+###  http://w3id.org/ontofnct/NominalTensileStress
+<http://w3id.org/ontofnct/NominalTensileStress> rdf:type owl:Class ;
+                                                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <https://w3id.org/pmd/co/participant> ;
+                                                                      owl:someValuesFrom <http://w3id.org/ontofnct/NominalLigamentArea>
+                                                                    ] ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <https://w3id.org/pmd/co/participant> ;
+                                                                      owl:someValuesFrom <https://w3id.org/pmd/co/Force>
+                                                                    ] ;
+                                                rdfs:subClassOf <http://w3id.org/ontofnct/TensileStress> ;
+                                                rdfs:comment "Symbol: sigma_n" ;
+                                                rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
+                                                rdfs:label "Nominal Tensile Stress"@en ,
+                                                           "Nominelle Zugspannung"@de ;
+                                                <http://www.w3.org/2004/02/skos/core#definition> """Diese Klasse beschreibt die Normalkraft pro Flächeneinheit der nominalen Ligamentfläche eines Prüfkörpers.
+
+Anmerkung: Sie wird in Megapascal (MPa) angegeben."""@de ,
+                                                                                                 """This class describes the normal force per unit area of the nominal ligament area of the test specimen.
+
+Note: It is expressed in megapascals (MPa)."""@en ;
+                                                <https://w3id.org/pmd/co/definitionSource> "ISO 16770:2019-09" .
+
+
+###  http://w3id.org/ontofnct/Notch
+<http://w3id.org/ontofnct/Notch> rdf:type owl:Class ;
+                                 rdfs:subClassOf <https://w3id.org/pmd/co/Object> ;
+                                 rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
+                                 rdfs:label "Kerbe"@de ,
+                                            "Notch"@en ;
+                                 <http://www.w3.org/2004/02/skos/core#definition> "Im Bereich der Materialwissenschaft und Werkstofftechnik bezeichnet eine Kerbe einen V-förmigen, U-förmigen oder halbkreisförmigen Defekt, der absichtlich in ein planes Material eingebracht wird. In Bauteilen verursacht eine Kerbe eine Spannungskonzentration, die zur Entstehung und zum Wachstum von Ermüdungsrissen führen kann. Kerben werden bei der Materialcharakterisierung verwendet, um bruchmechanische Eigenschaften wie die Bruchzähigkeit und die Wachstumsrate von Ermüdungsrissen zu bestimmen."@de ,
+                                                                                  "In mechanical engineering and materials science, a notch refers to a V-shaped, U-shaped, or semi-circular defect deliberately introduced into a planar material. In structural components, a notch causes a stress concentration which can result in the initiation and growth of fatigue cracks. Notches are used in materials characterization to determine fracture mechanics related properties such as fracture toughness and rates of fatigue crack growth."@en .
+
+
+###  http://w3id.org/ontofnct/NotchDepth
+<http://w3id.org/ontofnct/NotchDepth> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://w3id.org/ontofnct/Depth> ;
+                                      rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
+                                      rdfs:label "Kerbtiefe"@de ,
+                                                 "Notch Depth"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt die Tiefe einer Kerbe, die absichtlich oder unabsichtlich in ein Objekt, wie z. B. in einen Prüfkörper, eingebracht worden sein kann."@de ,
+                                                                                       "This class describes the depth of a notch that may have been introduced to an object, such as, e.g., a test specimen, deliberately or unintentionally."@en .
+
+
+###  http://w3id.org/ontofnct/Preload
+<http://w3id.org/ontofnct/Preload> rdf:type owl:Class ;
+                                   rdfs:subClassOf <https://w3id.org/pmd/co/Force> ;
+                                   rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
+                                   rdfs:label "Preload"@en ,
+                                              "Vorkraft"@de ;
+                                   <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt die Kraft, die zur Belastung eines Prüfkörpers vor der Durchführung einer Prüfung verwendet wird."@de ,
+                                                                                    "This class describes the force used to load a test specimen prior to the performance of a test procedure."@en .
+
+
+###  http://w3id.org/ontofnct/PreloadTime
+<http://w3id.org/ontofnct/PreloadTime> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/Time> ;
+                                       rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
+                                       rdfs:label "Preload Time"@en ,
+                                                  "Vorkraft-Belastungszeit"@de ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt die Zeit (Dauer), für die eine Vorlast (Kraft, die zur Belastung eines Probekörpers vor der Durchführung eines Prüfverfahrens verwendet wird) aufgebracht wird."@de ,
+                                                                                        "This class describes the time (duration) for which a preload (force used to load a test specimen prior to the performance of a test procedure) is applied."@en .
+
+
+###  http://w3id.org/ontofnct/ReferenceTensileStress
+<http://w3id.org/ontofnct/ReferenceTensileStress> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://w3id.org/ontofnct/TensileStress> ;
+                                                  rdfs:comment "Symbol: sigma_L,ref" ;
+                                                  rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
+                                                  rdfs:label "Reference Tensile Stress"@en ,
+                                                             "Referenz-Zugspannung"@de ;
+                                                  <http://www.w3.org/2004/02/skos/core#definition> """Diese Klasse beschreibt die ermittelte Normalkraft pro Flächeneinheit der gemessenen Ligamentfläche der Prüfkröper, die zur Bestimmung der vergleichbaren Zeit bis zum Versagen verwendet wurden.
+
+Anmerkung: Sie wird in Megapascal (MPa) angegeben."""@de ,
+                                                                                                   """This class describes the selected normal force per unit area of the measured ligament area of the test specimen used for determination of comparable time to failure.
+
+Note: It is expressed in megapascals (MPa)."""@en ;
+                                                  <https://w3id.org/pmd/co/definitionSource> "ISO 16770:2019-09" .
+
+
+###  http://w3id.org/ontofnct/TensileStress
+<http://w3id.org/ontofnct/TensileStress> rdf:type owl:Class ;
+                                         rdfs:subClassOf <https://w3id.org/pmd/co/Stress> ;
+                                         rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
+                                         rdfs:label "Tensile Stress"@en ,
+                                                    "Zugspannung"@de ;
+                                         <http://www.w3.org/2004/02/skos/core#definition> "Der Begriff Zugspannung ist eine physikalische Größe, die eine Kraft beschreibt, die auf einen Bereich eines betrachteten, auseinanderzuziehenden Objekts während eines Verformungsprozesses einwirkt. Wenn ein Objekt auseinandergezogen wird, unterliegt es einer Zugspannung und kann eine Dehnung erfahren."@de ,
+                                                                                          "The entity tensile stress is a physical quantity that describes a force imposed on an area of a considered object present during a drawing (tensile) deformation process. When an object is pulled apart, it is subject to tensile stress and may undergo elongation."@en ;
+                                         <https://w3id.org/pmd/co/definitionSource> "ISO 16770:2019-09" .
+
+
+###  http://w3id.org/ontofnct/TestContainer
+<http://w3id.org/ontofnct/TestContainer> rdf:type owl:Class ;
+                                         rdfs:subClassOf <https://w3id.org/pmd/co/ProcessingNode> ;
+                                         rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
+                                         rdfs:label "Prüfbehälter"@de ,
+                                                    "Test Container"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt ein hohles Objekt, wie z. B. eine Schachtel, eine Flasche oder einen Zylinder, das zur Aufnahme von etwas verwendet werden kann, insbesondere um es zu tragen oder aufzubewahren (Behälter), und das an einem Prüfverfahren beteiligt ist."@de ,
+                                                                                          "This class describes a hollow object, such as a box, a cylinder, or a bottle, that can be used for holding something, especially to carry or store it (container) and which is involved in a testing procedure."@en ;
+                                         <https://w3id.org/pmd/co/definitionSource> <https://dictionary.cambridge.org/dictionary/english/container> .
+
+
+###  http://w3id.org/ontofnct/TestForceIncreaseRate
+<http://w3id.org/ontofnct/TestForceIncreaseRate> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/pmd/co/TestingRate> ;
+                                                 rdfs:isDefinedBy <https://w3id.org/ontofnct> ,
+                                                                  "This class describes the rate of the increase of the force applied to a test specimen during a test."@en ;
+                                                 rdfs:label "Test Force Increase Rate"@en ,
+                                                            "Test-Kraftanstiegsrate"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt die Steigerungsrate der Kraft, die während einer Prüfung auf einen Probekörper aufgebracht wird und einwirkt."@de .
+
+
+###  http://w3id.org/ontofnct/TimeToFailureAtTheReferenceTensileStress
+<http://w3id.org/ontofnct/TimeToFailureAtTheReferenceTensileStress> rdf:type owl:Class ;
+                                                                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/pmd/co/participant> ;
+                                                                                          owl:someValuesFrom <http://w3id.org/ontofnct/ReferenceTensileStress>
+                                                                                        ] ;
+                                                                    rdfs:subClassOf <https://w3id.org/pmd/co/Duration> ;
+                                                                    rdfs:comment "Symbol: t_f,ref" ;
+                                                                    rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
+                                                                    rdfs:label "Time To Failure At The Reference Tensile Stress"@en ,
+                                                                               "Versagenszeit bei der Referenz-Zugspannung"@de ;
+                                                                    <http://www.w3.org/2004/02/skos/core#definition> """Diese Klasse beschreibt die Zeit bis zum Versagen, die der Referenz-Zugspannung zugeordnet ist und durch Interpolation der gemessenen Zeit bis zum Versagen in Abhängigkeit von der tatsächlichen Zugspannung für einzelne geprüfte Proben ermittelt wird.
+
+Anmerkung: Sie wird in Stunden (h) angegeben."""@de ,
+                                                                                                                     """This class describes the time to failure corresponding to the reference tensile stress, calculated by interpolating in the measured dependence of time to failure vs. actual tensile stress for individual tested specimens.
+
+Note: It is expressed in hours (h)."""@en ;
+                                                                    <https://w3id.org/pmd/co/definitionSource> "ISO 16770:2019-09" .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi

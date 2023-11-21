@@ -1,0 +1,3 @@
+Standard;Laboratory;Institute;Address;Location;Load Cell Maximum Force;Test machine name;Test machine serial number;Test machine manufacturer;Test machine manufacturer Location;Funding Party;Funding Party ID;Grant number;Preload;Preload time;Test Force increase rate;Limit Test Movement
+;;;;;N;;;;;;;;N;s;N/s;mm
+ISO 16770;Polymer FNCT Lab Division 5.3;Bundesanstalt für Materialforschung und -prüfung (BAM);Unter den Eichen 87, 12205 Berlin;Berlin, Germany;200;Tensile Creep Tester for Tests in Fluids;1727-90;IPT Institut für Prüftechnik Gerätebau GmbH & Co.KG;Todtenweiß, Bavaria, Germany;Arbeitsgemeinschaft industrieller Forschungsvereinigungen;AiF;18606N;30;30;5;50
