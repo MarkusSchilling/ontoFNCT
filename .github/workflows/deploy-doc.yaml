@@ -5,23 +5,6 @@ on:
     branches:
     - main
 jobs:
-  create-gh-pages:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Check if gh-pages branch exists
-      run: |
-        if [[ ! $(git ls-remote --heads origin gh-pages) ]]; then
-          git checkout --orphan gh-pages
-          git rm -rf .
-          git commit --allow-empty -m "Initialize empty gh-pages branch"
-          git push origin gh-pages
-        fi
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        
   deploy:
     runs-on: ubuntu-latest
     steps:
