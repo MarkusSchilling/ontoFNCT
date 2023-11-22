@@ -5,18 +5,35 @@ on:
     branches:
     - main
 jobs:
+  create-gh-pages:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Check if gh-pages branch exists
+      run: |
+        if [[ ! $(git ls-remote --heads origin gh-pages) ]]; then
+          git checkout --orphan gh-pages
+          git rm -rf .
+          git commit --allow-empty -m "Initialize empty gh-pages branch"
+          git push origin gh-pages
+        fi
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
   deploy:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
       with:
-        ref: main
-        path: main
-    - name: Build HTML for main
+        ref: ${{ github.ref_name }}
+        path: deploy_checkout
+    - name: Build HTML docs for main/ontoFNCT.ttl
       run: | 
            wget -O widoco.jar https://github.com/dgarijo/Widoco/releases/download/v1.4.17/java-11-widoco-1.4.17-jar-with-dependencies.jar
-           mkdir public 
-           java -jar widoco.jar -ontFile main/ontoFNCT.ttl -outFolder public -htaccess -uniteSections -includeAnnotationProperties -lang en-de  -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
+           mkdir -p public 
+           java -jar widoco.jar -ontFile deploy_checkout/ontoFNCT.ttl -outFolder public -htaccess -uniteSections -includeAnnotationProperties -lang en-de  -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
            cp public/index-en.html public/index.html
     - name: Deploy to GitHub Pages
       if: success()
