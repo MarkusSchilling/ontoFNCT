@@ -85,6 +85,21 @@ Note: The beginning of the transition to ductile failure behaviour may be indica
                                             <https://w3id.org/pmd/co/definitionSource> <https://maclellanrubber.com/definitions/conditioning> .
 
 
+###  http://w3id.org/ontofnct/CriterionOfBrittleness
+<http://w3id.org/ontofnct/CriterionOfBrittleness> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
+                                                  rdfs:comment "Symbol: B" ;
+                                                  rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
+                                                  rdfs:label "Criterion of brittleness"@en ,
+                                                             "Kriterium der Sprödigkeit"@de ;
+                                                  <http://www.w3.org/2004/02/skos/core#definition> """Diese Klasse beschreibt ein Maß für die Sprödigkeit des Bruchs eines FNCT-Prüfkörpers, das auf Parametern der Bruchflächenrauheit, der Höhe ausgeprägter Bruchflächenmerkmale sowie deren Anteilen auf Bruchflächenbereichen beruht. Dieses Maß kann als Kriterium für die Bewertung eines durch den FNCT erfolgten Bruchs verwendet werden.
+
+Anmerkung: Das Kriterium der Sprödigkeit ist ein vergleichender skalarer Wert, der ohne Einheit angegeben wird."""@de ,
+                                                                                                   """This class describes a measure of the brittleness of the fracture of an FNCT test piece that is based on fracture surface roughness parameters, heights of distinct fracture surface features, and proportions of fracture surface areas. This measure can be used as a criterion for evaluating a fracture caused by the FNCT.
+
+Note: The criterion of brittleness is a comparative scalar, given without unit."""@en .
+
+
 ###  http://w3id.org/ontofnct/Depth
 <http://w3id.org/ontofnct/Depth> rdf:type owl:Class ;
                                  rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
@@ -344,6 +359,25 @@ Note: It is expressed in megapascals (MPa)."""@en ;
                                                  rdfs:label "Test Force Increase Rate"@en ,
                                                             "Test-Kraftanstiegsrate"@de ;
                                                  <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt die Steigerungsrate der Kraft, die während einer Prüfung auf einen Probekörper aufgebracht wird und einwirkt."@de .
+
+
+###  http://w3id.org/ontofnct/TimeToFailure
+<http://w3id.org/ontofnct/TimeToFailure> rdf:type owl:Class ;
+                                         owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <https://w3id.org/pmd/co/participant> ;
+                                                               owl:someValuesFrom <http://w3id.org/ontofnct/ActualTensileStress>
+                                                             ] ;
+                                         rdfs:subClassOf <https://w3id.org/pmd/co/Duration> ;
+                                         rdfs:comment "Versagenszeit"@de ,
+                                                      "Symbol: t_f" ;
+                                         rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
+                                         rdfs:label "Time To Failure"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#definition> """Diese Klasse beschreibt die Zeit bis zum Versagen eines einzelnen Prüfkörpers, die der tatsächlichen Zugspannung für diesen einzeln geprüften Prüfkörper zugeordnet wird.
+
+Anmerkung: Die Versagenszeit wird in Stunden (h) angegeben."""@de ,
+                                                                                          """This class describes the time to failure of an individual test specimen, which is assigned to the actual tensile stress for this individually tested test specimen.
+
+Note: The time to failure time is expressed in hours (h)."""@en .
 
 
 ###  http://w3id.org/ontofnct/TimeToFailureAtTheReferenceTensileStress
