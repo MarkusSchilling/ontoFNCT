@@ -99,8 +99,6 @@ resource:1511007DXMSFunder_Identifier a datacite:FunderIdentifier ;
     pmdco:value """0    18606N
 Name: Grant number, dtype: object"""^^xsd:string .
 
-resource:1511007DXMS_extensometer pmdco:characteristic resource:1511007DXMS_extensometer_capacity .
-
 resource:1511007DXMS_extensometer_capacity a base:ExtensometerCapacity,
         pmdco:Metadata ;
     pmdco:value "50"^^xsd:float .
@@ -115,10 +113,6 @@ resource:1511007DXMS_funding_party_ID a datacite:OrganizationIdentifier ;
     pmdco:value """0    AiF
 Name: Funding Party ID, dtype: object"""^^xsd:string .
 
-resource:1511007DXMS_load_cell a pmdco:LoadCell,
-        pmdco:Metadata ;
-    pmdco:characteristic resource:1511007DXMS_load_cell_maximum_force .
-
 resource:1511007DXMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
         pmdco:Metadata ;
     pmdco:unit unit:N ;
@@ -126,7 +120,7 @@ resource:1511007DXMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
 
 resource:1511007DXMS_machine_manufacturer a pmdco:Manufacturer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:1511007DXMS_machine_manufacturer_location ;
+    prov:atLocation resource:1511007DXMS_machine_manufacturer_location ;
     pmdco:value """0    IPT Institut für Prüftechnik Gerätebau GmbH & ...
 Name: Test machine manufacturer, dtype: object"""^^xsd:string .
 
@@ -158,7 +152,11 @@ resource:1511007DXMS_nominal_notch_depth_nn a base:NotchDepth,
 resource:1511007DXMS_process a wild:SequentialActivity,
         base:FullNotchCreepTest ;
     wild:hasChildActivities ( resource:1511007DXMS_process_preMeasuring resource:1511007DXMS_process_mounting resource:1511007DXMS_process_gripsAlignment resource:1511007DXMS_process_FNCTISO resource:1511007DXMS_process_demounting resource:1511007DXMS_process_postMeasuring resource:1511007DXMS_process_analysis ) ;
+    prov:atLocation resource:_location ;
+    prov:wasAssociatedWith resource:_institute,
+        resource:_laboratory ;
     base:subordinateProcess resource:1511007DXMS_process_preMeasuring ;
+    pmdco:belongsToProject resource:1511007DXMS_project ;
     pmdco:characteristic resource:1511007DXMS,
         resource:1511007DXMS_conditioning_time,
         resource:1511007DXMS_end_time,
@@ -166,20 +164,16 @@ resource:1511007DXMS_process a wild:SequentialActivity,
         resource:1511007DXMS_nominal_stress_sigma_n,
         resource:1511007DXMS_preload,
         resource:1511007DXMS_preload_time,
-        resource:1511007DXMS_project,
         resource:1511007DXMS_start_time,
-        resource:1511007DXMS_test_container,
         resource:1511007DXMS_test_force_F,
         resource:1511007DXMS_test_force_increase_rate,
-        resource:1511007DXMS_test_medium,
         resource:1511007DXMS_test_temperature,
-        resource:_institute,
         resource:_institute_address,
-        resource:_laboratory,
-        resource:_location,
         resource:_standard ;
-    pmdco:executedBy resource:1511007DXMS_load_cell,
-        resource:1511007DXMS_machine ;
+    pmdco:executedBy resource:1511007DXMS_extensometer,
+        resource:1511007DXMS_load_cell,
+        resource:1511007DXMS_machine,
+        resource:1511007DXMS_test_container ;
     pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/5021DX_7> ;
     pmdco:output resource:1511007DXMS_final_elongation_d,
         resource:1511007DXMS_measured_ligament_area_AL,
@@ -190,7 +184,8 @@ resource:1511007DXMS_process a wild:SequentialActivity,
         resource:1511007DXMS_time_to_failure_tf,
         resource:5021DX_7_dataset,
         <https://w3id.org/ontofnct/resource/_testpiece/5021DX_7_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_7_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_7_testpiece_afterTest_2> ;
+    pmdco:participant resource:1511007DXMS_test_medium .
 
 resource:1511007DXMS_project a pmdco:Metadata,
         pmdco:Project ;
@@ -204,8 +199,6 @@ resource:1511007UVMSFunder_Identifier a datacite:FunderIdentifier ;
     datacite:usesIdentifierScheme datacite:_local-funder-identifier-scheme ;
     pmdco:value """0    18606N
 Name: Grant number, dtype: object"""^^xsd:string .
-
-resource:1511007UVMS_extensometer pmdco:characteristic resource:1511007UVMS_extensometer_capacity .
 
 resource:1511007UVMS_extensometer_capacity a base:ExtensometerCapacity,
         pmdco:Metadata ;
@@ -221,10 +214,6 @@ resource:1511007UVMS_funding_party_ID a datacite:OrganizationIdentifier ;
     pmdco:value """0    AiF
 Name: Funding Party ID, dtype: object"""^^xsd:string .
 
-resource:1511007UVMS_load_cell a pmdco:LoadCell,
-        pmdco:Metadata ;
-    pmdco:characteristic resource:1511007UVMS_load_cell_maximum_force .
-
 resource:1511007UVMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
         pmdco:Metadata ;
     pmdco:unit unit:N ;
@@ -232,7 +221,7 @@ resource:1511007UVMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
 
 resource:1511007UVMS_machine_manufacturer a pmdco:Manufacturer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:1511007UVMS_machine_manufacturer_location ;
+    prov:atLocation resource:1511007UVMS_machine_manufacturer_location ;
     pmdco:value """0    IPT Institut für Prüftechnik Gerätebau GmbH & ...
 Name: Test machine manufacturer, dtype: object"""^^xsd:string .
 
@@ -264,7 +253,11 @@ resource:1511007UVMS_nominal_notch_depth_nn a base:NotchDepth,
 resource:1511007UVMS_process a wild:SequentialActivity,
         base:FullNotchCreepTest ;
     wild:hasChildActivities ( resource:1511007UVMS_process_preMeasuring resource:1511007UVMS_process_mounting resource:1511007UVMS_process_gripsAlignment resource:1511007UVMS_process_FNCTISO resource:1511007UVMS_process_demounting resource:1511007UVMS_process_postMeasuring resource:1511007UVMS_process_analysis ) ;
+    prov:atLocation resource:_location ;
+    prov:wasAssociatedWith resource:_institute,
+        resource:_laboratory ;
     base:subordinateProcess resource:1511007UVMS_process_preMeasuring ;
+    pmdco:belongsToProject resource:1511007UVMS_project ;
     pmdco:characteristic resource:1511007UVMS,
         resource:1511007UVMS_conditioning_time,
         resource:1511007UVMS_end_time,
@@ -272,20 +265,16 @@ resource:1511007UVMS_process a wild:SequentialActivity,
         resource:1511007UVMS_nominal_stress_sigma_n,
         resource:1511007UVMS_preload,
         resource:1511007UVMS_preload_time,
-        resource:1511007UVMS_project,
         resource:1511007UVMS_start_time,
-        resource:1511007UVMS_test_container,
         resource:1511007UVMS_test_force_F,
         resource:1511007UVMS_test_force_increase_rate,
-        resource:1511007UVMS_test_medium,
         resource:1511007UVMS_test_temperature,
-        resource:_institute,
         resource:_institute_address,
-        resource:_laboratory,
-        resource:_location,
         resource:_standard ;
-    pmdco:executedBy resource:1511007UVMS_load_cell,
-        resource:1511007UVMS_machine ;
+    pmdco:executedBy resource:1511007UVMS_extensometer,
+        resource:1511007UVMS_load_cell,
+        resource:1511007UVMS_machine,
+        resource:1511007UVMS_test_container ;
     pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/AGUV_7> ;
     pmdco:output resource:1511007UVMS_final_elongation_d,
         resource:1511007UVMS_measured_ligament_area_AL,
@@ -296,7 +285,8 @@ resource:1511007UVMS_process a wild:SequentialActivity,
         resource:1511007UVMS_time_to_failure_tf,
         resource:AGUV_7_dataset,
         <https://w3id.org/ontofnct/resource/_testpiece/AGUV_7_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_7_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_7_testpiece_afterTest_2> ;
+    pmdco:participant resource:1511007UVMS_test_medium .
 
 resource:1511007UVMS_project a pmdco:Metadata,
         pmdco:Project ;
@@ -310,8 +300,6 @@ resource:1511008DXMSFunder_Identifier a datacite:FunderIdentifier ;
     datacite:usesIdentifierScheme datacite:_local-funder-identifier-scheme ;
     pmdco:value """0    18606N
 Name: Grant number, dtype: object"""^^xsd:string .
-
-resource:1511008DXMS_extensometer pmdco:characteristic resource:1511008DXMS_extensometer_capacity .
 
 resource:1511008DXMS_extensometer_capacity a base:ExtensometerCapacity,
         pmdco:Metadata ;
@@ -327,10 +315,6 @@ resource:1511008DXMS_funding_party_ID a datacite:OrganizationIdentifier ;
     pmdco:value """0    AiF
 Name: Funding Party ID, dtype: object"""^^xsd:string .
 
-resource:1511008DXMS_load_cell a pmdco:LoadCell,
-        pmdco:Metadata ;
-    pmdco:characteristic resource:1511008DXMS_load_cell_maximum_force .
-
 resource:1511008DXMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
         pmdco:Metadata ;
     pmdco:unit unit:N ;
@@ -338,7 +322,7 @@ resource:1511008DXMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
 
 resource:1511008DXMS_machine_manufacturer a pmdco:Manufacturer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:1511008DXMS_machine_manufacturer_location ;
+    prov:atLocation resource:1511008DXMS_machine_manufacturer_location ;
     pmdco:value """0    IPT Institut für Prüftechnik Gerätebau GmbH & ...
 Name: Test machine manufacturer, dtype: object"""^^xsd:string .
 
@@ -370,7 +354,11 @@ resource:1511008DXMS_nominal_notch_depth_nn a base:NotchDepth,
 resource:1511008DXMS_process a wild:SequentialActivity,
         base:FullNotchCreepTest ;
     wild:hasChildActivities ( resource:1511008DXMS_process_preMeasuring resource:1511008DXMS_process_mounting resource:1511008DXMS_process_gripsAlignment resource:1511008DXMS_process_FNCTISO resource:1511008DXMS_process_demounting resource:1511008DXMS_process_postMeasuring resource:1511008DXMS_process_analysis ) ;
+    prov:atLocation resource:_location ;
+    prov:wasAssociatedWith resource:_institute,
+        resource:_laboratory ;
     base:subordinateProcess resource:1511008DXMS_process_preMeasuring ;
+    pmdco:belongsToProject resource:1511008DXMS_project ;
     pmdco:characteristic resource:1511008DXMS,
         resource:1511008DXMS_conditioning_time,
         resource:1511008DXMS_end_time,
@@ -378,20 +366,16 @@ resource:1511008DXMS_process a wild:SequentialActivity,
         resource:1511008DXMS_nominal_stress_sigma_n,
         resource:1511008DXMS_preload,
         resource:1511008DXMS_preload_time,
-        resource:1511008DXMS_project,
         resource:1511008DXMS_start_time,
-        resource:1511008DXMS_test_container,
         resource:1511008DXMS_test_force_F,
         resource:1511008DXMS_test_force_increase_rate,
-        resource:1511008DXMS_test_medium,
         resource:1511008DXMS_test_temperature,
-        resource:_institute,
         resource:_institute_address,
-        resource:_laboratory,
-        resource:_location,
         resource:_standard ;
-    pmdco:executedBy resource:1511008DXMS_load_cell,
-        resource:1511008DXMS_machine ;
+    pmdco:executedBy resource:1511008DXMS_extensometer,
+        resource:1511008DXMS_load_cell,
+        resource:1511008DXMS_machine,
+        resource:1511008DXMS_test_container ;
     pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/5021DX_8> ;
     pmdco:output resource:1511008DXMS_final_elongation_d,
         resource:1511008DXMS_measured_ligament_area_AL,
@@ -402,7 +386,8 @@ resource:1511008DXMS_process a wild:SequentialActivity,
         resource:1511008DXMS_time_to_failure_tf,
         resource:5021DX_8_dataset,
         <https://w3id.org/ontofnct/resource/_testpiece/5021DX_8_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_8_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_8_testpiece_afterTest_2> ;
+    pmdco:participant resource:1511008DXMS_test_medium .
 
 resource:1511008DXMS_project a pmdco:Metadata,
         pmdco:Project ;
@@ -416,8 +401,6 @@ resource:1511008UVMSFunder_Identifier a datacite:FunderIdentifier ;
     datacite:usesIdentifierScheme datacite:_local-funder-identifier-scheme ;
     pmdco:value """0    18606N
 Name: Grant number, dtype: object"""^^xsd:string .
-
-resource:1511008UVMS_extensometer pmdco:characteristic resource:1511008UVMS_extensometer_capacity .
 
 resource:1511008UVMS_extensometer_capacity a base:ExtensometerCapacity,
         pmdco:Metadata ;
@@ -433,10 +416,6 @@ resource:1511008UVMS_funding_party_ID a datacite:OrganizationIdentifier ;
     pmdco:value """0    AiF
 Name: Funding Party ID, dtype: object"""^^xsd:string .
 
-resource:1511008UVMS_load_cell a pmdco:LoadCell,
-        pmdco:Metadata ;
-    pmdco:characteristic resource:1511008UVMS_load_cell_maximum_force .
-
 resource:1511008UVMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
         pmdco:Metadata ;
     pmdco:unit unit:N ;
@@ -444,7 +423,7 @@ resource:1511008UVMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
 
 resource:1511008UVMS_machine_manufacturer a pmdco:Manufacturer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:1511008UVMS_machine_manufacturer_location ;
+    prov:atLocation resource:1511008UVMS_machine_manufacturer_location ;
     pmdco:value """0    IPT Institut für Prüftechnik Gerätebau GmbH & ...
 Name: Test machine manufacturer, dtype: object"""^^xsd:string .
 
@@ -476,7 +455,11 @@ resource:1511008UVMS_nominal_notch_depth_nn a base:NotchDepth,
 resource:1511008UVMS_process a wild:SequentialActivity,
         base:FullNotchCreepTest ;
     wild:hasChildActivities ( resource:1511008UVMS_process_preMeasuring resource:1511008UVMS_process_mounting resource:1511008UVMS_process_gripsAlignment resource:1511008UVMS_process_FNCTISO resource:1511008UVMS_process_demounting resource:1511008UVMS_process_postMeasuring resource:1511008UVMS_process_analysis ) ;
+    prov:atLocation resource:_location ;
+    prov:wasAssociatedWith resource:_institute,
+        resource:_laboratory ;
     base:subordinateProcess resource:1511008UVMS_process_preMeasuring ;
+    pmdco:belongsToProject resource:1511008UVMS_project ;
     pmdco:characteristic resource:1511008UVMS,
         resource:1511008UVMS_conditioning_time,
         resource:1511008UVMS_end_time,
@@ -484,20 +467,16 @@ resource:1511008UVMS_process a wild:SequentialActivity,
         resource:1511008UVMS_nominal_stress_sigma_n,
         resource:1511008UVMS_preload,
         resource:1511008UVMS_preload_time,
-        resource:1511008UVMS_project,
         resource:1511008UVMS_start_time,
-        resource:1511008UVMS_test_container,
         resource:1511008UVMS_test_force_F,
         resource:1511008UVMS_test_force_increase_rate,
-        resource:1511008UVMS_test_medium,
         resource:1511008UVMS_test_temperature,
-        resource:_institute,
         resource:_institute_address,
-        resource:_laboratory,
-        resource:_location,
         resource:_standard ;
-    pmdco:executedBy resource:1511008UVMS_load_cell,
-        resource:1511008UVMS_machine ;
+    pmdco:executedBy resource:1511008UVMS_extensometer,
+        resource:1511008UVMS_load_cell,
+        resource:1511008UVMS_machine,
+        resource:1511008UVMS_test_container ;
     pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/AGUV_8> ;
     pmdco:output resource:1511008UVMS_final_elongation_d,
         resource:1511008UVMS_measured_ligament_area_AL,
@@ -508,7 +487,8 @@ resource:1511008UVMS_process a wild:SequentialActivity,
         resource:1511008UVMS_time_to_failure_tf,
         resource:AGUV_8_dataset,
         <https://w3id.org/ontofnct/resource/_testpiece/AGUV_8_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_8_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_8_testpiece_afterTest_2> ;
+    pmdco:participant resource:1511008UVMS_test_medium .
 
 resource:1511008UVMS_project a pmdco:Metadata,
         pmdco:Project ;
@@ -522,8 +502,6 @@ resource:1511009DXMSFunder_Identifier a datacite:FunderIdentifier ;
     datacite:usesIdentifierScheme datacite:_local-funder-identifier-scheme ;
     pmdco:value """0    18606N
 Name: Grant number, dtype: object"""^^xsd:string .
-
-resource:1511009DXMS_extensometer pmdco:characteristic resource:1511009DXMS_extensometer_capacity .
 
 resource:1511009DXMS_extensometer_capacity a base:ExtensometerCapacity,
         pmdco:Metadata ;
@@ -539,10 +517,6 @@ resource:1511009DXMS_funding_party_ID a datacite:OrganizationIdentifier ;
     pmdco:value """0    AiF
 Name: Funding Party ID, dtype: object"""^^xsd:string .
 
-resource:1511009DXMS_load_cell a pmdco:LoadCell,
-        pmdco:Metadata ;
-    pmdco:characteristic resource:1511009DXMS_load_cell_maximum_force .
-
 resource:1511009DXMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
         pmdco:Metadata ;
     pmdco:unit unit:N ;
@@ -550,7 +524,7 @@ resource:1511009DXMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
 
 resource:1511009DXMS_machine_manufacturer a pmdco:Manufacturer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:1511009DXMS_machine_manufacturer_location ;
+    prov:atLocation resource:1511009DXMS_machine_manufacturer_location ;
     pmdco:value """0    IPT Institut für Prüftechnik Gerätebau GmbH & ...
 Name: Test machine manufacturer, dtype: object"""^^xsd:string .
 
@@ -582,7 +556,11 @@ resource:1511009DXMS_nominal_notch_depth_nn a base:NotchDepth,
 resource:1511009DXMS_process a wild:SequentialActivity,
         base:FullNotchCreepTest ;
     wild:hasChildActivities ( resource:1511009DXMS_process_preMeasuring resource:1511009DXMS_process_mounting resource:1511009DXMS_process_gripsAlignment resource:1511009DXMS_process_FNCTISO resource:1511009DXMS_process_demounting resource:1511009DXMS_process_postMeasuring resource:1511009DXMS_process_analysis ) ;
+    prov:atLocation resource:_location ;
+    prov:wasAssociatedWith resource:_institute,
+        resource:_laboratory ;
     base:subordinateProcess resource:1511009DXMS_process_preMeasuring ;
+    pmdco:belongsToProject resource:1511009DXMS_project ;
     pmdco:characteristic resource:1511009DXMS,
         resource:1511009DXMS_conditioning_time,
         resource:1511009DXMS_end_time,
@@ -590,20 +568,16 @@ resource:1511009DXMS_process a wild:SequentialActivity,
         resource:1511009DXMS_nominal_stress_sigma_n,
         resource:1511009DXMS_preload,
         resource:1511009DXMS_preload_time,
-        resource:1511009DXMS_project,
         resource:1511009DXMS_start_time,
-        resource:1511009DXMS_test_container,
         resource:1511009DXMS_test_force_F,
         resource:1511009DXMS_test_force_increase_rate,
-        resource:1511009DXMS_test_medium,
         resource:1511009DXMS_test_temperature,
-        resource:_institute,
         resource:_institute_address,
-        resource:_laboratory,
-        resource:_location,
         resource:_standard ;
-    pmdco:executedBy resource:1511009DXMS_load_cell,
-        resource:1511009DXMS_machine ;
+    pmdco:executedBy resource:1511009DXMS_extensometer,
+        resource:1511009DXMS_load_cell,
+        resource:1511009DXMS_machine,
+        resource:1511009DXMS_test_container ;
     pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/5021DX_9> ;
     pmdco:output resource:1511009DXMS_final_elongation_d,
         resource:1511009DXMS_measured_ligament_area_AL,
@@ -614,7 +588,8 @@ resource:1511009DXMS_process a wild:SequentialActivity,
         resource:1511009DXMS_time_to_failure_tf,
         resource:5021DX_9_dataset,
         <https://w3id.org/ontofnct/resource/_testpiece/5021DX_9_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_9_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_9_testpiece_afterTest_2> ;
+    pmdco:participant resource:1511009DXMS_test_medium .
 
 resource:1511009DXMS_project a pmdco:Metadata,
         pmdco:Project ;
@@ -628,8 +603,6 @@ resource:1511009UVMSFunder_Identifier a datacite:FunderIdentifier ;
     datacite:usesIdentifierScheme datacite:_local-funder-identifier-scheme ;
     pmdco:value """0    18606N
 Name: Grant number, dtype: object"""^^xsd:string .
-
-resource:1511009UVMS_extensometer pmdco:characteristic resource:1511009UVMS_extensometer_capacity .
 
 resource:1511009UVMS_extensometer_capacity a base:ExtensometerCapacity,
         pmdco:Metadata ;
@@ -645,10 +618,6 @@ resource:1511009UVMS_funding_party_ID a datacite:OrganizationIdentifier ;
     pmdco:value """0    AiF
 Name: Funding Party ID, dtype: object"""^^xsd:string .
 
-resource:1511009UVMS_load_cell a pmdco:LoadCell,
-        pmdco:Metadata ;
-    pmdco:characteristic resource:1511009UVMS_load_cell_maximum_force .
-
 resource:1511009UVMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
         pmdco:Metadata ;
     pmdco:unit unit:N ;
@@ -656,7 +625,7 @@ resource:1511009UVMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
 
 resource:1511009UVMS_machine_manufacturer a pmdco:Manufacturer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:1511009UVMS_machine_manufacturer_location ;
+    prov:atLocation resource:1511009UVMS_machine_manufacturer_location ;
     pmdco:value """0    IPT Institut für Prüftechnik Gerätebau GmbH & ...
 Name: Test machine manufacturer, dtype: object"""^^xsd:string .
 
@@ -688,7 +657,11 @@ resource:1511009UVMS_nominal_notch_depth_nn a base:NotchDepth,
 resource:1511009UVMS_process a wild:SequentialActivity,
         base:FullNotchCreepTest ;
     wild:hasChildActivities ( resource:1511009UVMS_process_preMeasuring resource:1511009UVMS_process_mounting resource:1511009UVMS_process_gripsAlignment resource:1511009UVMS_process_FNCTISO resource:1511009UVMS_process_demounting resource:1511009UVMS_process_postMeasuring resource:1511009UVMS_process_analysis ) ;
+    prov:atLocation resource:_location ;
+    prov:wasAssociatedWith resource:_institute,
+        resource:_laboratory ;
     base:subordinateProcess resource:1511009UVMS_process_preMeasuring ;
+    pmdco:belongsToProject resource:1511009UVMS_project ;
     pmdco:characteristic resource:1511009UVMS,
         resource:1511009UVMS_conditioning_time,
         resource:1511009UVMS_end_time,
@@ -696,20 +669,16 @@ resource:1511009UVMS_process a wild:SequentialActivity,
         resource:1511009UVMS_nominal_stress_sigma_n,
         resource:1511009UVMS_preload,
         resource:1511009UVMS_preload_time,
-        resource:1511009UVMS_project,
         resource:1511009UVMS_start_time,
-        resource:1511009UVMS_test_container,
         resource:1511009UVMS_test_force_F,
         resource:1511009UVMS_test_force_increase_rate,
-        resource:1511009UVMS_test_medium,
         resource:1511009UVMS_test_temperature,
-        resource:_institute,
         resource:_institute_address,
-        resource:_laboratory,
-        resource:_location,
         resource:_standard ;
-    pmdco:executedBy resource:1511009UVMS_load_cell,
-        resource:1511009UVMS_machine ;
+    pmdco:executedBy resource:1511009UVMS_extensometer,
+        resource:1511009UVMS_load_cell,
+        resource:1511009UVMS_machine,
+        resource:1511009UVMS_test_container ;
     pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/AGUV_9> ;
     pmdco:output resource:1511009UVMS_final_elongation_d,
         resource:1511009UVMS_measured_ligament_area_AL,
@@ -720,7 +689,8 @@ resource:1511009UVMS_process a wild:SequentialActivity,
         resource:1511009UVMS_time_to_failure_tf,
         resource:AGUV_9_dataset,
         <https://w3id.org/ontofnct/resource/_testpiece/AGUV_9_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_9_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_9_testpiece_afterTest_2> ;
+    pmdco:participant resource:1511009UVMS_test_medium .
 
 resource:1511009UVMS_project a pmdco:Metadata,
         pmdco:Project ;
@@ -734,8 +704,6 @@ resource:1511010DXMSFunder_Identifier a datacite:FunderIdentifier ;
     datacite:usesIdentifierScheme datacite:_local-funder-identifier-scheme ;
     pmdco:value """0    18606N
 Name: Grant number, dtype: object"""^^xsd:string .
-
-resource:1511010DXMS_extensometer pmdco:characteristic resource:1511010DXMS_extensometer_capacity .
 
 resource:1511010DXMS_extensometer_capacity a base:ExtensometerCapacity,
         pmdco:Metadata ;
@@ -751,10 +719,6 @@ resource:1511010DXMS_funding_party_ID a datacite:OrganizationIdentifier ;
     pmdco:value """0    AiF
 Name: Funding Party ID, dtype: object"""^^xsd:string .
 
-resource:1511010DXMS_load_cell a pmdco:LoadCell,
-        pmdco:Metadata ;
-    pmdco:characteristic resource:1511010DXMS_load_cell_maximum_force .
-
 resource:1511010DXMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
         pmdco:Metadata ;
     pmdco:unit unit:N ;
@@ -762,7 +726,7 @@ resource:1511010DXMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
 
 resource:1511010DXMS_machine_manufacturer a pmdco:Manufacturer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:1511010DXMS_machine_manufacturer_location ;
+    prov:atLocation resource:1511010DXMS_machine_manufacturer_location ;
     pmdco:value """0    IPT Institut für Prüftechnik Gerätebau GmbH & ...
 Name: Test machine manufacturer, dtype: object"""^^xsd:string .
 
@@ -794,7 +758,11 @@ resource:1511010DXMS_nominal_notch_depth_nn a base:NotchDepth,
 resource:1511010DXMS_process a wild:SequentialActivity,
         base:FullNotchCreepTest ;
     wild:hasChildActivities ( resource:1511010DXMS_process_preMeasuring resource:1511010DXMS_process_mounting resource:1511010DXMS_process_gripsAlignment resource:1511010DXMS_process_FNCTISO resource:1511010DXMS_process_demounting resource:1511010DXMS_process_postMeasuring resource:1511010DXMS_process_analysis ) ;
+    prov:atLocation resource:_location ;
+    prov:wasAssociatedWith resource:_institute,
+        resource:_laboratory ;
     base:subordinateProcess resource:1511010DXMS_process_preMeasuring ;
+    pmdco:belongsToProject resource:1511010DXMS_project ;
     pmdco:characteristic resource:1511010DXMS,
         resource:1511010DXMS_conditioning_time,
         resource:1511010DXMS_end_time,
@@ -802,20 +770,16 @@ resource:1511010DXMS_process a wild:SequentialActivity,
         resource:1511010DXMS_nominal_stress_sigma_n,
         resource:1511010DXMS_preload,
         resource:1511010DXMS_preload_time,
-        resource:1511010DXMS_project,
         resource:1511010DXMS_start_time,
-        resource:1511010DXMS_test_container,
         resource:1511010DXMS_test_force_F,
         resource:1511010DXMS_test_force_increase_rate,
-        resource:1511010DXMS_test_medium,
         resource:1511010DXMS_test_temperature,
-        resource:_institute,
         resource:_institute_address,
-        resource:_laboratory,
-        resource:_location,
         resource:_standard ;
-    pmdco:executedBy resource:1511010DXMS_load_cell,
-        resource:1511010DXMS_machine ;
+    pmdco:executedBy resource:1511010DXMS_extensometer,
+        resource:1511010DXMS_load_cell,
+        resource:1511010DXMS_machine,
+        resource:1511010DXMS_test_container ;
     pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/5021DX_10> ;
     pmdco:output resource:1511010DXMS_final_elongation_d,
         resource:1511010DXMS_measured_ligament_area_AL,
@@ -826,7 +790,8 @@ resource:1511010DXMS_process a wild:SequentialActivity,
         resource:1511010DXMS_time_to_failure_tf,
         resource:5021DX_10_dataset,
         <https://w3id.org/ontofnct/resource/_testpiece/5021DX_10_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_10_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_10_testpiece_afterTest_2> ;
+    pmdco:participant resource:1511010DXMS_test_medium .
 
 resource:1511010DXMS_project a pmdco:Metadata,
         pmdco:Project ;
@@ -840,8 +805,6 @@ resource:1511011DXMSFunder_Identifier a datacite:FunderIdentifier ;
     datacite:usesIdentifierScheme datacite:_local-funder-identifier-scheme ;
     pmdco:value """0    18606N
 Name: Grant number, dtype: object"""^^xsd:string .
-
-resource:1511011DXMS_extensometer pmdco:characteristic resource:1511011DXMS_extensometer_capacity .
 
 resource:1511011DXMS_extensometer_capacity a base:ExtensometerCapacity,
         pmdco:Metadata ;
@@ -857,10 +820,6 @@ resource:1511011DXMS_funding_party_ID a datacite:OrganizationIdentifier ;
     pmdco:value """0    AiF
 Name: Funding Party ID, dtype: object"""^^xsd:string .
 
-resource:1511011DXMS_load_cell a pmdco:LoadCell,
-        pmdco:Metadata ;
-    pmdco:characteristic resource:1511011DXMS_load_cell_maximum_force .
-
 resource:1511011DXMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
         pmdco:Metadata ;
     pmdco:unit unit:N ;
@@ -868,7 +827,7 @@ resource:1511011DXMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
 
 resource:1511011DXMS_machine_manufacturer a pmdco:Manufacturer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:1511011DXMS_machine_manufacturer_location ;
+    prov:atLocation resource:1511011DXMS_machine_manufacturer_location ;
     pmdco:value """0    IPT Institut für Prüftechnik Gerätebau GmbH & ...
 Name: Test machine manufacturer, dtype: object"""^^xsd:string .
 
@@ -900,7 +859,11 @@ resource:1511011DXMS_nominal_notch_depth_nn a base:NotchDepth,
 resource:1511011DXMS_process a wild:SequentialActivity,
         base:FullNotchCreepTest ;
     wild:hasChildActivities ( resource:1511011DXMS_process_preMeasuring resource:1511011DXMS_process_mounting resource:1511011DXMS_process_gripsAlignment resource:1511011DXMS_process_FNCTISO resource:1511011DXMS_process_demounting resource:1511011DXMS_process_postMeasuring resource:1511011DXMS_process_analysis ) ;
+    prov:atLocation resource:_location ;
+    prov:wasAssociatedWith resource:_institute,
+        resource:_laboratory ;
     base:subordinateProcess resource:1511011DXMS_process_preMeasuring ;
+    pmdco:belongsToProject resource:1511011DXMS_project ;
     pmdco:characteristic resource:1511011DXMS,
         resource:1511011DXMS_conditioning_time,
         resource:1511011DXMS_end_time,
@@ -908,20 +871,16 @@ resource:1511011DXMS_process a wild:SequentialActivity,
         resource:1511011DXMS_nominal_stress_sigma_n,
         resource:1511011DXMS_preload,
         resource:1511011DXMS_preload_time,
-        resource:1511011DXMS_project,
         resource:1511011DXMS_start_time,
-        resource:1511011DXMS_test_container,
         resource:1511011DXMS_test_force_F,
         resource:1511011DXMS_test_force_increase_rate,
-        resource:1511011DXMS_test_medium,
         resource:1511011DXMS_test_temperature,
-        resource:_institute,
         resource:_institute_address,
-        resource:_laboratory,
-        resource:_location,
         resource:_standard ;
-    pmdco:executedBy resource:1511011DXMS_load_cell,
-        resource:1511011DXMS_machine ;
+    pmdco:executedBy resource:1511011DXMS_extensometer,
+        resource:1511011DXMS_load_cell,
+        resource:1511011DXMS_machine,
+        resource:1511011DXMS_test_container ;
     pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/5021DX_11> ;
     pmdco:output resource:1511011DXMS_final_elongation_d,
         resource:1511011DXMS_measured_ligament_area_AL,
@@ -932,7 +891,8 @@ resource:1511011DXMS_process a wild:SequentialActivity,
         resource:1511011DXMS_time_to_failure_tf,
         resource:5021DX_11_dataset,
         <https://w3id.org/ontofnct/resource/_testpiece/5021DX_11_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_11_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_11_testpiece_afterTest_2> ;
+    pmdco:participant resource:1511011DXMS_test_medium .
 
 resource:1511011DXMS_project a pmdco:Metadata,
         pmdco:Project ;
@@ -946,8 +906,6 @@ resource:1511012UVMSFunder_Identifier a datacite:FunderIdentifier ;
     datacite:usesIdentifierScheme datacite:_local-funder-identifier-scheme ;
     pmdco:value """0    18606N
 Name: Grant number, dtype: object"""^^xsd:string .
-
-resource:1511012UVMS_extensometer pmdco:characteristic resource:1511012UVMS_extensometer_capacity .
 
 resource:1511012UVMS_extensometer_capacity a base:ExtensometerCapacity,
         pmdco:Metadata ;
@@ -963,10 +921,6 @@ resource:1511012UVMS_funding_party_ID a datacite:OrganizationIdentifier ;
     pmdco:value """0    AiF
 Name: Funding Party ID, dtype: object"""^^xsd:string .
 
-resource:1511012UVMS_load_cell a pmdco:LoadCell,
-        pmdco:Metadata ;
-    pmdco:characteristic resource:1511012UVMS_load_cell_maximum_force .
-
 resource:1511012UVMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
         pmdco:Metadata ;
     pmdco:unit unit:N ;
@@ -974,7 +928,7 @@ resource:1511012UVMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
 
 resource:1511012UVMS_machine_manufacturer a pmdco:Manufacturer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:1511012UVMS_machine_manufacturer_location ;
+    prov:atLocation resource:1511012UVMS_machine_manufacturer_location ;
     pmdco:value """0    IPT Institut für Prüftechnik Gerätebau GmbH & ...
 Name: Test machine manufacturer, dtype: object"""^^xsd:string .
 
@@ -1006,7 +960,11 @@ resource:1511012UVMS_nominal_notch_depth_nn a base:NotchDepth,
 resource:1511012UVMS_process a wild:SequentialActivity,
         base:FullNotchCreepTest ;
     wild:hasChildActivities ( resource:1511012UVMS_process_preMeasuring resource:1511012UVMS_process_mounting resource:1511012UVMS_process_gripsAlignment resource:1511012UVMS_process_FNCTISO resource:1511012UVMS_process_demounting resource:1511012UVMS_process_postMeasuring resource:1511012UVMS_process_analysis ) ;
+    prov:atLocation resource:_location ;
+    prov:wasAssociatedWith resource:_institute,
+        resource:_laboratory ;
     base:subordinateProcess resource:1511012UVMS_process_preMeasuring ;
+    pmdco:belongsToProject resource:1511012UVMS_project ;
     pmdco:characteristic resource:1511012UVMS,
         resource:1511012UVMS_conditioning_time,
         resource:1511012UVMS_end_time,
@@ -1014,20 +972,16 @@ resource:1511012UVMS_process a wild:SequentialActivity,
         resource:1511012UVMS_nominal_stress_sigma_n,
         resource:1511012UVMS_preload,
         resource:1511012UVMS_preload_time,
-        resource:1511012UVMS_project,
         resource:1511012UVMS_start_time,
-        resource:1511012UVMS_test_container,
         resource:1511012UVMS_test_force_F,
         resource:1511012UVMS_test_force_increase_rate,
-        resource:1511012UVMS_test_medium,
         resource:1511012UVMS_test_temperature,
-        resource:_institute,
         resource:_institute_address,
-        resource:_laboratory,
-        resource:_location,
         resource:_standard ;
-    pmdco:executedBy resource:1511012UVMS_load_cell,
-        resource:1511012UVMS_machine ;
+    pmdco:executedBy resource:1511012UVMS_extensometer,
+        resource:1511012UVMS_load_cell,
+        resource:1511012UVMS_machine,
+        resource:1511012UVMS_test_container ;
     pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/AGUV_12> ;
     pmdco:output resource:1511012UVMS_final_elongation_d,
         resource:1511012UVMS_measured_ligament_area_AL,
@@ -1038,7 +992,8 @@ resource:1511012UVMS_process a wild:SequentialActivity,
         resource:1511012UVMS_time_to_failure_tf,
         resource:AGUV_12_dataset,
         <https://w3id.org/ontofnct/resource/_testpiece/AGUV_12_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_12_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_12_testpiece_afterTest_2> ;
+    pmdco:participant resource:1511012UVMS_test_medium .
 
 resource:1511012UVMS_project a pmdco:Metadata,
         pmdco:Project ;
@@ -1052,8 +1007,6 @@ resource:1511013UVMSFunder_Identifier a datacite:FunderIdentifier ;
     datacite:usesIdentifierScheme datacite:_local-funder-identifier-scheme ;
     pmdco:value """0    18606N
 Name: Grant number, dtype: object"""^^xsd:string .
-
-resource:1511013UVMS_extensometer pmdco:characteristic resource:1511013UVMS_extensometer_capacity .
 
 resource:1511013UVMS_extensometer_capacity a base:ExtensometerCapacity,
         pmdco:Metadata ;
@@ -1069,10 +1022,6 @@ resource:1511013UVMS_funding_party_ID a datacite:OrganizationIdentifier ;
     pmdco:value """0    AiF
 Name: Funding Party ID, dtype: object"""^^xsd:string .
 
-resource:1511013UVMS_load_cell a pmdco:LoadCell,
-        pmdco:Metadata ;
-    pmdco:characteristic resource:1511013UVMS_load_cell_maximum_force .
-
 resource:1511013UVMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
         pmdco:Metadata ;
     pmdco:unit unit:N ;
@@ -1080,7 +1029,7 @@ resource:1511013UVMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
 
 resource:1511013UVMS_machine_manufacturer a pmdco:Manufacturer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:1511013UVMS_machine_manufacturer_location ;
+    prov:atLocation resource:1511013UVMS_machine_manufacturer_location ;
     pmdco:value """0    IPT Institut für Prüftechnik Gerätebau GmbH & ...
 Name: Test machine manufacturer, dtype: object"""^^xsd:string .
 
@@ -1112,7 +1061,11 @@ resource:1511013UVMS_nominal_notch_depth_nn a base:NotchDepth,
 resource:1511013UVMS_process a wild:SequentialActivity,
         base:FullNotchCreepTest ;
     wild:hasChildActivities ( resource:1511013UVMS_process_preMeasuring resource:1511013UVMS_process_mounting resource:1511013UVMS_process_gripsAlignment resource:1511013UVMS_process_FNCTISO resource:1511013UVMS_process_demounting resource:1511013UVMS_process_postMeasuring resource:1511013UVMS_process_analysis ) ;
+    prov:atLocation resource:_location ;
+    prov:wasAssociatedWith resource:_institute,
+        resource:_laboratory ;
     base:subordinateProcess resource:1511013UVMS_process_preMeasuring ;
+    pmdco:belongsToProject resource:1511013UVMS_project ;
     pmdco:characteristic resource:1511013UVMS,
         resource:1511013UVMS_conditioning_time,
         resource:1511013UVMS_end_time,
@@ -1120,20 +1073,16 @@ resource:1511013UVMS_process a wild:SequentialActivity,
         resource:1511013UVMS_nominal_stress_sigma_n,
         resource:1511013UVMS_preload,
         resource:1511013UVMS_preload_time,
-        resource:1511013UVMS_project,
         resource:1511013UVMS_start_time,
-        resource:1511013UVMS_test_container,
         resource:1511013UVMS_test_force_F,
         resource:1511013UVMS_test_force_increase_rate,
-        resource:1511013UVMS_test_medium,
         resource:1511013UVMS_test_temperature,
-        resource:_institute,
         resource:_institute_address,
-        resource:_laboratory,
-        resource:_location,
         resource:_standard ;
-    pmdco:executedBy resource:1511013UVMS_load_cell,
-        resource:1511013UVMS_machine ;
+    pmdco:executedBy resource:1511013UVMS_extensometer,
+        resource:1511013UVMS_load_cell,
+        resource:1511013UVMS_machine,
+        resource:1511013UVMS_test_container ;
     pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/AGUV_13> ;
     pmdco:output resource:1511013UVMS_final_elongation_d,
         resource:1511013UVMS_measured_ligament_area_AL,
@@ -1144,7 +1093,8 @@ resource:1511013UVMS_process a wild:SequentialActivity,
         resource:1511013UVMS_time_to_failure_tf,
         resource:AGUV_13_dataset,
         <https://w3id.org/ontofnct/resource/_testpiece/AGUV_13_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_13_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_13_testpiece_afterTest_2> ;
+    pmdco:participant resource:1511013UVMS_test_medium .
 
 resource:1511013UVMS_project a pmdco:Metadata,
         pmdco:Project ;
@@ -1158,8 +1108,6 @@ resource:16120244UVMSFunder_Identifier a datacite:FunderIdentifier ;
     datacite:usesIdentifierScheme datacite:_local-funder-identifier-scheme ;
     pmdco:value """0    18606N
 Name: Grant number, dtype: object"""^^xsd:string .
-
-resource:16120244UVMS_extensometer pmdco:characteristic resource:16120244UVMS_extensometer_capacity .
 
 resource:16120244UVMS_extensometer_capacity a base:ExtensometerCapacity,
         pmdco:Metadata ;
@@ -1175,10 +1123,6 @@ resource:16120244UVMS_funding_party_ID a datacite:OrganizationIdentifier ;
     pmdco:value """0    AiF
 Name: Funding Party ID, dtype: object"""^^xsd:string .
 
-resource:16120244UVMS_load_cell a pmdco:LoadCell,
-        pmdco:Metadata ;
-    pmdco:characteristic resource:16120244UVMS_load_cell_maximum_force .
-
 resource:16120244UVMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
         pmdco:Metadata ;
     pmdco:unit unit:N ;
@@ -1186,7 +1130,7 @@ resource:16120244UVMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
 
 resource:16120244UVMS_machine_manufacturer a pmdco:Manufacturer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:16120244UVMS_machine_manufacturer_location ;
+    prov:atLocation resource:16120244UVMS_machine_manufacturer_location ;
     pmdco:value """0    IPT Institut für Prüftechnik Gerätebau GmbH & ...
 Name: Test machine manufacturer, dtype: object"""^^xsd:string .
 
@@ -1218,7 +1162,11 @@ resource:16120244UVMS_nominal_notch_depth_nn a base:NotchDepth,
 resource:16120244UVMS_process a wild:SequentialActivity,
         base:FullNotchCreepTest ;
     wild:hasChildActivities ( resource:16120244UVMS_process_preMeasuring resource:16120244UVMS_process_mounting resource:16120244UVMS_process_gripsAlignment resource:16120244UVMS_process_FNCTISO resource:16120244UVMS_process_demounting resource:16120244UVMS_process_postMeasuring resource:16120244UVMS_process_analysis ) ;
+    prov:atLocation resource:_location ;
+    prov:wasAssociatedWith resource:_institute,
+        resource:_laboratory ;
     base:subordinateProcess resource:16120244UVMS_process_preMeasuring ;
+    pmdco:belongsToProject resource:16120244UVMS_project ;
     pmdco:characteristic resource:16120244UVMS,
         resource:16120244UVMS_conditioning_time,
         resource:16120244UVMS_end_time,
@@ -1226,20 +1174,16 @@ resource:16120244UVMS_process a wild:SequentialActivity,
         resource:16120244UVMS_nominal_stress_sigma_n,
         resource:16120244UVMS_preload,
         resource:16120244UVMS_preload_time,
-        resource:16120244UVMS_project,
         resource:16120244UVMS_start_time,
-        resource:16120244UVMS_test_container,
         resource:16120244UVMS_test_force_F,
         resource:16120244UVMS_test_force_increase_rate,
-        resource:16120244UVMS_test_medium,
         resource:16120244UVMS_test_temperature,
-        resource:_institute,
         resource:_institute_address,
-        resource:_laboratory,
-        resource:_location,
         resource:_standard ;
-    pmdco:executedBy resource:16120244UVMS_load_cell,
-        resource:16120244UVMS_machine ;
+    pmdco:executedBy resource:16120244UVMS_extensometer,
+        resource:16120244UVMS_load_cell,
+        resource:16120244UVMS_machine,
+        resource:16120244UVMS_test_container ;
     pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/AGUV_244> ;
     pmdco:output resource:16120244UVMS_final_elongation_d,
         resource:16120244UVMS_measured_ligament_area_AL,
@@ -1250,7 +1194,8 @@ resource:16120244UVMS_process a wild:SequentialActivity,
         resource:16120244UVMS_time_to_failure_tf,
         resource:AGUV_244_dataset,
         <https://w3id.org/ontofnct/resource/_testpiece/AGUV_244_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_244_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_244_testpiece_afterTest_2> ;
+    pmdco:participant resource:16120244UVMS_test_medium .
 
 resource:16120244UVMS_project a pmdco:Metadata,
         pmdco:Project ;
@@ -1264,8 +1209,6 @@ resource:16120245UVMSFunder_Identifier a datacite:FunderIdentifier ;
     datacite:usesIdentifierScheme datacite:_local-funder-identifier-scheme ;
     pmdco:value """0    18606N
 Name: Grant number, dtype: object"""^^xsd:string .
-
-resource:16120245UVMS_extensometer pmdco:characteristic resource:16120245UVMS_extensometer_capacity .
 
 resource:16120245UVMS_extensometer_capacity a base:ExtensometerCapacity,
         pmdco:Metadata ;
@@ -1281,10 +1224,6 @@ resource:16120245UVMS_funding_party_ID a datacite:OrganizationIdentifier ;
     pmdco:value """0    AiF
 Name: Funding Party ID, dtype: object"""^^xsd:string .
 
-resource:16120245UVMS_load_cell a pmdco:LoadCell,
-        pmdco:Metadata ;
-    pmdco:characteristic resource:16120245UVMS_load_cell_maximum_force .
-
 resource:16120245UVMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
         pmdco:Metadata ;
     pmdco:unit unit:N ;
@@ -1292,7 +1231,7 @@ resource:16120245UVMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
 
 resource:16120245UVMS_machine_manufacturer a pmdco:Manufacturer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:16120245UVMS_machine_manufacturer_location ;
+    prov:atLocation resource:16120245UVMS_machine_manufacturer_location ;
     pmdco:value """0    IPT Institut für Prüftechnik Gerätebau GmbH & ...
 Name: Test machine manufacturer, dtype: object"""^^xsd:string .
 
@@ -1324,7 +1263,11 @@ resource:16120245UVMS_nominal_notch_depth_nn a base:NotchDepth,
 resource:16120245UVMS_process a wild:SequentialActivity,
         base:FullNotchCreepTest ;
     wild:hasChildActivities ( resource:16120245UVMS_process_preMeasuring resource:16120245UVMS_process_mounting resource:16120245UVMS_process_gripsAlignment resource:16120245UVMS_process_FNCTISO resource:16120245UVMS_process_demounting resource:16120245UVMS_process_postMeasuring resource:16120245UVMS_process_analysis ) ;
+    prov:atLocation resource:_location ;
+    prov:wasAssociatedWith resource:_institute,
+        resource:_laboratory ;
     base:subordinateProcess resource:16120245UVMS_process_preMeasuring ;
+    pmdco:belongsToProject resource:16120245UVMS_project ;
     pmdco:characteristic resource:16120245UVMS,
         resource:16120245UVMS_conditioning_time,
         resource:16120245UVMS_end_time,
@@ -1332,20 +1275,16 @@ resource:16120245UVMS_process a wild:SequentialActivity,
         resource:16120245UVMS_nominal_stress_sigma_n,
         resource:16120245UVMS_preload,
         resource:16120245UVMS_preload_time,
-        resource:16120245UVMS_project,
         resource:16120245UVMS_start_time,
-        resource:16120245UVMS_test_container,
         resource:16120245UVMS_test_force_F,
         resource:16120245UVMS_test_force_increase_rate,
-        resource:16120245UVMS_test_medium,
         resource:16120245UVMS_test_temperature,
-        resource:_institute,
         resource:_institute_address,
-        resource:_laboratory,
-        resource:_location,
         resource:_standard ;
-    pmdco:executedBy resource:16120245UVMS_load_cell,
-        resource:16120245UVMS_machine ;
+    pmdco:executedBy resource:16120245UVMS_extensometer,
+        resource:16120245UVMS_load_cell,
+        resource:16120245UVMS_machine,
+        resource:16120245UVMS_test_container ;
     pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/AGUV_245> ;
     pmdco:output resource:16120245UVMS_final_elongation_d,
         resource:16120245UVMS_measured_ligament_area_AL,
@@ -1356,7 +1295,8 @@ resource:16120245UVMS_process a wild:SequentialActivity,
         resource:16120245UVMS_time_to_failure_tf,
         resource:AGUV_245_dataset,
         <https://w3id.org/ontofnct/resource/_testpiece/AGUV_245_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_245_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_245_testpiece_afterTest_2> ;
+    pmdco:participant resource:16120245UVMS_test_medium .
 
 resource:16120245UVMS_project a pmdco:Metadata,
         pmdco:Project ;
@@ -1370,8 +1310,6 @@ resource:16120248DXMSFunder_Identifier a datacite:FunderIdentifier ;
     datacite:usesIdentifierScheme datacite:_local-funder-identifier-scheme ;
     pmdco:value """0    18606N
 Name: Grant number, dtype: object"""^^xsd:string .
-
-resource:16120248DXMS_extensometer pmdco:characteristic resource:16120248DXMS_extensometer_capacity .
 
 resource:16120248DXMS_extensometer_capacity a base:ExtensometerCapacity,
         pmdco:Metadata ;
@@ -1387,10 +1325,6 @@ resource:16120248DXMS_funding_party_ID a datacite:OrganizationIdentifier ;
     pmdco:value """0    AiF
 Name: Funding Party ID, dtype: object"""^^xsd:string .
 
-resource:16120248DXMS_load_cell a pmdco:LoadCell,
-        pmdco:Metadata ;
-    pmdco:characteristic resource:16120248DXMS_load_cell_maximum_force .
-
 resource:16120248DXMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
         pmdco:Metadata ;
     pmdco:unit unit:N ;
@@ -1398,7 +1332,7 @@ resource:16120248DXMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
 
 resource:16120248DXMS_machine_manufacturer a pmdco:Manufacturer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:16120248DXMS_machine_manufacturer_location ;
+    prov:atLocation resource:16120248DXMS_machine_manufacturer_location ;
     pmdco:value """0    IPT Institut für Prüftechnik Gerätebau GmbH & ...
 Name: Test machine manufacturer, dtype: object"""^^xsd:string .
 
@@ -1430,7 +1364,11 @@ resource:16120248DXMS_nominal_notch_depth_nn a base:NotchDepth,
 resource:16120248DXMS_process a wild:SequentialActivity,
         base:FullNotchCreepTest ;
     wild:hasChildActivities ( resource:16120248DXMS_process_preMeasuring resource:16120248DXMS_process_mounting resource:16120248DXMS_process_gripsAlignment resource:16120248DXMS_process_FNCTISO resource:16120248DXMS_process_demounting resource:16120248DXMS_process_postMeasuring resource:16120248DXMS_process_analysis ) ;
+    prov:atLocation resource:_location ;
+    prov:wasAssociatedWith resource:_institute,
+        resource:_laboratory ;
     base:subordinateProcess resource:16120248DXMS_process_preMeasuring ;
+    pmdco:belongsToProject resource:16120248DXMS_project ;
     pmdco:characteristic resource:16120248DXMS,
         resource:16120248DXMS_conditioning_time,
         resource:16120248DXMS_end_time,
@@ -1438,20 +1376,16 @@ resource:16120248DXMS_process a wild:SequentialActivity,
         resource:16120248DXMS_nominal_stress_sigma_n,
         resource:16120248DXMS_preload,
         resource:16120248DXMS_preload_time,
-        resource:16120248DXMS_project,
         resource:16120248DXMS_start_time,
-        resource:16120248DXMS_test_container,
         resource:16120248DXMS_test_force_F,
         resource:16120248DXMS_test_force_increase_rate,
-        resource:16120248DXMS_test_medium,
         resource:16120248DXMS_test_temperature,
-        resource:_institute,
         resource:_institute_address,
-        resource:_laboratory,
-        resource:_location,
         resource:_standard ;
-    pmdco:executedBy resource:16120248DXMS_load_cell,
-        resource:16120248DXMS_machine ;
+    pmdco:executedBy resource:16120248DXMS_extensometer,
+        resource:16120248DXMS_load_cell,
+        resource:16120248DXMS_machine,
+        resource:16120248DXMS_test_container ;
     pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/5021DX_248> ;
     pmdco:output resource:16120248DXMS_final_elongation_d,
         resource:16120248DXMS_measured_ligament_area_AL,
@@ -1462,7 +1396,8 @@ resource:16120248DXMS_process a wild:SequentialActivity,
         resource:16120248DXMS_time_to_failure_tf,
         resource:5021DX_248_dataset,
         <https://w3id.org/ontofnct/resource/_testpiece/5021DX_248_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_248_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_248_testpiece_afterTest_2> ;
+    pmdco:participant resource:16120248DXMS_test_medium .
 
 resource:16120248DXMS_project a pmdco:Metadata,
         pmdco:Project ;
@@ -1476,8 +1411,6 @@ resource:16120250DXMSFunder_Identifier a datacite:FunderIdentifier ;
     datacite:usesIdentifierScheme datacite:_local-funder-identifier-scheme ;
     pmdco:value """0    18606N
 Name: Grant number, dtype: object"""^^xsd:string .
-
-resource:16120250DXMS_extensometer pmdco:characteristic resource:16120250DXMS_extensometer_capacity .
 
 resource:16120250DXMS_extensometer_capacity a base:ExtensometerCapacity,
         pmdco:Metadata ;
@@ -1493,10 +1426,6 @@ resource:16120250DXMS_funding_party_ID a datacite:OrganizationIdentifier ;
     pmdco:value """0    AiF
 Name: Funding Party ID, dtype: object"""^^xsd:string .
 
-resource:16120250DXMS_load_cell a pmdco:LoadCell,
-        pmdco:Metadata ;
-    pmdco:characteristic resource:16120250DXMS_load_cell_maximum_force .
-
 resource:16120250DXMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
         pmdco:Metadata ;
     pmdco:unit unit:N ;
@@ -1504,7 +1433,7 @@ resource:16120250DXMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
 
 resource:16120250DXMS_machine_manufacturer a pmdco:Manufacturer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:16120250DXMS_machine_manufacturer_location ;
+    prov:atLocation resource:16120250DXMS_machine_manufacturer_location ;
     pmdco:value """0    IPT Institut für Prüftechnik Gerätebau GmbH & ...
 Name: Test machine manufacturer, dtype: object"""^^xsd:string .
 
@@ -1536,7 +1465,11 @@ resource:16120250DXMS_nominal_notch_depth_nn a base:NotchDepth,
 resource:16120250DXMS_process a wild:SequentialActivity,
         base:FullNotchCreepTest ;
     wild:hasChildActivities ( resource:16120250DXMS_process_preMeasuring resource:16120250DXMS_process_mounting resource:16120250DXMS_process_gripsAlignment resource:16120250DXMS_process_FNCTISO resource:16120250DXMS_process_demounting resource:16120250DXMS_process_postMeasuring resource:16120250DXMS_process_analysis ) ;
+    prov:atLocation resource:_location ;
+    prov:wasAssociatedWith resource:_institute,
+        resource:_laboratory ;
     base:subordinateProcess resource:16120250DXMS_process_preMeasuring ;
+    pmdco:belongsToProject resource:16120250DXMS_project ;
     pmdco:characteristic resource:16120250DXMS,
         resource:16120250DXMS_conditioning_time,
         resource:16120250DXMS_end_time,
@@ -1544,20 +1477,16 @@ resource:16120250DXMS_process a wild:SequentialActivity,
         resource:16120250DXMS_nominal_stress_sigma_n,
         resource:16120250DXMS_preload,
         resource:16120250DXMS_preload_time,
-        resource:16120250DXMS_project,
         resource:16120250DXMS_start_time,
-        resource:16120250DXMS_test_container,
         resource:16120250DXMS_test_force_F,
         resource:16120250DXMS_test_force_increase_rate,
-        resource:16120250DXMS_test_medium,
         resource:16120250DXMS_test_temperature,
-        resource:_institute,
         resource:_institute_address,
-        resource:_laboratory,
-        resource:_location,
         resource:_standard ;
-    pmdco:executedBy resource:16120250DXMS_load_cell,
-        resource:16120250DXMS_machine ;
+    pmdco:executedBy resource:16120250DXMS_extensometer,
+        resource:16120250DXMS_load_cell,
+        resource:16120250DXMS_machine,
+        resource:16120250DXMS_test_container ;
     pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/5021DX_250> ;
     pmdco:output resource:16120250DXMS_final_elongation_d,
         resource:16120250DXMS_measured_ligament_area_AL,
@@ -1568,7 +1497,8 @@ resource:16120250DXMS_process a wild:SequentialActivity,
         resource:16120250DXMS_time_to_failure_tf,
         resource:5021DX_250_dataset,
         <https://w3id.org/ontofnct/resource/_testpiece/5021DX_250_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_250_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_250_testpiece_afterTest_2> ;
+    pmdco:participant resource:16120250DXMS_test_medium .
 
 resource:16120250DXMS_project a pmdco:Metadata,
         pmdco:Project ;
@@ -1582,8 +1512,6 @@ resource:16120251DXMSFunder_Identifier a datacite:FunderIdentifier ;
     datacite:usesIdentifierScheme datacite:_local-funder-identifier-scheme ;
     pmdco:value """0    18606N
 Name: Grant number, dtype: object"""^^xsd:string .
-
-resource:16120251DXMS_extensometer pmdco:characteristic resource:16120251DXMS_extensometer_capacity .
 
 resource:16120251DXMS_extensometer_capacity a base:ExtensometerCapacity,
         pmdco:Metadata ;
@@ -1599,10 +1527,6 @@ resource:16120251DXMS_funding_party_ID a datacite:OrganizationIdentifier ;
     pmdco:value """0    AiF
 Name: Funding Party ID, dtype: object"""^^xsd:string .
 
-resource:16120251DXMS_load_cell a pmdco:LoadCell,
-        pmdco:Metadata ;
-    pmdco:characteristic resource:16120251DXMS_load_cell_maximum_force .
-
 resource:16120251DXMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
         pmdco:Metadata ;
     pmdco:unit unit:N ;
@@ -1610,7 +1534,7 @@ resource:16120251DXMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
 
 resource:16120251DXMS_machine_manufacturer a pmdco:Manufacturer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:16120251DXMS_machine_manufacturer_location ;
+    prov:atLocation resource:16120251DXMS_machine_manufacturer_location ;
     pmdco:value """0    IPT Institut für Prüftechnik Gerätebau GmbH & ...
 Name: Test machine manufacturer, dtype: object"""^^xsd:string .
 
@@ -1642,7 +1566,11 @@ resource:16120251DXMS_nominal_notch_depth_nn a base:NotchDepth,
 resource:16120251DXMS_process a wild:SequentialActivity,
         base:FullNotchCreepTest ;
     wild:hasChildActivities ( resource:16120251DXMS_process_preMeasuring resource:16120251DXMS_process_mounting resource:16120251DXMS_process_gripsAlignment resource:16120251DXMS_process_FNCTISO resource:16120251DXMS_process_demounting resource:16120251DXMS_process_postMeasuring resource:16120251DXMS_process_analysis ) ;
+    prov:atLocation resource:_location ;
+    prov:wasAssociatedWith resource:_institute,
+        resource:_laboratory ;
     base:subordinateProcess resource:16120251DXMS_process_preMeasuring ;
+    pmdco:belongsToProject resource:16120251DXMS_project ;
     pmdco:characteristic resource:16120251DXMS,
         resource:16120251DXMS_conditioning_time,
         resource:16120251DXMS_end_time,
@@ -1650,20 +1578,16 @@ resource:16120251DXMS_process a wild:SequentialActivity,
         resource:16120251DXMS_nominal_stress_sigma_n,
         resource:16120251DXMS_preload,
         resource:16120251DXMS_preload_time,
-        resource:16120251DXMS_project,
         resource:16120251DXMS_start_time,
-        resource:16120251DXMS_test_container,
         resource:16120251DXMS_test_force_F,
         resource:16120251DXMS_test_force_increase_rate,
-        resource:16120251DXMS_test_medium,
         resource:16120251DXMS_test_temperature,
-        resource:_institute,
         resource:_institute_address,
-        resource:_laboratory,
-        resource:_location,
         resource:_standard ;
-    pmdco:executedBy resource:16120251DXMS_load_cell,
-        resource:16120251DXMS_machine ;
+    pmdco:executedBy resource:16120251DXMS_extensometer,
+        resource:16120251DXMS_load_cell,
+        resource:16120251DXMS_machine,
+        resource:16120251DXMS_test_container ;
     pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/5021DX_251> ;
     pmdco:output resource:16120251DXMS_final_elongation_d,
         resource:16120251DXMS_measured_ligament_area_AL,
@@ -1674,7 +1598,8 @@ resource:16120251DXMS_process a wild:SequentialActivity,
         resource:16120251DXMS_time_to_failure_tf,
         resource:5021DX_251_dataset,
         <https://w3id.org/ontofnct/resource/_testpiece/5021DX_251_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_251_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_251_testpiece_afterTest_2> ;
+    pmdco:participant resource:16120251DXMS_test_medium .
 
 resource:16120251DXMS_project a pmdco:Metadata,
         pmdco:Project ;
@@ -1688,8 +1613,6 @@ resource:16120252DXMSFunder_Identifier a datacite:FunderIdentifier ;
     datacite:usesIdentifierScheme datacite:_local-funder-identifier-scheme ;
     pmdco:value """0    18606N
 Name: Grant number, dtype: object"""^^xsd:string .
-
-resource:16120252DXMS_extensometer pmdco:characteristic resource:16120252DXMS_extensometer_capacity .
 
 resource:16120252DXMS_extensometer_capacity a base:ExtensometerCapacity,
         pmdco:Metadata ;
@@ -1705,10 +1628,6 @@ resource:16120252DXMS_funding_party_ID a datacite:OrganizationIdentifier ;
     pmdco:value """0    AiF
 Name: Funding Party ID, dtype: object"""^^xsd:string .
 
-resource:16120252DXMS_load_cell a pmdco:LoadCell,
-        pmdco:Metadata ;
-    pmdco:characteristic resource:16120252DXMS_load_cell_maximum_force .
-
 resource:16120252DXMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
         pmdco:Metadata ;
     pmdco:unit unit:N ;
@@ -1716,7 +1635,7 @@ resource:16120252DXMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
 
 resource:16120252DXMS_machine_manufacturer a pmdco:Manufacturer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:16120252DXMS_machine_manufacturer_location ;
+    prov:atLocation resource:16120252DXMS_machine_manufacturer_location ;
     pmdco:value """0    IPT Institut für Prüftechnik Gerätebau GmbH & ...
 Name: Test machine manufacturer, dtype: object"""^^xsd:string .
 
@@ -1748,7 +1667,11 @@ resource:16120252DXMS_nominal_notch_depth_nn a base:NotchDepth,
 resource:16120252DXMS_process a wild:SequentialActivity,
         base:FullNotchCreepTest ;
     wild:hasChildActivities ( resource:16120252DXMS_process_preMeasuring resource:16120252DXMS_process_mounting resource:16120252DXMS_process_gripsAlignment resource:16120252DXMS_process_FNCTISO resource:16120252DXMS_process_demounting resource:16120252DXMS_process_postMeasuring resource:16120252DXMS_process_analysis ) ;
+    prov:atLocation resource:_location ;
+    prov:wasAssociatedWith resource:_institute,
+        resource:_laboratory ;
     base:subordinateProcess resource:16120252DXMS_process_preMeasuring ;
+    pmdco:belongsToProject resource:16120252DXMS_project ;
     pmdco:characteristic resource:16120252DXMS,
         resource:16120252DXMS_conditioning_time,
         resource:16120252DXMS_end_time,
@@ -1756,20 +1679,16 @@ resource:16120252DXMS_process a wild:SequentialActivity,
         resource:16120252DXMS_nominal_stress_sigma_n,
         resource:16120252DXMS_preload,
         resource:16120252DXMS_preload_time,
-        resource:16120252DXMS_project,
         resource:16120252DXMS_start_time,
-        resource:16120252DXMS_test_container,
         resource:16120252DXMS_test_force_F,
         resource:16120252DXMS_test_force_increase_rate,
-        resource:16120252DXMS_test_medium,
         resource:16120252DXMS_test_temperature,
-        resource:_institute,
         resource:_institute_address,
-        resource:_laboratory,
-        resource:_location,
         resource:_standard ;
-    pmdco:executedBy resource:16120252DXMS_load_cell,
-        resource:16120252DXMS_machine ;
+    pmdco:executedBy resource:16120252DXMS_extensometer,
+        resource:16120252DXMS_load_cell,
+        resource:16120252DXMS_machine,
+        resource:16120252DXMS_test_container ;
     pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/5021DX_252> ;
     pmdco:output resource:16120252DXMS_final_elongation_d,
         resource:16120252DXMS_measured_ligament_area_AL,
@@ -1780,7 +1699,8 @@ resource:16120252DXMS_process a wild:SequentialActivity,
         resource:16120252DXMS_time_to_failure_tf,
         resource:5021DX_252_dataset,
         <https://w3id.org/ontofnct/resource/_testpiece/5021DX_252_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_252_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_252_testpiece_afterTest_2> ;
+    pmdco:participant resource:16120252DXMS_test_medium .
 
 resource:16120252DXMS_project a pmdco:Metadata,
         pmdco:Project ;
@@ -1794,8 +1714,6 @@ resource:16120253DXMSFunder_Identifier a datacite:FunderIdentifier ;
     datacite:usesIdentifierScheme datacite:_local-funder-identifier-scheme ;
     pmdco:value """0    18606N
 Name: Grant number, dtype: object"""^^xsd:string .
-
-resource:16120253DXMS_extensometer pmdco:characteristic resource:16120253DXMS_extensometer_capacity .
 
 resource:16120253DXMS_extensometer_capacity a base:ExtensometerCapacity,
         pmdco:Metadata ;
@@ -1811,10 +1729,6 @@ resource:16120253DXMS_funding_party_ID a datacite:OrganizationIdentifier ;
     pmdco:value """0    AiF
 Name: Funding Party ID, dtype: object"""^^xsd:string .
 
-resource:16120253DXMS_load_cell a pmdco:LoadCell,
-        pmdco:Metadata ;
-    pmdco:characteristic resource:16120253DXMS_load_cell_maximum_force .
-
 resource:16120253DXMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
         pmdco:Metadata ;
     pmdco:unit unit:N ;
@@ -1822,7 +1736,7 @@ resource:16120253DXMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
 
 resource:16120253DXMS_machine_manufacturer a pmdco:Manufacturer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:16120253DXMS_machine_manufacturer_location ;
+    prov:atLocation resource:16120253DXMS_machine_manufacturer_location ;
     pmdco:value """0    IPT Institut für Prüftechnik Gerätebau GmbH & ...
 Name: Test machine manufacturer, dtype: object"""^^xsd:string .
 
@@ -1854,7 +1768,11 @@ resource:16120253DXMS_nominal_notch_depth_nn a base:NotchDepth,
 resource:16120253DXMS_process a wild:SequentialActivity,
         base:FullNotchCreepTest ;
     wild:hasChildActivities ( resource:16120253DXMS_process_preMeasuring resource:16120253DXMS_process_mounting resource:16120253DXMS_process_gripsAlignment resource:16120253DXMS_process_FNCTISO resource:16120253DXMS_process_demounting resource:16120253DXMS_process_postMeasuring resource:16120253DXMS_process_analysis ) ;
+    prov:atLocation resource:_location ;
+    prov:wasAssociatedWith resource:_institute,
+        resource:_laboratory ;
     base:subordinateProcess resource:16120253DXMS_process_preMeasuring ;
+    pmdco:belongsToProject resource:16120253DXMS_project ;
     pmdco:characteristic resource:16120253DXMS,
         resource:16120253DXMS_conditioning_time,
         resource:16120253DXMS_end_time,
@@ -1862,20 +1780,16 @@ resource:16120253DXMS_process a wild:SequentialActivity,
         resource:16120253DXMS_nominal_stress_sigma_n,
         resource:16120253DXMS_preload,
         resource:16120253DXMS_preload_time,
-        resource:16120253DXMS_project,
         resource:16120253DXMS_start_time,
-        resource:16120253DXMS_test_container,
         resource:16120253DXMS_test_force_F,
         resource:16120253DXMS_test_force_increase_rate,
-        resource:16120253DXMS_test_medium,
         resource:16120253DXMS_test_temperature,
-        resource:_institute,
         resource:_institute_address,
-        resource:_laboratory,
-        resource:_location,
         resource:_standard ;
-    pmdco:executedBy resource:16120253DXMS_load_cell,
-        resource:16120253DXMS_machine ;
+    pmdco:executedBy resource:16120253DXMS_extensometer,
+        resource:16120253DXMS_load_cell,
+        resource:16120253DXMS_machine,
+        resource:16120253DXMS_test_container ;
     pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/5021DX_253> ;
     pmdco:output resource:16120253DXMS_final_elongation_d,
         resource:16120253DXMS_measured_ligament_area_AL,
@@ -1886,7 +1800,8 @@ resource:16120253DXMS_process a wild:SequentialActivity,
         resource:16120253DXMS_time_to_failure_tf,
         resource:5021DX_253_dataset,
         <https://w3id.org/ontofnct/resource/_testpiece/5021DX_253_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_253_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_253_testpiece_afterTest_2> ;
+    pmdco:participant resource:16120253DXMS_test_medium .
 
 resource:16120253DXMS_project a pmdco:Metadata,
         pmdco:Project ;
@@ -1900,8 +1815,6 @@ resource:17010248UVMSFunder_Identifier a datacite:FunderIdentifier ;
     datacite:usesIdentifierScheme datacite:_local-funder-identifier-scheme ;
     pmdco:value """0    18606N
 Name: Grant number, dtype: object"""^^xsd:string .
-
-resource:17010248UVMS_extensometer pmdco:characteristic resource:17010248UVMS_extensometer_capacity .
 
 resource:17010248UVMS_extensometer_capacity a base:ExtensometerCapacity,
         pmdco:Metadata ;
@@ -1917,10 +1830,6 @@ resource:17010248UVMS_funding_party_ID a datacite:OrganizationIdentifier ;
     pmdco:value """0    AiF
 Name: Funding Party ID, dtype: object"""^^xsd:string .
 
-resource:17010248UVMS_load_cell a pmdco:LoadCell,
-        pmdco:Metadata ;
-    pmdco:characteristic resource:17010248UVMS_load_cell_maximum_force .
-
 resource:17010248UVMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
         pmdco:Metadata ;
     pmdco:unit unit:N ;
@@ -1928,7 +1837,7 @@ resource:17010248UVMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
 
 resource:17010248UVMS_machine_manufacturer a pmdco:Manufacturer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:17010248UVMS_machine_manufacturer_location ;
+    prov:atLocation resource:17010248UVMS_machine_manufacturer_location ;
     pmdco:value """0    IPT Institut für Prüftechnik Gerätebau GmbH & ...
 Name: Test machine manufacturer, dtype: object"""^^xsd:string .
 
@@ -1960,7 +1869,11 @@ resource:17010248UVMS_nominal_notch_depth_nn a base:NotchDepth,
 resource:17010248UVMS_process a wild:SequentialActivity,
         base:FullNotchCreepTest ;
     wild:hasChildActivities ( resource:17010248UVMS_process_preMeasuring resource:17010248UVMS_process_mounting resource:17010248UVMS_process_gripsAlignment resource:17010248UVMS_process_FNCTISO resource:17010248UVMS_process_demounting resource:17010248UVMS_process_postMeasuring resource:17010248UVMS_process_analysis ) ;
+    prov:atLocation resource:_location ;
+    prov:wasAssociatedWith resource:_institute,
+        resource:_laboratory ;
     base:subordinateProcess resource:17010248UVMS_process_preMeasuring ;
+    pmdco:belongsToProject resource:17010248UVMS_project ;
     pmdco:characteristic resource:17010248UVMS,
         resource:17010248UVMS_conditioning_time,
         resource:17010248UVMS_end_time,
@@ -1968,20 +1881,16 @@ resource:17010248UVMS_process a wild:SequentialActivity,
         resource:17010248UVMS_nominal_stress_sigma_n,
         resource:17010248UVMS_preload,
         resource:17010248UVMS_preload_time,
-        resource:17010248UVMS_project,
         resource:17010248UVMS_start_time,
-        resource:17010248UVMS_test_container,
         resource:17010248UVMS_test_force_F,
         resource:17010248UVMS_test_force_increase_rate,
-        resource:17010248UVMS_test_medium,
         resource:17010248UVMS_test_temperature,
-        resource:_institute,
         resource:_institute_address,
-        resource:_laboratory,
-        resource:_location,
         resource:_standard ;
-    pmdco:executedBy resource:17010248UVMS_load_cell,
-        resource:17010248UVMS_machine ;
+    pmdco:executedBy resource:17010248UVMS_extensometer,
+        resource:17010248UVMS_load_cell,
+        resource:17010248UVMS_machine,
+        resource:17010248UVMS_test_container ;
     pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/AGUV_248> ;
     pmdco:output resource:17010248UVMS_final_elongation_d,
         resource:17010248UVMS_measured_ligament_area_AL,
@@ -1992,7 +1901,8 @@ resource:17010248UVMS_process a wild:SequentialActivity,
         resource:17010248UVMS_time_to_failure_tf,
         resource:AGUV_248_dataset,
         <https://w3id.org/ontofnct/resource/_testpiece/AGUV_248_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_248_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_248_testpiece_afterTest_2> ;
+    pmdco:participant resource:17010248UVMS_test_medium .
 
 resource:17010248UVMS_project a pmdco:Metadata,
         pmdco:Project ;
@@ -2006,8 +1916,6 @@ resource:17010253UVMSFunder_Identifier a datacite:FunderIdentifier ;
     datacite:usesIdentifierScheme datacite:_local-funder-identifier-scheme ;
     pmdco:value """0    18606N
 Name: Grant number, dtype: object"""^^xsd:string .
-
-resource:17010253UVMS_extensometer pmdco:characteristic resource:17010253UVMS_extensometer_capacity .
 
 resource:17010253UVMS_extensometer_capacity a base:ExtensometerCapacity,
         pmdco:Metadata ;
@@ -2023,10 +1931,6 @@ resource:17010253UVMS_funding_party_ID a datacite:OrganizationIdentifier ;
     pmdco:value """0    AiF
 Name: Funding Party ID, dtype: object"""^^xsd:string .
 
-resource:17010253UVMS_load_cell a pmdco:LoadCell,
-        pmdco:Metadata ;
-    pmdco:characteristic resource:17010253UVMS_load_cell_maximum_force .
-
 resource:17010253UVMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
         pmdco:Metadata ;
     pmdco:unit unit:N ;
@@ -2034,7 +1938,7 @@ resource:17010253UVMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
 
 resource:17010253UVMS_machine_manufacturer a pmdco:Manufacturer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:17010253UVMS_machine_manufacturer_location ;
+    prov:atLocation resource:17010253UVMS_machine_manufacturer_location ;
     pmdco:value """0    IPT Institut für Prüftechnik Gerätebau GmbH & ...
 Name: Test machine manufacturer, dtype: object"""^^xsd:string .
 
@@ -2066,7 +1970,11 @@ resource:17010253UVMS_nominal_notch_depth_nn a base:NotchDepth,
 resource:17010253UVMS_process a wild:SequentialActivity,
         base:FullNotchCreepTest ;
     wild:hasChildActivities ( resource:17010253UVMS_process_preMeasuring resource:17010253UVMS_process_mounting resource:17010253UVMS_process_gripsAlignment resource:17010253UVMS_process_FNCTISO resource:17010253UVMS_process_demounting resource:17010253UVMS_process_postMeasuring resource:17010253UVMS_process_analysis ) ;
+    prov:atLocation resource:_location ;
+    prov:wasAssociatedWith resource:_institute,
+        resource:_laboratory ;
     base:subordinateProcess resource:17010253UVMS_process_preMeasuring ;
+    pmdco:belongsToProject resource:17010253UVMS_project ;
     pmdco:characteristic resource:17010253UVMS,
         resource:17010253UVMS_conditioning_time,
         resource:17010253UVMS_end_time,
@@ -2074,20 +1982,16 @@ resource:17010253UVMS_process a wild:SequentialActivity,
         resource:17010253UVMS_nominal_stress_sigma_n,
         resource:17010253UVMS_preload,
         resource:17010253UVMS_preload_time,
-        resource:17010253UVMS_project,
         resource:17010253UVMS_start_time,
-        resource:17010253UVMS_test_container,
         resource:17010253UVMS_test_force_F,
         resource:17010253UVMS_test_force_increase_rate,
-        resource:17010253UVMS_test_medium,
         resource:17010253UVMS_test_temperature,
-        resource:_institute,
         resource:_institute_address,
-        resource:_laboratory,
-        resource:_location,
         resource:_standard ;
-    pmdco:executedBy resource:17010253UVMS_load_cell,
-        resource:17010253UVMS_machine ;
+    pmdco:executedBy resource:17010253UVMS_extensometer,
+        resource:17010253UVMS_load_cell,
+        resource:17010253UVMS_machine,
+        resource:17010253UVMS_test_container ;
     pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/AGUV_253> ;
     pmdco:output resource:17010253UVMS_final_elongation_d,
         resource:17010253UVMS_measured_ligament_area_AL,
@@ -2098,7 +2002,8 @@ resource:17010253UVMS_process a wild:SequentialActivity,
         resource:17010253UVMS_time_to_failure_tf,
         resource:AGUV_253_dataset,
         <https://w3id.org/ontofnct/resource/_testpiece/AGUV_253_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_253_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_253_testpiece_afterTest_2> ;
+    pmdco:participant resource:17010253UVMS_test_medium .
 
 resource:17010253UVMS_project a pmdco:Metadata,
         pmdco:Project ;
@@ -2112,8 +2017,6 @@ resource:17020264UVMSFunder_Identifier a datacite:FunderIdentifier ;
     datacite:usesIdentifierScheme datacite:_local-funder-identifier-scheme ;
     pmdco:value """0    18606N
 Name: Grant number, dtype: object"""^^xsd:string .
-
-resource:17020264UVMS_extensometer pmdco:characteristic resource:17020264UVMS_extensometer_capacity .
 
 resource:17020264UVMS_extensometer_capacity a base:ExtensometerCapacity,
         pmdco:Metadata ;
@@ -2129,10 +2032,6 @@ resource:17020264UVMS_funding_party_ID a datacite:OrganizationIdentifier ;
     pmdco:value """0    AiF
 Name: Funding Party ID, dtype: object"""^^xsd:string .
 
-resource:17020264UVMS_load_cell a pmdco:LoadCell,
-        pmdco:Metadata ;
-    pmdco:characteristic resource:17020264UVMS_load_cell_maximum_force .
-
 resource:17020264UVMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
         pmdco:Metadata ;
     pmdco:unit unit:N ;
@@ -2140,7 +2039,7 @@ resource:17020264UVMS_load_cell_maximum_force a pmdco:LoadCellCapacity,
 
 resource:17020264UVMS_machine_manufacturer a pmdco:Manufacturer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:17020264UVMS_machine_manufacturer_location ;
+    prov:atLocation resource:17020264UVMS_machine_manufacturer_location ;
     pmdco:value """0    IPT Institut für Prüftechnik Gerätebau GmbH & ...
 Name: Test machine manufacturer, dtype: object"""^^xsd:string .
 
@@ -2172,7 +2071,11 @@ resource:17020264UVMS_nominal_notch_depth_nn a base:NotchDepth,
 resource:17020264UVMS_process a wild:SequentialActivity,
         base:FullNotchCreepTest ;
     wild:hasChildActivities ( resource:17020264UVMS_process_preMeasuring resource:17020264UVMS_process_mounting resource:17020264UVMS_process_gripsAlignment resource:17020264UVMS_process_FNCTISO resource:17020264UVMS_process_demounting resource:17020264UVMS_process_postMeasuring resource:17020264UVMS_process_analysis ) ;
+    prov:atLocation resource:_location ;
+    prov:wasAssociatedWith resource:_institute,
+        resource:_laboratory ;
     base:subordinateProcess resource:17020264UVMS_process_preMeasuring ;
+    pmdco:belongsToProject resource:17020264UVMS_project ;
     pmdco:characteristic resource:17020264UVMS,
         resource:17020264UVMS_conditioning_time,
         resource:17020264UVMS_end_time,
@@ -2180,20 +2083,16 @@ resource:17020264UVMS_process a wild:SequentialActivity,
         resource:17020264UVMS_nominal_stress_sigma_n,
         resource:17020264UVMS_preload,
         resource:17020264UVMS_preload_time,
-        resource:17020264UVMS_project,
         resource:17020264UVMS_start_time,
-        resource:17020264UVMS_test_container,
         resource:17020264UVMS_test_force_F,
         resource:17020264UVMS_test_force_increase_rate,
-        resource:17020264UVMS_test_medium,
         resource:17020264UVMS_test_temperature,
-        resource:_institute,
         resource:_institute_address,
-        resource:_laboratory,
-        resource:_location,
         resource:_standard ;
-    pmdco:executedBy resource:17020264UVMS_load_cell,
-        resource:17020264UVMS_machine ;
+    pmdco:executedBy resource:17020264UVMS_extensometer,
+        resource:17020264UVMS_load_cell,
+        resource:17020264UVMS_machine,
+        resource:17020264UVMS_test_container ;
     pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/AGUV_264> ;
     pmdco:output resource:17020264UVMS_final_elongation_d,
         resource:17020264UVMS_measured_ligament_area_AL,
@@ -2204,7 +2103,8 @@ resource:17020264UVMS_process a wild:SequentialActivity,
         resource:17020264UVMS_time_to_failure_tf,
         resource:AGUV_264_dataset,
         <https://w3id.org/ontofnct/resource/_testpiece/AGUV_264_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_264_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_264_testpiece_afterTest_2> ;
+    pmdco:participant resource:17020264UVMS_test_medium .
 
 resource:17020264UVMS_project a pmdco:Metadata,
         pmdco:Project ;
@@ -3582,17 +3482,25 @@ resource:1511007DXMS_end_time a pmdco:EndTime,
         pmdco:Metadata ;
     pmdco:value "05.11.2015 11:20" .
 
+resource:1511007DXMS_extensometer pmdco:characteristic resource:1511007DXMS_extensometer_capacity .
+
 resource:1511007DXMS_lever_arm_ratio a base:LeverArmRatio,
         pmdco:Metadata ;
     pmdco:value "1"^^xsd:int .
 
+resource:1511007DXMS_load_cell a pmdco:LoadCell,
+        pmdco:Metadata ;
+    pmdco:characteristic resource:1511007DXMS_load_cell_maximum_force .
+
 resource:1511007DXMS_machine a base:FullNotchCreepTestDevice,
         pmdco:Extensometer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:1511007DXMS_extensometer,
-        resource:1511007DXMS_machine_manufacturer,
-        resource:1511007DXMS_machine_name,
-        resource:1511007DXMS_machine_serial_number .
+    prov:wasInfluencedBy resource:1511007DXMS_machine_manufacturer ;
+    pmdco:characteristic resource:1511007DXMS_machine_name,
+        resource:1511007DXMS_machine_serial_number ;
+    pmdco:component resource:1511007DXMS_extensometer,
+        resource:1511007DXMS_load_cell,
+        resource:1511007DXMS_test_container .
 
 resource:1511007DXMS_nominal_ligament_area_An a base:NominalLigamentArea,
         pmdco:Measurement,
@@ -3626,14 +3534,14 @@ resource:1511007DXMS_process_FNCTISO a wild:Activity,
         resource:1511007DXMS_preload,
         resource:1511007DXMS_preload_time,
         resource:1511007DXMS_start_time,
-        resource:1511007DXMS_test_container,
         resource:1511007DXMS_test_force_F,
         resource:1511007DXMS_test_force_increase_rate,
-        resource:1511007DXMS_test_medium,
         resource:1511007DXMS_test_temperature ;
-    pmdco:executedBy resource:1511007DXMS_machine ;
+    pmdco:executedBy resource:1511007DXMS_machine,
+        resource:1511007DXMS_test_container ;
     pmdco:output resource:1511007DXMS_final_elongation_d,
-        resource:1511007DXMS_time_to_failure_tf .
+        resource:1511007DXMS_time_to_failure_tf ;
+    pmdco:participant resource:1511007DXMS_test_medium .
 
 resource:1511007DXMS_process_analysis a wild:Activity,
         base:AnalysingProcess .
@@ -3670,10 +3578,6 @@ resource:1511007DXMS_start_time a pmdco:Measurement,
         pmdco:Metadata,
         pmdco:StartTime ;
     pmdco:value "04.11.2015 15:14" .
-
-resource:1511007DXMS_test_container a base:TestContainer,
-        pmdco:Metadata ;
-    pmdco:value "1"^^xsd:int .
 
 resource:1511007DXMS_test_force_F a pmdco:Force,
         pmdco:PrimaryData,
@@ -3719,17 +3623,25 @@ resource:1511007UVMS_end_time a pmdco:EndTime,
         pmdco:Metadata ;
     pmdco:value "07.11.2015 19:34" .
 
+resource:1511007UVMS_extensometer pmdco:characteristic resource:1511007UVMS_extensometer_capacity .
+
 resource:1511007UVMS_lever_arm_ratio a base:LeverArmRatio,
         pmdco:Metadata ;
     pmdco:value "1"^^xsd:int .
 
+resource:1511007UVMS_load_cell a pmdco:LoadCell,
+        pmdco:Metadata ;
+    pmdco:characteristic resource:1511007UVMS_load_cell_maximum_force .
+
 resource:1511007UVMS_machine a base:FullNotchCreepTestDevice,
         pmdco:Extensometer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:1511007UVMS_extensometer,
-        resource:1511007UVMS_machine_manufacturer,
-        resource:1511007UVMS_machine_name,
-        resource:1511007UVMS_machine_serial_number .
+    prov:wasInfluencedBy resource:1511007UVMS_machine_manufacturer ;
+    pmdco:characteristic resource:1511007UVMS_machine_name,
+        resource:1511007UVMS_machine_serial_number ;
+    pmdco:component resource:1511007UVMS_extensometer,
+        resource:1511007UVMS_load_cell,
+        resource:1511007UVMS_test_container .
 
 resource:1511007UVMS_nominal_ligament_area_An a base:NominalLigamentArea,
         pmdco:Measurement,
@@ -3763,14 +3675,14 @@ resource:1511007UVMS_process_FNCTISO a wild:Activity,
         resource:1511007UVMS_preload,
         resource:1511007UVMS_preload_time,
         resource:1511007UVMS_start_time,
-        resource:1511007UVMS_test_container,
         resource:1511007UVMS_test_force_F,
         resource:1511007UVMS_test_force_increase_rate,
-        resource:1511007UVMS_test_medium,
         resource:1511007UVMS_test_temperature ;
-    pmdco:executedBy resource:1511007UVMS_machine ;
+    pmdco:executedBy resource:1511007UVMS_machine,
+        resource:1511007UVMS_test_container ;
     pmdco:output resource:1511007UVMS_final_elongation_d,
-        resource:1511007UVMS_time_to_failure_tf .
+        resource:1511007UVMS_time_to_failure_tf ;
+    pmdco:participant resource:1511007UVMS_test_medium .
 
 resource:1511007UVMS_process_analysis a wild:Activity,
         base:AnalysingProcess .
@@ -3807,10 +3719,6 @@ resource:1511007UVMS_start_time a pmdco:Measurement,
         pmdco:Metadata,
         pmdco:StartTime ;
     pmdco:value "04.11.2015 15:19" .
-
-resource:1511007UVMS_test_container a base:TestContainer,
-        pmdco:Metadata ;
-    pmdco:value "6"^^xsd:int .
 
 resource:1511007UVMS_test_force_F a pmdco:Force,
         pmdco:PrimaryData,
@@ -3856,17 +3764,25 @@ resource:1511008DXMS_end_time a pmdco:EndTime,
         pmdco:Metadata ;
     pmdco:value "05.11.2015 09:15" .
 
+resource:1511008DXMS_extensometer pmdco:characteristic resource:1511008DXMS_extensometer_capacity .
+
 resource:1511008DXMS_lever_arm_ratio a base:LeverArmRatio,
         pmdco:Metadata ;
     pmdco:value "1"^^xsd:int .
 
+resource:1511008DXMS_load_cell a pmdco:LoadCell,
+        pmdco:Metadata ;
+    pmdco:characteristic resource:1511008DXMS_load_cell_maximum_force .
+
 resource:1511008DXMS_machine a base:FullNotchCreepTestDevice,
         pmdco:Extensometer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:1511008DXMS_extensometer,
-        resource:1511008DXMS_machine_manufacturer,
-        resource:1511008DXMS_machine_name,
-        resource:1511008DXMS_machine_serial_number .
+    prov:wasInfluencedBy resource:1511008DXMS_machine_manufacturer ;
+    pmdco:characteristic resource:1511008DXMS_machine_name,
+        resource:1511008DXMS_machine_serial_number ;
+    pmdco:component resource:1511008DXMS_extensometer,
+        resource:1511008DXMS_load_cell,
+        resource:1511008DXMS_test_container .
 
 resource:1511008DXMS_nominal_ligament_area_An a base:NominalLigamentArea,
         pmdco:Measurement,
@@ -3900,14 +3816,14 @@ resource:1511008DXMS_process_FNCTISO a wild:Activity,
         resource:1511008DXMS_preload,
         resource:1511008DXMS_preload_time,
         resource:1511008DXMS_start_time,
-        resource:1511008DXMS_test_container,
         resource:1511008DXMS_test_force_F,
         resource:1511008DXMS_test_force_increase_rate,
-        resource:1511008DXMS_test_medium,
         resource:1511008DXMS_test_temperature ;
-    pmdco:executedBy resource:1511008DXMS_machine ;
+    pmdco:executedBy resource:1511008DXMS_machine,
+        resource:1511008DXMS_test_container ;
     pmdco:output resource:1511008DXMS_final_elongation_d,
-        resource:1511008DXMS_time_to_failure_tf .
+        resource:1511008DXMS_time_to_failure_tf ;
+    pmdco:participant resource:1511008DXMS_test_medium .
 
 resource:1511008DXMS_process_analysis a wild:Activity,
         base:AnalysingProcess .
@@ -3944,10 +3860,6 @@ resource:1511008DXMS_start_time a pmdco:Measurement,
         pmdco:Metadata,
         pmdco:StartTime ;
     pmdco:value "04.11.2015 15:16" .
-
-resource:1511008DXMS_test_container a base:TestContainer,
-        pmdco:Metadata ;
-    pmdco:value "3"^^xsd:int .
 
 resource:1511008DXMS_test_force_F a pmdco:Force,
         pmdco:PrimaryData,
@@ -3993,17 +3905,25 @@ resource:1511008UVMS_end_time a pmdco:EndTime,
         pmdco:Metadata ;
     pmdco:value "08.11.2015 07:32" .
 
+resource:1511008UVMS_extensometer pmdco:characteristic resource:1511008UVMS_extensometer_capacity .
+
 resource:1511008UVMS_lever_arm_ratio a base:LeverArmRatio,
         pmdco:Metadata ;
     pmdco:value "1"^^xsd:int .
 
+resource:1511008UVMS_load_cell a pmdco:LoadCell,
+        pmdco:Metadata ;
+    pmdco:characteristic resource:1511008UVMS_load_cell_maximum_force .
+
 resource:1511008UVMS_machine a base:FullNotchCreepTestDevice,
         pmdco:Extensometer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:1511008UVMS_extensometer,
-        resource:1511008UVMS_machine_manufacturer,
-        resource:1511008UVMS_machine_name,
-        resource:1511008UVMS_machine_serial_number .
+    prov:wasInfluencedBy resource:1511008UVMS_machine_manufacturer ;
+    pmdco:characteristic resource:1511008UVMS_machine_name,
+        resource:1511008UVMS_machine_serial_number ;
+    pmdco:component resource:1511008UVMS_extensometer,
+        resource:1511008UVMS_load_cell,
+        resource:1511008UVMS_test_container .
 
 resource:1511008UVMS_nominal_ligament_area_An a base:NominalLigamentArea,
         pmdco:Measurement,
@@ -4037,14 +3957,14 @@ resource:1511008UVMS_process_FNCTISO a wild:Activity,
         resource:1511008UVMS_preload,
         resource:1511008UVMS_preload_time,
         resource:1511008UVMS_start_time,
-        resource:1511008UVMS_test_container,
         resource:1511008UVMS_test_force_F,
         resource:1511008UVMS_test_force_increase_rate,
-        resource:1511008UVMS_test_medium,
         resource:1511008UVMS_test_temperature ;
-    pmdco:executedBy resource:1511008UVMS_machine ;
+    pmdco:executedBy resource:1511008UVMS_machine,
+        resource:1511008UVMS_test_container ;
     pmdco:output resource:1511008UVMS_final_elongation_d,
-        resource:1511008UVMS_time_to_failure_tf .
+        resource:1511008UVMS_time_to_failure_tf ;
+    pmdco:participant resource:1511008UVMS_test_medium .
 
 resource:1511008UVMS_process_analysis a wild:Activity,
         base:AnalysingProcess .
@@ -4081,10 +4001,6 @@ resource:1511008UVMS_start_time a pmdco:Measurement,
         pmdco:Metadata,
         pmdco:StartTime ;
     pmdco:value "05.11.2015 11:14" .
-
-resource:1511008UVMS_test_container a base:TestContainer,
-        pmdco:Metadata ;
-    pmdco:value "4"^^xsd:int .
 
 resource:1511008UVMS_test_force_F a pmdco:Force,
         pmdco:PrimaryData,
@@ -4130,17 +4046,25 @@ resource:1511009DXMS_end_time a pmdco:EndTime,
         pmdco:Metadata ;
     pmdco:value "05.11.2015 08:00" .
 
+resource:1511009DXMS_extensometer pmdco:characteristic resource:1511009DXMS_extensometer_capacity .
+
 resource:1511009DXMS_lever_arm_ratio a base:LeverArmRatio,
         pmdco:Metadata ;
     pmdco:value "1"^^xsd:int .
 
+resource:1511009DXMS_load_cell a pmdco:LoadCell,
+        pmdco:Metadata ;
+    pmdco:characteristic resource:1511009DXMS_load_cell_maximum_force .
+
 resource:1511009DXMS_machine a base:FullNotchCreepTestDevice,
         pmdco:Extensometer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:1511009DXMS_extensometer,
-        resource:1511009DXMS_machine_manufacturer,
-        resource:1511009DXMS_machine_name,
-        resource:1511009DXMS_machine_serial_number .
+    prov:wasInfluencedBy resource:1511009DXMS_machine_manufacturer ;
+    pmdco:characteristic resource:1511009DXMS_machine_name,
+        resource:1511009DXMS_machine_serial_number ;
+    pmdco:component resource:1511009DXMS_extensometer,
+        resource:1511009DXMS_load_cell,
+        resource:1511009DXMS_test_container .
 
 resource:1511009DXMS_nominal_ligament_area_An a base:NominalLigamentArea,
         pmdco:Measurement,
@@ -4174,14 +4098,14 @@ resource:1511009DXMS_process_FNCTISO a wild:Activity,
         resource:1511009DXMS_preload,
         resource:1511009DXMS_preload_time,
         resource:1511009DXMS_start_time,
-        resource:1511009DXMS_test_container,
         resource:1511009DXMS_test_force_F,
         resource:1511009DXMS_test_force_increase_rate,
-        resource:1511009DXMS_test_medium,
         resource:1511009DXMS_test_temperature ;
-    pmdco:executedBy resource:1511009DXMS_machine ;
+    pmdco:executedBy resource:1511009DXMS_machine,
+        resource:1511009DXMS_test_container ;
     pmdco:output resource:1511009DXMS_final_elongation_d,
-        resource:1511009DXMS_time_to_failure_tf .
+        resource:1511009DXMS_time_to_failure_tf ;
+    pmdco:participant resource:1511009DXMS_test_medium .
 
 resource:1511009DXMS_process_analysis a wild:Activity,
         base:AnalysingProcess .
@@ -4218,10 +4142,6 @@ resource:1511009DXMS_start_time a pmdco:Measurement,
         pmdco:Metadata,
         pmdco:StartTime ;
     pmdco:value "04.11.2015 15:17" .
-
-resource:1511009DXMS_test_container a base:TestContainer,
-        pmdco:Metadata ;
-    pmdco:value "4"^^xsd:int .
 
 resource:1511009DXMS_test_force_F a pmdco:Force,
         pmdco:PrimaryData,
@@ -4267,17 +4187,25 @@ resource:1511009UVMS_end_time a pmdco:EndTime,
         pmdco:Metadata ;
     pmdco:value "07.11.2015 02:04" .
 
+resource:1511009UVMS_extensometer pmdco:characteristic resource:1511009UVMS_extensometer_capacity .
+
 resource:1511009UVMS_lever_arm_ratio a base:LeverArmRatio,
         pmdco:Metadata ;
     pmdco:value "1"^^xsd:int .
 
+resource:1511009UVMS_load_cell a pmdco:LoadCell,
+        pmdco:Metadata ;
+    pmdco:characteristic resource:1511009UVMS_load_cell_maximum_force .
+
 resource:1511009UVMS_machine a base:FullNotchCreepTestDevice,
         pmdco:Extensometer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:1511009UVMS_extensometer,
-        resource:1511009UVMS_machine_manufacturer,
-        resource:1511009UVMS_machine_name,
-        resource:1511009UVMS_machine_serial_number .
+    prov:wasInfluencedBy resource:1511009UVMS_machine_manufacturer ;
+    pmdco:characteristic resource:1511009UVMS_machine_name,
+        resource:1511009UVMS_machine_serial_number ;
+    pmdco:component resource:1511009UVMS_extensometer,
+        resource:1511009UVMS_load_cell,
+        resource:1511009UVMS_test_container .
 
 resource:1511009UVMS_nominal_ligament_area_An a base:NominalLigamentArea,
         pmdco:Measurement,
@@ -4311,14 +4239,14 @@ resource:1511009UVMS_process_FNCTISO a wild:Activity,
         resource:1511009UVMS_preload,
         resource:1511009UVMS_preload_time,
         resource:1511009UVMS_start_time,
-        resource:1511009UVMS_test_container,
         resource:1511009UVMS_test_force_F,
         resource:1511009UVMS_test_force_increase_rate,
-        resource:1511009UVMS_test_medium,
         resource:1511009UVMS_test_temperature ;
-    pmdco:executedBy resource:1511009UVMS_machine ;
+    pmdco:executedBy resource:1511009UVMS_machine,
+        resource:1511009UVMS_test_container ;
     pmdco:output resource:1511009UVMS_final_elongation_d,
-        resource:1511009UVMS_time_to_failure_tf .
+        resource:1511009UVMS_time_to_failure_tf ;
+    pmdco:participant resource:1511009UVMS_test_medium .
 
 resource:1511009UVMS_process_analysis a wild:Activity,
         base:AnalysingProcess .
@@ -4355,10 +4283,6 @@ resource:1511009UVMS_start_time a pmdco:Measurement,
         pmdco:Metadata,
         pmdco:StartTime ;
     pmdco:value "04.11.2015 15:22" .
-
-resource:1511009UVMS_test_container a base:TestContainer,
-        pmdco:Metadata ;
-    pmdco:value "9"^^xsd:int .
 
 resource:1511009UVMS_test_force_F a pmdco:Force,
         pmdco:PrimaryData,
@@ -4404,17 +4328,25 @@ resource:1511010DXMS_end_time a pmdco:EndTime,
         pmdco:Metadata ;
     pmdco:value "06.11.2015 04:06" .
 
+resource:1511010DXMS_extensometer pmdco:characteristic resource:1511010DXMS_extensometer_capacity .
+
 resource:1511010DXMS_lever_arm_ratio a base:LeverArmRatio,
         pmdco:Metadata ;
     pmdco:value "1"^^xsd:int .
 
+resource:1511010DXMS_load_cell a pmdco:LoadCell,
+        pmdco:Metadata ;
+    pmdco:characteristic resource:1511010DXMS_load_cell_maximum_force .
+
 resource:1511010DXMS_machine a base:FullNotchCreepTestDevice,
         pmdco:Extensometer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:1511010DXMS_extensometer,
-        resource:1511010DXMS_machine_manufacturer,
-        resource:1511010DXMS_machine_name,
-        resource:1511010DXMS_machine_serial_number .
+    prov:wasInfluencedBy resource:1511010DXMS_machine_manufacturer ;
+    pmdco:characteristic resource:1511010DXMS_machine_name,
+        resource:1511010DXMS_machine_serial_number ;
+    pmdco:component resource:1511010DXMS_extensometer,
+        resource:1511010DXMS_load_cell,
+        resource:1511010DXMS_test_container .
 
 resource:1511010DXMS_nominal_ligament_area_An a base:NominalLigamentArea,
         pmdco:Measurement,
@@ -4448,14 +4380,14 @@ resource:1511010DXMS_process_FNCTISO a wild:Activity,
         resource:1511010DXMS_preload,
         resource:1511010DXMS_preload_time,
         resource:1511010DXMS_start_time,
-        resource:1511010DXMS_test_container,
         resource:1511010DXMS_test_force_F,
         resource:1511010DXMS_test_force_increase_rate,
-        resource:1511010DXMS_test_medium,
         resource:1511010DXMS_test_temperature ;
-    pmdco:executedBy resource:1511010DXMS_machine ;
+    pmdco:executedBy resource:1511010DXMS_machine,
+        resource:1511010DXMS_test_container ;
     pmdco:output resource:1511010DXMS_final_elongation_d,
-        resource:1511010DXMS_time_to_failure_tf .
+        resource:1511010DXMS_time_to_failure_tf ;
+    pmdco:participant resource:1511010DXMS_test_medium .
 
 resource:1511010DXMS_process_analysis a wild:Activity,
         base:AnalysingProcess .
@@ -4492,10 +4424,6 @@ resource:1511010DXMS_start_time a pmdco:Measurement,
         pmdco:Metadata,
         pmdco:StartTime ;
     pmdco:value "05.11.2015 11:12" .
-
-resource:1511010DXMS_test_container a base:TestContainer,
-        pmdco:Metadata ;
-    pmdco:value "3"^^xsd:int .
 
 resource:1511010DXMS_test_force_F a pmdco:Force,
         pmdco:PrimaryData,
@@ -4541,17 +4469,25 @@ resource:1511011DXMS_end_time a pmdco:EndTime,
         pmdco:Metadata ;
     pmdco:value "06.11.2015 03:49" .
 
+resource:1511011DXMS_extensometer pmdco:characteristic resource:1511011DXMS_extensometer_capacity .
+
 resource:1511011DXMS_lever_arm_ratio a base:LeverArmRatio,
         pmdco:Metadata ;
     pmdco:value "1"^^xsd:int .
 
+resource:1511011DXMS_load_cell a pmdco:LoadCell,
+        pmdco:Metadata ;
+    pmdco:characteristic resource:1511011DXMS_load_cell_maximum_force .
+
 resource:1511011DXMS_machine a base:FullNotchCreepTestDevice,
         pmdco:Extensometer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:1511011DXMS_extensometer,
-        resource:1511011DXMS_machine_manufacturer,
-        resource:1511011DXMS_machine_name,
-        resource:1511011DXMS_machine_serial_number .
+    prov:wasInfluencedBy resource:1511011DXMS_machine_manufacturer ;
+    pmdco:characteristic resource:1511011DXMS_machine_name,
+        resource:1511011DXMS_machine_serial_number ;
+    pmdco:component resource:1511011DXMS_extensometer,
+        resource:1511011DXMS_load_cell,
+        resource:1511011DXMS_test_container .
 
 resource:1511011DXMS_nominal_ligament_area_An a base:NominalLigamentArea,
         pmdco:Measurement,
@@ -4585,14 +4521,14 @@ resource:1511011DXMS_process_FNCTISO a wild:Activity,
         resource:1511011DXMS_preload,
         resource:1511011DXMS_preload_time,
         resource:1511011DXMS_start_time,
-        resource:1511011DXMS_test_container,
         resource:1511011DXMS_test_force_F,
         resource:1511011DXMS_test_force_increase_rate,
-        resource:1511011DXMS_test_medium,
         resource:1511011DXMS_test_temperature ;
-    pmdco:executedBy resource:1511011DXMS_machine ;
+    pmdco:executedBy resource:1511011DXMS_machine,
+        resource:1511011DXMS_test_container ;
     pmdco:output resource:1511011DXMS_final_elongation_d,
-        resource:1511011DXMS_time_to_failure_tf .
+        resource:1511011DXMS_time_to_failure_tf ;
+    pmdco:participant resource:1511011DXMS_test_medium .
 
 resource:1511011DXMS_process_analysis a wild:Activity,
         base:AnalysingProcess .
@@ -4629,10 +4565,6 @@ resource:1511011DXMS_start_time a pmdco:Measurement,
         pmdco:Metadata,
         pmdco:StartTime ;
     pmdco:value "05.11.2015 12:09" .
-
-resource:1511011DXMS_test_container a base:TestContainer,
-        pmdco:Metadata ;
-    pmdco:value "1"^^xsd:int .
 
 resource:1511011DXMS_test_force_F a pmdco:Force,
         pmdco:PrimaryData,
@@ -4678,17 +4610,25 @@ resource:1511012UVMS_end_time a pmdco:EndTime,
         pmdco:Metadata ;
     pmdco:value "08.11.2015 21:43" .
 
+resource:1511012UVMS_extensometer pmdco:characteristic resource:1511012UVMS_extensometer_capacity .
+
 resource:1511012UVMS_lever_arm_ratio a base:LeverArmRatio,
         pmdco:Metadata ;
     pmdco:value "1"^^xsd:int .
 
+resource:1511012UVMS_load_cell a pmdco:LoadCell,
+        pmdco:Metadata ;
+    pmdco:characteristic resource:1511012UVMS_load_cell_maximum_force .
+
 resource:1511012UVMS_machine a base:FullNotchCreepTestDevice,
         pmdco:Extensometer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:1511012UVMS_extensometer,
-        resource:1511012UVMS_machine_manufacturer,
-        resource:1511012UVMS_machine_name,
-        resource:1511012UVMS_machine_serial_number .
+    prov:wasInfluencedBy resource:1511012UVMS_machine_manufacturer ;
+    pmdco:characteristic resource:1511012UVMS_machine_name,
+        resource:1511012UVMS_machine_serial_number ;
+    pmdco:component resource:1511012UVMS_extensometer,
+        resource:1511012UVMS_load_cell,
+        resource:1511012UVMS_test_container .
 
 resource:1511012UVMS_nominal_ligament_area_An a base:NominalLigamentArea,
         pmdco:Measurement,
@@ -4722,14 +4662,14 @@ resource:1511012UVMS_process_FNCTISO a wild:Activity,
         resource:1511012UVMS_preload,
         resource:1511012UVMS_preload_time,
         resource:1511012UVMS_start_time,
-        resource:1511012UVMS_test_container,
         resource:1511012UVMS_test_force_F,
         resource:1511012UVMS_test_force_increase_rate,
-        resource:1511012UVMS_test_medium,
         resource:1511012UVMS_test_temperature ;
-    pmdco:executedBy resource:1511012UVMS_machine ;
+    pmdco:executedBy resource:1511012UVMS_machine,
+        resource:1511012UVMS_test_container ;
     pmdco:output resource:1511012UVMS_final_elongation_d,
-        resource:1511012UVMS_time_to_failure_tf .
+        resource:1511012UVMS_time_to_failure_tf ;
+    pmdco:participant resource:1511012UVMS_test_medium .
 
 resource:1511012UVMS_process_analysis a wild:Activity,
         base:AnalysingProcess .
@@ -4766,10 +4706,6 @@ resource:1511012UVMS_start_time a pmdco:Measurement,
         pmdco:Metadata,
         pmdco:StartTime ;
     pmdco:value "06.11.2015 11:04" .
-
-resource:1511012UVMS_test_container a base:TestContainer,
-        pmdco:Metadata ;
-    pmdco:value "1"^^xsd:int .
 
 resource:1511012UVMS_test_force_F a pmdco:Force,
         pmdco:PrimaryData,
@@ -4815,17 +4751,25 @@ resource:1511013UVMS_end_time a pmdco:EndTime,
         pmdco:Metadata ;
     pmdco:value "08.11.2015 19:32" .
 
+resource:1511013UVMS_extensometer pmdco:characteristic resource:1511013UVMS_extensometer_capacity .
+
 resource:1511013UVMS_lever_arm_ratio a base:LeverArmRatio,
         pmdco:Metadata ;
     pmdco:value "1"^^xsd:int .
 
+resource:1511013UVMS_load_cell a pmdco:LoadCell,
+        pmdco:Metadata ;
+    pmdco:characteristic resource:1511013UVMS_load_cell_maximum_force .
+
 resource:1511013UVMS_machine a base:FullNotchCreepTestDevice,
         pmdco:Extensometer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:1511013UVMS_extensometer,
-        resource:1511013UVMS_machine_manufacturer,
-        resource:1511013UVMS_machine_name,
-        resource:1511013UVMS_machine_serial_number .
+    prov:wasInfluencedBy resource:1511013UVMS_machine_manufacturer ;
+    pmdco:characteristic resource:1511013UVMS_machine_name,
+        resource:1511013UVMS_machine_serial_number ;
+    pmdco:component resource:1511013UVMS_extensometer,
+        resource:1511013UVMS_load_cell,
+        resource:1511013UVMS_test_container .
 
 resource:1511013UVMS_nominal_ligament_area_An a base:NominalLigamentArea,
         pmdco:Measurement,
@@ -4859,14 +4803,14 @@ resource:1511013UVMS_process_FNCTISO a wild:Activity,
         resource:1511013UVMS_preload,
         resource:1511013UVMS_preload_time,
         resource:1511013UVMS_start_time,
-        resource:1511013UVMS_test_container,
         resource:1511013UVMS_test_force_F,
         resource:1511013UVMS_test_force_increase_rate,
-        resource:1511013UVMS_test_medium,
         resource:1511013UVMS_test_temperature ;
-    pmdco:executedBy resource:1511013UVMS_machine ;
+    pmdco:executedBy resource:1511013UVMS_machine,
+        resource:1511013UVMS_test_container ;
     pmdco:output resource:1511013UVMS_final_elongation_d,
-        resource:1511013UVMS_time_to_failure_tf .
+        resource:1511013UVMS_time_to_failure_tf ;
+    pmdco:participant resource:1511013UVMS_test_medium .
 
 resource:1511013UVMS_process_analysis a wild:Activity,
         base:AnalysingProcess .
@@ -4903,10 +4847,6 @@ resource:1511013UVMS_start_time a pmdco:Measurement,
         pmdco:Metadata,
         pmdco:StartTime ;
     pmdco:value "06.11.2015 11:06" .
-
-resource:1511013UVMS_test_container a base:TestContainer,
-        pmdco:Metadata ;
-    pmdco:value "3"^^xsd:int .
 
 resource:1511013UVMS_test_force_F a pmdco:Force,
         pmdco:PrimaryData,
@@ -4952,17 +4892,25 @@ resource:16120244UVMS_end_time a pmdco:EndTime,
         pmdco:Metadata ;
     pmdco:value "28.12.2016 05:40" .
 
+resource:16120244UVMS_extensometer pmdco:characteristic resource:16120244UVMS_extensometer_capacity .
+
 resource:16120244UVMS_lever_arm_ratio a base:LeverArmRatio,
         pmdco:Metadata ;
     pmdco:value "1"^^xsd:int .
 
+resource:16120244UVMS_load_cell a pmdco:LoadCell,
+        pmdco:Metadata ;
+    pmdco:characteristic resource:16120244UVMS_load_cell_maximum_force .
+
 resource:16120244UVMS_machine a base:FullNotchCreepTestDevice,
         pmdco:Extensometer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:16120244UVMS_extensometer,
-        resource:16120244UVMS_machine_manufacturer,
-        resource:16120244UVMS_machine_name,
-        resource:16120244UVMS_machine_serial_number .
+    prov:wasInfluencedBy resource:16120244UVMS_machine_manufacturer ;
+    pmdco:characteristic resource:16120244UVMS_machine_name,
+        resource:16120244UVMS_machine_serial_number ;
+    pmdco:component resource:16120244UVMS_extensometer,
+        resource:16120244UVMS_load_cell,
+        resource:16120244UVMS_test_container .
 
 resource:16120244UVMS_nominal_ligament_area_An a base:NominalLigamentArea,
         pmdco:Measurement,
@@ -4996,14 +4944,14 @@ resource:16120244UVMS_process_FNCTISO a wild:Activity,
         resource:16120244UVMS_preload,
         resource:16120244UVMS_preload_time,
         resource:16120244UVMS_start_time,
-        resource:16120244UVMS_test_container,
         resource:16120244UVMS_test_force_F,
         resource:16120244UVMS_test_force_increase_rate,
-        resource:16120244UVMS_test_medium,
         resource:16120244UVMS_test_temperature ;
-    pmdco:executedBy resource:16120244UVMS_machine ;
+    pmdco:executedBy resource:16120244UVMS_machine,
+        resource:16120244UVMS_test_container ;
     pmdco:output resource:16120244UVMS_final_elongation_d,
-        resource:16120244UVMS_time_to_failure_tf .
+        resource:16120244UVMS_time_to_failure_tf ;
+    pmdco:participant resource:16120244UVMS_test_medium .
 
 resource:16120244UVMS_process_analysis a wild:Activity,
         base:AnalysingProcess .
@@ -5040,10 +4988,6 @@ resource:16120244UVMS_start_time a pmdco:Measurement,
         pmdco:Metadata,
         pmdco:StartTime ;
     pmdco:value "19.12.2016 11:58" .
-
-resource:16120244UVMS_test_container a base:TestContainer,
-        pmdco:Metadata ;
-    pmdco:value "6"^^xsd:int .
 
 resource:16120244UVMS_test_force_F a pmdco:Force,
         pmdco:PrimaryData,
@@ -5089,17 +5033,25 @@ resource:16120245UVMS_end_time a pmdco:EndTime,
         pmdco:Metadata ;
     pmdco:value "12.01.2017 16:36" .
 
+resource:16120245UVMS_extensometer pmdco:characteristic resource:16120245UVMS_extensometer_capacity .
+
 resource:16120245UVMS_lever_arm_ratio a base:LeverArmRatio,
         pmdco:Metadata ;
     pmdco:value "1"^^xsd:int .
 
+resource:16120245UVMS_load_cell a pmdco:LoadCell,
+        pmdco:Metadata ;
+    pmdco:characteristic resource:16120245UVMS_load_cell_maximum_force .
+
 resource:16120245UVMS_machine a base:FullNotchCreepTestDevice,
         pmdco:Extensometer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:16120245UVMS_extensometer,
-        resource:16120245UVMS_machine_manufacturer,
-        resource:16120245UVMS_machine_name,
-        resource:16120245UVMS_machine_serial_number .
+    prov:wasInfluencedBy resource:16120245UVMS_machine_manufacturer ;
+    pmdco:characteristic resource:16120245UVMS_machine_name,
+        resource:16120245UVMS_machine_serial_number ;
+    pmdco:component resource:16120245UVMS_extensometer,
+        resource:16120245UVMS_load_cell,
+        resource:16120245UVMS_test_container .
 
 resource:16120245UVMS_nominal_ligament_area_An a base:NominalLigamentArea,
         pmdco:Measurement,
@@ -5133,14 +5085,14 @@ resource:16120245UVMS_process_FNCTISO a wild:Activity,
         resource:16120245UVMS_preload,
         resource:16120245UVMS_preload_time,
         resource:16120245UVMS_start_time,
-        resource:16120245UVMS_test_container,
         resource:16120245UVMS_test_force_F,
         resource:16120245UVMS_test_force_increase_rate,
-        resource:16120245UVMS_test_medium,
         resource:16120245UVMS_test_temperature ;
-    pmdco:executedBy resource:16120245UVMS_machine ;
+    pmdco:executedBy resource:16120245UVMS_machine,
+        resource:16120245UVMS_test_container ;
     pmdco:output resource:16120245UVMS_final_elongation_d,
-        resource:16120245UVMS_time_to_failure_tf .
+        resource:16120245UVMS_time_to_failure_tf ;
+    pmdco:participant resource:16120245UVMS_test_medium .
 
 resource:16120245UVMS_process_analysis a wild:Activity,
         base:AnalysingProcess .
@@ -5177,10 +5129,6 @@ resource:16120245UVMS_start_time a pmdco:Measurement,
         pmdco:Metadata,
         pmdco:StartTime ;
     pmdco:value "05.01.2017 11:10" .
-
-resource:16120245UVMS_test_container a base:TestContainer,
-        pmdco:Metadata ;
-    pmdco:value "10"^^xsd:int .
 
 resource:16120245UVMS_test_force_F a pmdco:Force,
         pmdco:PrimaryData,
@@ -5226,17 +5174,25 @@ resource:16120248DXMS_end_time a pmdco:EndTime,
         pmdco:Metadata ;
     pmdco:value "09.12.2016 14:57" .
 
+resource:16120248DXMS_extensometer pmdco:characteristic resource:16120248DXMS_extensometer_capacity .
+
 resource:16120248DXMS_lever_arm_ratio a base:LeverArmRatio,
         pmdco:Metadata ;
     pmdco:value "1"^^xsd:int .
 
+resource:16120248DXMS_load_cell a pmdco:LoadCell,
+        pmdco:Metadata ;
+    pmdco:characteristic resource:16120248DXMS_load_cell_maximum_force .
+
 resource:16120248DXMS_machine a base:FullNotchCreepTestDevice,
         pmdco:Extensometer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:16120248DXMS_extensometer,
-        resource:16120248DXMS_machine_manufacturer,
-        resource:16120248DXMS_machine_name,
-        resource:16120248DXMS_machine_serial_number .
+    prov:wasInfluencedBy resource:16120248DXMS_machine_manufacturer ;
+    pmdco:characteristic resource:16120248DXMS_machine_name,
+        resource:16120248DXMS_machine_serial_number ;
+    pmdco:component resource:16120248DXMS_extensometer,
+        resource:16120248DXMS_load_cell,
+        resource:16120248DXMS_test_container .
 
 resource:16120248DXMS_nominal_ligament_area_An a base:NominalLigamentArea,
         pmdco:Measurement,
@@ -5270,14 +5226,14 @@ resource:16120248DXMS_process_FNCTISO a wild:Activity,
         resource:16120248DXMS_preload,
         resource:16120248DXMS_preload_time,
         resource:16120248DXMS_start_time,
-        resource:16120248DXMS_test_container,
         resource:16120248DXMS_test_force_F,
         resource:16120248DXMS_test_force_increase_rate,
-        resource:16120248DXMS_test_medium,
         resource:16120248DXMS_test_temperature ;
-    pmdco:executedBy resource:16120248DXMS_machine ;
+    pmdco:executedBy resource:16120248DXMS_machine,
+        resource:16120248DXMS_test_container ;
     pmdco:output resource:16120248DXMS_final_elongation_d,
-        resource:16120248DXMS_time_to_failure_tf .
+        resource:16120248DXMS_time_to_failure_tf ;
+    pmdco:participant resource:16120248DXMS_test_medium .
 
 resource:16120248DXMS_process_analysis a wild:Activity,
         base:AnalysingProcess .
@@ -5314,10 +5270,6 @@ resource:16120248DXMS_start_time a pmdco:Measurement,
         pmdco:Metadata,
         pmdco:StartTime ;
     pmdco:value "08.12.2016 12:48" .
-
-resource:16120248DXMS_test_container a base:TestContainer,
-        pmdco:Metadata ;
-    pmdco:value "1"^^xsd:int .
 
 resource:16120248DXMS_test_force_F a pmdco:Force,
         pmdco:PrimaryData,
@@ -5363,17 +5315,25 @@ resource:16120250DXMS_end_time a pmdco:EndTime,
         pmdco:Metadata ;
     pmdco:value "09.12.2016 12:04" .
 
+resource:16120250DXMS_extensometer pmdco:characteristic resource:16120250DXMS_extensometer_capacity .
+
 resource:16120250DXMS_lever_arm_ratio a base:LeverArmRatio,
         pmdco:Metadata ;
     pmdco:value "1"^^xsd:int .
 
+resource:16120250DXMS_load_cell a pmdco:LoadCell,
+        pmdco:Metadata ;
+    pmdco:characteristic resource:16120250DXMS_load_cell_maximum_force .
+
 resource:16120250DXMS_machine a base:FullNotchCreepTestDevice,
         pmdco:Extensometer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:16120250DXMS_extensometer,
-        resource:16120250DXMS_machine_manufacturer,
-        resource:16120250DXMS_machine_name,
-        resource:16120250DXMS_machine_serial_number .
+    prov:wasInfluencedBy resource:16120250DXMS_machine_manufacturer ;
+    pmdco:characteristic resource:16120250DXMS_machine_name,
+        resource:16120250DXMS_machine_serial_number ;
+    pmdco:component resource:16120250DXMS_extensometer,
+        resource:16120250DXMS_load_cell,
+        resource:16120250DXMS_test_container .
 
 resource:16120250DXMS_nominal_ligament_area_An a base:NominalLigamentArea,
         pmdco:Measurement,
@@ -5407,14 +5367,14 @@ resource:16120250DXMS_process_FNCTISO a wild:Activity,
         resource:16120250DXMS_preload,
         resource:16120250DXMS_preload_time,
         resource:16120250DXMS_start_time,
-        resource:16120250DXMS_test_container,
         resource:16120250DXMS_test_force_F,
         resource:16120250DXMS_test_force_increase_rate,
-        resource:16120250DXMS_test_medium,
         resource:16120250DXMS_test_temperature ;
-    pmdco:executedBy resource:16120250DXMS_machine ;
+    pmdco:executedBy resource:16120250DXMS_machine,
+        resource:16120250DXMS_test_container ;
     pmdco:output resource:16120250DXMS_final_elongation_d,
-        resource:16120250DXMS_time_to_failure_tf .
+        resource:16120250DXMS_time_to_failure_tf ;
+    pmdco:participant resource:16120250DXMS_test_medium .
 
 resource:16120250DXMS_process_analysis a wild:Activity,
         base:AnalysingProcess .
@@ -5451,10 +5411,6 @@ resource:16120250DXMS_start_time a pmdco:Measurement,
         pmdco:Metadata,
         pmdco:StartTime ;
     pmdco:value "08.12.2016 12:51" .
-
-resource:16120250DXMS_test_container a base:TestContainer,
-        pmdco:Metadata ;
-    pmdco:value "4"^^xsd:int .
 
 resource:16120250DXMS_test_force_F a pmdco:Force,
         pmdco:PrimaryData,
@@ -5500,17 +5456,25 @@ resource:16120251DXMS_end_time a pmdco:EndTime,
         pmdco:Metadata ;
     pmdco:value "09.12.2016 08:47" .
 
+resource:16120251DXMS_extensometer pmdco:characteristic resource:16120251DXMS_extensometer_capacity .
+
 resource:16120251DXMS_lever_arm_ratio a base:LeverArmRatio,
         pmdco:Metadata ;
     pmdco:value "1"^^xsd:int .
 
+resource:16120251DXMS_load_cell a pmdco:LoadCell,
+        pmdco:Metadata ;
+    pmdco:characteristic resource:16120251DXMS_load_cell_maximum_force .
+
 resource:16120251DXMS_machine a base:FullNotchCreepTestDevice,
         pmdco:Extensometer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:16120251DXMS_extensometer,
-        resource:16120251DXMS_machine_manufacturer,
-        resource:16120251DXMS_machine_name,
-        resource:16120251DXMS_machine_serial_number .
+    prov:wasInfluencedBy resource:16120251DXMS_machine_manufacturer ;
+    pmdco:characteristic resource:16120251DXMS_machine_name,
+        resource:16120251DXMS_machine_serial_number ;
+    pmdco:component resource:16120251DXMS_extensometer,
+        resource:16120251DXMS_load_cell,
+        resource:16120251DXMS_test_container .
 
 resource:16120251DXMS_nominal_ligament_area_An a base:NominalLigamentArea,
         pmdco:Measurement,
@@ -5544,14 +5508,14 @@ resource:16120251DXMS_process_FNCTISO a wild:Activity,
         resource:16120251DXMS_preload,
         resource:16120251DXMS_preload_time,
         resource:16120251DXMS_start_time,
-        resource:16120251DXMS_test_container,
         resource:16120251DXMS_test_force_F,
         resource:16120251DXMS_test_force_increase_rate,
-        resource:16120251DXMS_test_medium,
         resource:16120251DXMS_test_temperature ;
-    pmdco:executedBy resource:16120251DXMS_machine ;
+    pmdco:executedBy resource:16120251DXMS_machine,
+        resource:16120251DXMS_test_container ;
     pmdco:output resource:16120251DXMS_final_elongation_d,
-        resource:16120251DXMS_time_to_failure_tf .
+        resource:16120251DXMS_time_to_failure_tf ;
+    pmdco:participant resource:16120251DXMS_test_medium .
 
 resource:16120251DXMS_process_analysis a wild:Activity,
         base:AnalysingProcess .
@@ -5588,10 +5552,6 @@ resource:16120251DXMS_start_time a pmdco:Measurement,
         pmdco:Metadata,
         pmdco:StartTime ;
     pmdco:value "08.12.2016 12:51" .
-
-resource:16120251DXMS_test_container a base:TestContainer,
-        pmdco:Metadata ;
-    pmdco:value "5"^^xsd:int .
 
 resource:16120251DXMS_test_force_F a pmdco:Force,
         pmdco:PrimaryData,
@@ -5637,17 +5597,25 @@ resource:16120252DXMS_end_time a pmdco:EndTime,
         pmdco:Metadata ;
     pmdco:value "09.12.2016 03:43" .
 
+resource:16120252DXMS_extensometer pmdco:characteristic resource:16120252DXMS_extensometer_capacity .
+
 resource:16120252DXMS_lever_arm_ratio a base:LeverArmRatio,
         pmdco:Metadata ;
     pmdco:value "1"^^xsd:int .
 
+resource:16120252DXMS_load_cell a pmdco:LoadCell,
+        pmdco:Metadata ;
+    pmdco:characteristic resource:16120252DXMS_load_cell_maximum_force .
+
 resource:16120252DXMS_machine a base:FullNotchCreepTestDevice,
         pmdco:Extensometer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:16120252DXMS_extensometer,
-        resource:16120252DXMS_machine_manufacturer,
-        resource:16120252DXMS_machine_name,
-        resource:16120252DXMS_machine_serial_number .
+    prov:wasInfluencedBy resource:16120252DXMS_machine_manufacturer ;
+    pmdco:characteristic resource:16120252DXMS_machine_name,
+        resource:16120252DXMS_machine_serial_number ;
+    pmdco:component resource:16120252DXMS_extensometer,
+        resource:16120252DXMS_load_cell,
+        resource:16120252DXMS_test_container .
 
 resource:16120252DXMS_nominal_ligament_area_An a base:NominalLigamentArea,
         pmdco:Measurement,
@@ -5681,14 +5649,14 @@ resource:16120252DXMS_process_FNCTISO a wild:Activity,
         resource:16120252DXMS_preload,
         resource:16120252DXMS_preload_time,
         resource:16120252DXMS_start_time,
-        resource:16120252DXMS_test_container,
         resource:16120252DXMS_test_force_F,
         resource:16120252DXMS_test_force_increase_rate,
-        resource:16120252DXMS_test_medium,
         resource:16120252DXMS_test_temperature ;
-    pmdco:executedBy resource:16120252DXMS_machine ;
+    pmdco:executedBy resource:16120252DXMS_machine,
+        resource:16120252DXMS_test_container ;
     pmdco:output resource:16120252DXMS_final_elongation_d,
-        resource:16120252DXMS_time_to_failure_tf .
+        resource:16120252DXMS_time_to_failure_tf ;
+    pmdco:participant resource:16120252DXMS_test_medium .
 
 resource:16120252DXMS_process_analysis a wild:Activity,
         base:AnalysingProcess .
@@ -5725,10 +5693,6 @@ resource:16120252DXMS_start_time a pmdco:Measurement,
         pmdco:Metadata,
         pmdco:StartTime ;
     pmdco:value "08.12.2016 12:53" .
-
-resource:16120252DXMS_test_container a base:TestContainer,
-        pmdco:Metadata ;
-    pmdco:value "6"^^xsd:int .
 
 resource:16120252DXMS_test_force_F a pmdco:Force,
         pmdco:PrimaryData,
@@ -5774,17 +5738,25 @@ resource:16120253DXMS_end_time a pmdco:EndTime,
         pmdco:Metadata ;
     pmdco:value "14.12.2016 13:32" .
 
+resource:16120253DXMS_extensometer pmdco:characteristic resource:16120253DXMS_extensometer_capacity .
+
 resource:16120253DXMS_lever_arm_ratio a base:LeverArmRatio,
         pmdco:Metadata ;
     pmdco:value "1"^^xsd:int .
 
+resource:16120253DXMS_load_cell a pmdco:LoadCell,
+        pmdco:Metadata ;
+    pmdco:characteristic resource:16120253DXMS_load_cell_maximum_force .
+
 resource:16120253DXMS_machine a base:FullNotchCreepTestDevice,
         pmdco:Extensometer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:16120253DXMS_extensometer,
-        resource:16120253DXMS_machine_manufacturer,
-        resource:16120253DXMS_machine_name,
-        resource:16120253DXMS_machine_serial_number .
+    prov:wasInfluencedBy resource:16120253DXMS_machine_manufacturer ;
+    pmdco:characteristic resource:16120253DXMS_machine_name,
+        resource:16120253DXMS_machine_serial_number ;
+    pmdco:component resource:16120253DXMS_extensometer,
+        resource:16120253DXMS_load_cell,
+        resource:16120253DXMS_test_container .
 
 resource:16120253DXMS_nominal_ligament_area_An a base:NominalLigamentArea,
         pmdco:Measurement,
@@ -5818,14 +5790,14 @@ resource:16120253DXMS_process_FNCTISO a wild:Activity,
         resource:16120253DXMS_preload,
         resource:16120253DXMS_preload_time,
         resource:16120253DXMS_start_time,
-        resource:16120253DXMS_test_container,
         resource:16120253DXMS_test_force_F,
         resource:16120253DXMS_test_force_increase_rate,
-        resource:16120253DXMS_test_medium,
         resource:16120253DXMS_test_temperature ;
-    pmdco:executedBy resource:16120253DXMS_machine ;
+    pmdco:executedBy resource:16120253DXMS_machine,
+        resource:16120253DXMS_test_container ;
     pmdco:output resource:16120253DXMS_final_elongation_d,
-        resource:16120253DXMS_time_to_failure_tf .
+        resource:16120253DXMS_time_to_failure_tf ;
+    pmdco:participant resource:16120253DXMS_test_medium .
 
 resource:16120253DXMS_process_analysis a wild:Activity,
         base:AnalysingProcess .
@@ -5862,10 +5834,6 @@ resource:16120253DXMS_start_time a pmdco:Measurement,
         pmdco:Metadata,
         pmdco:StartTime ;
     pmdco:value "13.12.2016 13:59" .
-
-resource:16120253DXMS_test_container a base:TestContainer,
-        pmdco:Metadata ;
-    pmdco:value "1"^^xsd:int .
 
 resource:16120253DXMS_test_force_F a pmdco:Force,
         pmdco:PrimaryData,
@@ -5911,17 +5879,25 @@ resource:17010248UVMS_end_time a pmdco:EndTime,
         pmdco:Metadata ;
     pmdco:value "21.01.2017 13:54" .
 
+resource:17010248UVMS_extensometer pmdco:characteristic resource:17010248UVMS_extensometer_capacity .
+
 resource:17010248UVMS_lever_arm_ratio a base:LeverArmRatio,
         pmdco:Metadata ;
     pmdco:value "1"^^xsd:int .
 
+resource:17010248UVMS_load_cell a pmdco:LoadCell,
+        pmdco:Metadata ;
+    pmdco:characteristic resource:17010248UVMS_load_cell_maximum_force .
+
 resource:17010248UVMS_machine a base:FullNotchCreepTestDevice,
         pmdco:Extensometer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:17010248UVMS_extensometer,
-        resource:17010248UVMS_machine_manufacturer,
-        resource:17010248UVMS_machine_name,
-        resource:17010248UVMS_machine_serial_number .
+    prov:wasInfluencedBy resource:17010248UVMS_machine_manufacturer ;
+    pmdco:characteristic resource:17010248UVMS_machine_name,
+        resource:17010248UVMS_machine_serial_number ;
+    pmdco:component resource:17010248UVMS_extensometer,
+        resource:17010248UVMS_load_cell,
+        resource:17010248UVMS_test_container .
 
 resource:17010248UVMS_nominal_ligament_area_An a base:NominalLigamentArea,
         pmdco:Measurement,
@@ -5955,14 +5931,14 @@ resource:17010248UVMS_process_FNCTISO a wild:Activity,
         resource:17010248UVMS_preload,
         resource:17010248UVMS_preload_time,
         resource:17010248UVMS_start_time,
-        resource:17010248UVMS_test_container,
         resource:17010248UVMS_test_force_F,
         resource:17010248UVMS_test_force_increase_rate,
-        resource:17010248UVMS_test_medium,
         resource:17010248UVMS_test_temperature ;
-    pmdco:executedBy resource:17010248UVMS_machine ;
+    pmdco:executedBy resource:17010248UVMS_machine,
+        resource:17010248UVMS_test_container ;
     pmdco:output resource:17010248UVMS_final_elongation_d,
-        resource:17010248UVMS_time_to_failure_tf .
+        resource:17010248UVMS_time_to_failure_tf ;
+    pmdco:participant resource:17010248UVMS_test_medium .
 
 resource:17010248UVMS_process_analysis a wild:Activity,
         base:AnalysingProcess .
@@ -5999,10 +5975,6 @@ resource:17010248UVMS_start_time a pmdco:Measurement,
         pmdco:Metadata,
         pmdco:StartTime ;
     pmdco:value "13.01.2017 14:32" .
-
-resource:17010248UVMS_test_container a base:TestContainer,
-        pmdco:Metadata ;
-    pmdco:value "10"^^xsd:int .
 
 resource:17010248UVMS_test_force_F a pmdco:Force,
         pmdco:PrimaryData,
@@ -6048,17 +6020,25 @@ resource:17010253UVMS_end_time a pmdco:EndTime,
         pmdco:Metadata ;
     pmdco:value "06.02.2017 21:25" .
 
+resource:17010253UVMS_extensometer pmdco:characteristic resource:17010253UVMS_extensometer_capacity .
+
 resource:17010253UVMS_lever_arm_ratio a base:LeverArmRatio,
         pmdco:Metadata ;
     pmdco:value "1"^^xsd:int .
 
+resource:17010253UVMS_load_cell a pmdco:LoadCell,
+        pmdco:Metadata ;
+    pmdco:characteristic resource:17010253UVMS_load_cell_maximum_force .
+
 resource:17010253UVMS_machine a base:FullNotchCreepTestDevice,
         pmdco:Extensometer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:17010253UVMS_extensometer,
-        resource:17010253UVMS_machine_manufacturer,
-        resource:17010253UVMS_machine_name,
-        resource:17010253UVMS_machine_serial_number .
+    prov:wasInfluencedBy resource:17010253UVMS_machine_manufacturer ;
+    pmdco:characteristic resource:17010253UVMS_machine_name,
+        resource:17010253UVMS_machine_serial_number ;
+    pmdco:component resource:17010253UVMS_extensometer,
+        resource:17010253UVMS_load_cell,
+        resource:17010253UVMS_test_container .
 
 resource:17010253UVMS_nominal_ligament_area_An a base:NominalLigamentArea,
         pmdco:Measurement,
@@ -6092,14 +6072,14 @@ resource:17010253UVMS_process_FNCTISO a wild:Activity,
         resource:17010253UVMS_preload,
         resource:17010253UVMS_preload_time,
         resource:17010253UVMS_start_time,
-        resource:17010253UVMS_test_container,
         resource:17010253UVMS_test_force_F,
         resource:17010253UVMS_test_force_increase_rate,
-        resource:17010253UVMS_test_medium,
         resource:17010253UVMS_test_temperature ;
-    pmdco:executedBy resource:17010253UVMS_machine ;
+    pmdco:executedBy resource:17010253UVMS_machine,
+        resource:17010253UVMS_test_container ;
     pmdco:output resource:17010253UVMS_final_elongation_d,
-        resource:17010253UVMS_time_to_failure_tf .
+        resource:17010253UVMS_time_to_failure_tf ;
+    pmdco:participant resource:17010253UVMS_test_medium .
 
 resource:17010253UVMS_process_analysis a wild:Activity,
         base:AnalysingProcess .
@@ -6136,10 +6116,6 @@ resource:17010253UVMS_start_time a pmdco:Measurement,
         pmdco:Metadata,
         pmdco:StartTime ;
     pmdco:value "25.01.2017 15:27" .
-
-resource:17010253UVMS_test_container a base:TestContainer,
-        pmdco:Metadata ;
-    pmdco:value "10"^^xsd:int .
 
 resource:17010253UVMS_test_force_F a pmdco:Force,
         pmdco:PrimaryData,
@@ -6185,17 +6161,25 @@ resource:17020264UVMS_end_time a pmdco:EndTime,
         pmdco:Metadata ;
     pmdco:value "16.02.2017 03:58" .
 
+resource:17020264UVMS_extensometer pmdco:characteristic resource:17020264UVMS_extensometer_capacity .
+
 resource:17020264UVMS_lever_arm_ratio a base:LeverArmRatio,
         pmdco:Metadata ;
     pmdco:value "1"^^xsd:int .
 
+resource:17020264UVMS_load_cell a pmdco:LoadCell,
+        pmdco:Metadata ;
+    pmdco:characteristic resource:17020264UVMS_load_cell_maximum_force .
+
 resource:17020264UVMS_machine a base:FullNotchCreepTestDevice,
         pmdco:Extensometer,
         pmdco:Metadata ;
-    pmdco:characteristic resource:17020264UVMS_extensometer,
-        resource:17020264UVMS_machine_manufacturer,
-        resource:17020264UVMS_machine_name,
-        resource:17020264UVMS_machine_serial_number .
+    prov:wasInfluencedBy resource:17020264UVMS_machine_manufacturer ;
+    pmdco:characteristic resource:17020264UVMS_machine_name,
+        resource:17020264UVMS_machine_serial_number ;
+    pmdco:component resource:17020264UVMS_extensometer,
+        resource:17020264UVMS_load_cell,
+        resource:17020264UVMS_test_container .
 
 resource:17020264UVMS_nominal_ligament_area_An a base:NominalLigamentArea,
         pmdco:Measurement,
@@ -6229,14 +6213,14 @@ resource:17020264UVMS_process_FNCTISO a wild:Activity,
         resource:17020264UVMS_preload,
         resource:17020264UVMS_preload_time,
         resource:17020264UVMS_start_time,
-        resource:17020264UVMS_test_container,
         resource:17020264UVMS_test_force_F,
         resource:17020264UVMS_test_force_increase_rate,
-        resource:17020264UVMS_test_medium,
         resource:17020264UVMS_test_temperature ;
-    pmdco:executedBy resource:17020264UVMS_machine ;
+    pmdco:executedBy resource:17020264UVMS_machine,
+        resource:17020264UVMS_test_container ;
     pmdco:output resource:17020264UVMS_final_elongation_d,
-        resource:17020264UVMS_time_to_failure_tf .
+        resource:17020264UVMS_time_to_failure_tf ;
+    pmdco:participant resource:17020264UVMS_test_medium .
 
 resource:17020264UVMS_process_analysis a wild:Activity,
         base:AnalysingProcess .
@@ -6273,10 +6257,6 @@ resource:17020264UVMS_start_time a pmdco:Measurement,
         pmdco:Metadata,
         pmdco:StartTime ;
     pmdco:value "09.02.2017 15:07" .
-
-resource:17020264UVMS_test_container a base:TestContainer,
-        pmdco:Metadata ;
-    pmdco:value "10"^^xsd:int .
 
 resource:17020264UVMS_test_force_F a pmdco:Force,
         pmdco:PrimaryData,
@@ -6467,6 +6447,10 @@ resource:1511007DXMS_measured_stress_sigma_L a base:NominalTensileStress,
     pmdco:unit unit:MegaPa ;
     pmdco:value "8.112"^^xsd:float .
 
+resource:1511007DXMS_test_container a base:TestContainer,
+        pmdco:Metadata ;
+    pmdco:value "1"^^xsd:int .
+
 resource:1511007DXMS_time_to_failure_tf a base:TimeToFailure,
         pmdco:Measurement,
         pmdco:SecondaryData ;
@@ -6508,6 +6492,10 @@ resource:1511007UVMS_measured_stress_sigma_L a base:NominalTensileStress,
         pmdco:SecondaryData ;
     pmdco:unit unit:MegaPa ;
     pmdco:value "8.269"^^xsd:float .
+
+resource:1511007UVMS_test_container a base:TestContainer,
+        pmdco:Metadata ;
+    pmdco:value "6"^^xsd:int .
 
 resource:1511007UVMS_time_to_failure_tf a base:TimeToFailure,
         pmdco:Measurement,
@@ -6551,6 +6539,10 @@ resource:1511008DXMS_measured_stress_sigma_L a base:NominalTensileStress,
     pmdco:unit unit:MegaPa ;
     pmdco:value "8.857"^^xsd:float .
 
+resource:1511008DXMS_test_container a base:TestContainer,
+        pmdco:Metadata ;
+    pmdco:value "3"^^xsd:int .
+
 resource:1511008DXMS_time_to_failure_tf a base:TimeToFailure,
         pmdco:Measurement,
         pmdco:SecondaryData ;
@@ -6592,6 +6584,10 @@ resource:1511008UVMS_measured_stress_sigma_L a base:NominalTensileStress,
         pmdco:SecondaryData ;
     pmdco:unit unit:MegaPa ;
     pmdco:value "8.912"^^xsd:float .
+
+resource:1511008UVMS_test_container a base:TestContainer,
+        pmdco:Metadata ;
+    pmdco:value "4"^^xsd:int .
 
 resource:1511008UVMS_time_to_failure_tf a base:TimeToFailure,
         pmdco:Measurement,
@@ -6635,6 +6631,10 @@ resource:1511009DXMS_measured_stress_sigma_L a base:NominalTensileStress,
     pmdco:unit unit:MegaPa ;
     pmdco:value "8.986"^^xsd:float .
 
+resource:1511009DXMS_test_container a base:TestContainer,
+        pmdco:Metadata ;
+    pmdco:value "4"^^xsd:int .
+
 resource:1511009DXMS_time_to_failure_tf a base:TimeToFailure,
         pmdco:Measurement,
         pmdco:SecondaryData ;
@@ -6676,6 +6676,10 @@ resource:1511009UVMS_measured_stress_sigma_L a base:NominalTensileStress,
         pmdco:SecondaryData ;
     pmdco:unit unit:MegaPa ;
     pmdco:value "9.602"^^xsd:float .
+
+resource:1511009UVMS_test_container a base:TestContainer,
+        pmdco:Metadata ;
+    pmdco:value "9"^^xsd:int .
 
 resource:1511009UVMS_time_to_failure_tf a base:TimeToFailure,
         pmdco:Measurement,
@@ -6719,6 +6723,10 @@ resource:1511010DXMS_measured_stress_sigma_L a base:NominalTensileStress,
     pmdco:unit unit:MegaPa ;
     pmdco:value "9.124"^^xsd:float .
 
+resource:1511010DXMS_test_container a base:TestContainer,
+        pmdco:Metadata ;
+    pmdco:value "3"^^xsd:int .
+
 resource:1511010DXMS_time_to_failure_tf a base:TimeToFailure,
         pmdco:Measurement,
         pmdco:SecondaryData ;
@@ -6760,6 +6768,10 @@ resource:1511011DXMS_measured_stress_sigma_L a base:NominalTensileStress,
         pmdco:SecondaryData ;
     pmdco:unit unit:MegaPa ;
     pmdco:value "9.828"^^xsd:float .
+
+resource:1511011DXMS_test_container a base:TestContainer,
+        pmdco:Metadata ;
+    pmdco:value "1"^^xsd:int .
 
 resource:1511011DXMS_time_to_failure_tf a base:TimeToFailure,
         pmdco:Measurement,
@@ -6803,6 +6815,10 @@ resource:1511012UVMS_measured_stress_sigma_L a base:NominalTensileStress,
     pmdco:unit unit:MegaPa ;
     pmdco:value "9.767"^^xsd:float .
 
+resource:1511012UVMS_test_container a base:TestContainer,
+        pmdco:Metadata ;
+    pmdco:value "1"^^xsd:int .
+
 resource:1511012UVMS_time_to_failure_tf a base:TimeToFailure,
         pmdco:Measurement,
         pmdco:SecondaryData ;
@@ -6844,6 +6860,10 @@ resource:1511013UVMS_measured_stress_sigma_L a base:NominalTensileStress,
         pmdco:SecondaryData ;
     pmdco:unit unit:MegaPa ;
     pmdco:value "10.128"^^xsd:float .
+
+resource:1511013UVMS_test_container a base:TestContainer,
+        pmdco:Metadata ;
+    pmdco:value "3"^^xsd:int .
 
 resource:1511013UVMS_time_to_failure_tf a base:TimeToFailure,
         pmdco:Measurement,
@@ -6887,6 +6907,10 @@ resource:16120244UVMS_measured_stress_sigma_L a base:NominalTensileStress,
     pmdco:unit unit:MegaPa ;
     pmdco:value "8.905"^^xsd:float .
 
+resource:16120244UVMS_test_container a base:TestContainer,
+        pmdco:Metadata ;
+    pmdco:value "6"^^xsd:int .
+
 resource:16120244UVMS_time_to_failure_tf a base:TimeToFailure,
         pmdco:Measurement,
         pmdco:SecondaryData ;
@@ -6928,6 +6952,10 @@ resource:16120245UVMS_measured_stress_sigma_L a base:NominalTensileStress,
         pmdco:SecondaryData ;
     pmdco:unit unit:MegaPa ;
     pmdco:value "8.918"^^xsd:float .
+
+resource:16120245UVMS_test_container a base:TestContainer,
+        pmdco:Metadata ;
+    pmdco:value "10"^^xsd:int .
 
 resource:16120245UVMS_time_to_failure_tf a base:TimeToFailure,
         pmdco:Measurement,
@@ -6971,6 +6999,10 @@ resource:16120248DXMS_measured_stress_sigma_L a base:NominalTensileStress,
     pmdco:unit unit:MegaPa ;
     pmdco:value "7.991"^^xsd:float .
 
+resource:16120248DXMS_test_container a base:TestContainer,
+        pmdco:Metadata ;
+    pmdco:value "1"^^xsd:int .
+
 resource:16120248DXMS_time_to_failure_tf a base:TimeToFailure,
         pmdco:Measurement,
         pmdco:SecondaryData ;
@@ -7012,6 +7044,10 @@ resource:16120250DXMS_measured_stress_sigma_L a base:NominalTensileStress,
         pmdco:SecondaryData ;
     pmdco:unit unit:MegaPa ;
     pmdco:value "8.753"^^xsd:float .
+
+resource:16120250DXMS_test_container a base:TestContainer,
+        pmdco:Metadata ;
+    pmdco:value "4"^^xsd:int .
 
 resource:16120250DXMS_time_to_failure_tf a base:TimeToFailure,
         pmdco:Measurement,
@@ -7055,6 +7091,10 @@ resource:16120251DXMS_measured_stress_sigma_L a base:NominalTensileStress,
     pmdco:unit unit:MegaPa ;
     pmdco:value "8.911"^^xsd:float .
 
+resource:16120251DXMS_test_container a base:TestContainer,
+        pmdco:Metadata ;
+    pmdco:value "5"^^xsd:int .
+
 resource:16120251DXMS_time_to_failure_tf a base:TimeToFailure,
         pmdco:Measurement,
         pmdco:SecondaryData ;
@@ -7096,6 +7136,10 @@ resource:16120252DXMS_measured_stress_sigma_L a base:NominalTensileStress,
         pmdco:SecondaryData ;
     pmdco:unit unit:MegaPa ;
     pmdco:value "9.72"^^xsd:float .
+
+resource:16120252DXMS_test_container a base:TestContainer,
+        pmdco:Metadata ;
+    pmdco:value "6"^^xsd:int .
 
 resource:16120252DXMS_time_to_failure_tf a base:TimeToFailure,
         pmdco:Measurement,
@@ -7139,6 +7183,10 @@ resource:16120253DXMS_measured_stress_sigma_L a base:NominalTensileStress,
     pmdco:unit unit:MegaPa ;
     pmdco:value "8.64"^^xsd:float .
 
+resource:16120253DXMS_test_container a base:TestContainer,
+        pmdco:Metadata ;
+    pmdco:value "1"^^xsd:int .
+
 resource:16120253DXMS_time_to_failure_tf a base:TimeToFailure,
         pmdco:Measurement,
         pmdco:SecondaryData ;
@@ -7180,6 +7228,10 @@ resource:17010248UVMS_measured_stress_sigma_L a base:NominalTensileStress,
         pmdco:SecondaryData ;
     pmdco:unit unit:MegaPa ;
     pmdco:value "9.237"^^xsd:float .
+
+resource:17010248UVMS_test_container a base:TestContainer,
+        pmdco:Metadata ;
+    pmdco:value "10"^^xsd:int .
 
 resource:17010248UVMS_time_to_failure_tf a base:TimeToFailure,
         pmdco:Measurement,
@@ -7223,6 +7275,10 @@ resource:17010253UVMS_measured_stress_sigma_L a base:NominalTensileStress,
     pmdco:unit unit:MegaPa ;
     pmdco:value "8.16"^^xsd:float .
 
+resource:17010253UVMS_test_container a base:TestContainer,
+        pmdco:Metadata ;
+    pmdco:value "10"^^xsd:int .
+
 resource:17010253UVMS_time_to_failure_tf a base:TimeToFailure,
         pmdco:Measurement,
         pmdco:SecondaryData ;
@@ -7265,6 +7321,10 @@ resource:17020264UVMS_measured_stress_sigma_L a base:NominalTensileStress,
     pmdco:unit unit:MegaPa ;
     pmdco:value "10.052"^^xsd:float .
 
+resource:17020264UVMS_test_container a base:TestContainer,
+        pmdco:Metadata ;
+    pmdco:value "10"^^xsd:int .
+
 resource:17020264UVMS_time_to_failure_tf a base:TimeToFailure,
         pmdco:Measurement,
         pmdco:SecondaryData ;
@@ -7277,6 +7337,7 @@ datacite:_local-funder-identifier-scheme a datacite:FunderIdentifierScheme .
 
 resource:_institute a prov:Organization,
         pmdco:Metadata ;
+    prov:atLocation resource:_location ;
     pmdco:value """0    Bundesanstalt für Materialforschung und -prüfu...
 Name: Institute, dtype: object"""^^xsd:string .
 
@@ -7290,13 +7351,13 @@ resource:_laboratory a pmdco:Laboratory,
     pmdco:value """0    Polymer FNCT Lab Division 5.3
 Name: Laboratory, dtype: object"""^^xsd:string .
 
-resource:_location a pmdco:Location,
-        pmdco:Metadata ;
-    pmdco:value """0    Berlin, Germany
-Name: Location, dtype: object"""^^xsd:string .
-
 resource:_standard a pmdco:Metadata,
         pmdco:Norm ;
     pmdco:value """0    ISO 16770
 Name: Standard, dtype: object"""^^xsd:string .
+
+resource:_location a pmdco:Location,
+        pmdco:Metadata ;
+    pmdco:value """0    Berlin, Germany
+Name: Location, dtype: object"""^^xsd:string .
 
