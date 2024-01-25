@@ -174,7 +174,7 @@ resource:1511007DXMS_process a wild:SequentialActivity,
         resource:1511007DXMS_load_cell,
         resource:1511007DXMS_machine,
         resource:1511007DXMS_test_container ;
-    pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/5021DX_7> ;
+    pmdco:input <https://w3id.org/ontofnct/resource/_specimen/5021DX_7> ;
     pmdco:output resource:1511007DXMS_final_elongation_d,
         resource:1511007DXMS_measured_ligament_area_AL,
         resource:1511007DXMS_measured_ligament_area_AL1,
@@ -183,8 +183,8 @@ resource:1511007DXMS_process a wild:SequentialActivity,
         resource:1511007DXMS_measured_stress_sigma_L,
         resource:1511007DXMS_time_to_failure_tf,
         resource:5021DX_7_dataset,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_7_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_7_testpiece_afterTest_2> ;
+        <https://w3id.org/ontofnct/resource/_specimen/5021DX_7_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/5021DX_7_specimen_afterTest_2> ;
     pmdco:participant resource:1511007DXMS_test_medium .
 
 resource:1511007DXMS_project a pmdco:Metadata,
@@ -275,7 +275,7 @@ resource:1511007UVMS_process a wild:SequentialActivity,
         resource:1511007UVMS_load_cell,
         resource:1511007UVMS_machine,
         resource:1511007UVMS_test_container ;
-    pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/AGUV_7> ;
+    pmdco:input <https://w3id.org/ontofnct/resource/_specimen/AGUV_7> ;
     pmdco:output resource:1511007UVMS_final_elongation_d,
         resource:1511007UVMS_measured_ligament_area_AL,
         resource:1511007UVMS_measured_ligament_area_AL1,
@@ -284,8 +284,8 @@ resource:1511007UVMS_process a wild:SequentialActivity,
         resource:1511007UVMS_measured_stress_sigma_L,
         resource:1511007UVMS_time_to_failure_tf,
         resource:AGUV_7_dataset,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_7_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_7_testpiece_afterTest_2> ;
+        <https://w3id.org/ontofnct/resource/_specimen/AGUV_7_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/AGUV_7_specimen_afterTest_2> ;
     pmdco:participant resource:1511007UVMS_test_medium .
 
 resource:1511007UVMS_project a pmdco:Metadata,
@@ -376,7 +376,7 @@ resource:1511008DXMS_process a wild:SequentialActivity,
         resource:1511008DXMS_load_cell,
         resource:1511008DXMS_machine,
         resource:1511008DXMS_test_container ;
-    pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/5021DX_8> ;
+    pmdco:input <https://w3id.org/ontofnct/resource/_specimen/5021DX_8> ;
     pmdco:output resource:1511008DXMS_final_elongation_d,
         resource:1511008DXMS_measured_ligament_area_AL,
         resource:1511008DXMS_measured_ligament_area_AL1,
@@ -385,8 +385,8 @@ resource:1511008DXMS_process a wild:SequentialActivity,
         resource:1511008DXMS_measured_stress_sigma_L,
         resource:1511008DXMS_time_to_failure_tf,
         resource:5021DX_8_dataset,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_8_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_8_testpiece_afterTest_2> ;
+        <https://w3id.org/ontofnct/resource/_specimen/5021DX_8_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/5021DX_8_specimen_afterTest_2> ;
     pmdco:participant resource:1511008DXMS_test_medium .
 
 resource:1511008DXMS_project a pmdco:Metadata,
@@ -477,7 +477,7 @@ resource:1511008UVMS_process a wild:SequentialActivity,
         resource:1511008UVMS_load_cell,
         resource:1511008UVMS_machine,
         resource:1511008UVMS_test_container ;
-    pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/AGUV_8> ;
+    pmdco:input <https://w3id.org/ontofnct/resource/_specimen/AGUV_8> ;
     pmdco:output resource:1511008UVMS_final_elongation_d,
         resource:1511008UVMS_measured_ligament_area_AL,
         resource:1511008UVMS_measured_ligament_area_AL1,
@@ -486,8 +486,8 @@ resource:1511008UVMS_process a wild:SequentialActivity,
         resource:1511008UVMS_measured_stress_sigma_L,
         resource:1511008UVMS_time_to_failure_tf,
         resource:AGUV_8_dataset,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_8_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_8_testpiece_afterTest_2> ;
+        <https://w3id.org/ontofnct/resource/_specimen/AGUV_8_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/AGUV_8_specimen_afterTest_2> ;
     pmdco:participant resource:1511008UVMS_test_medium .
 
 resource:1511008UVMS_project a pmdco:Metadata,
@@ -578,7 +578,7 @@ resource:1511009DXMS_process a wild:SequentialActivity,
         resource:1511009DXMS_load_cell,
         resource:1511009DXMS_machine,
         resource:1511009DXMS_test_container ;
-    pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/5021DX_9> ;
+    pmdco:input <https://w3id.org/ontofnct/resource/_specimen/5021DX_9> ;
     pmdco:output resource:1511009DXMS_final_elongation_d,
         resource:1511009DXMS_measured_ligament_area_AL,
         resource:1511009DXMS_measured_ligament_area_AL1,
@@ -587,8 +587,8 @@ resource:1511009DXMS_process a wild:SequentialActivity,
         resource:1511009DXMS_measured_stress_sigma_L,
         resource:1511009DXMS_time_to_failure_tf,
         resource:5021DX_9_dataset,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_9_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_9_testpiece_afterTest_2> ;
+        <https://w3id.org/ontofnct/resource/_specimen/5021DX_9_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/5021DX_9_specimen_afterTest_2> ;
     pmdco:participant resource:1511009DXMS_test_medium .
 
 resource:1511009DXMS_project a pmdco:Metadata,
@@ -679,7 +679,7 @@ resource:1511009UVMS_process a wild:SequentialActivity,
         resource:1511009UVMS_load_cell,
         resource:1511009UVMS_machine,
         resource:1511009UVMS_test_container ;
-    pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/AGUV_9> ;
+    pmdco:input <https://w3id.org/ontofnct/resource/_specimen/AGUV_9> ;
     pmdco:output resource:1511009UVMS_final_elongation_d,
         resource:1511009UVMS_measured_ligament_area_AL,
         resource:1511009UVMS_measured_ligament_area_AL1,
@@ -688,8 +688,8 @@ resource:1511009UVMS_process a wild:SequentialActivity,
         resource:1511009UVMS_measured_stress_sigma_L,
         resource:1511009UVMS_time_to_failure_tf,
         resource:AGUV_9_dataset,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_9_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_9_testpiece_afterTest_2> ;
+        <https://w3id.org/ontofnct/resource/_specimen/AGUV_9_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/AGUV_9_specimen_afterTest_2> ;
     pmdco:participant resource:1511009UVMS_test_medium .
 
 resource:1511009UVMS_project a pmdco:Metadata,
@@ -780,7 +780,7 @@ resource:1511010DXMS_process a wild:SequentialActivity,
         resource:1511010DXMS_load_cell,
         resource:1511010DXMS_machine,
         resource:1511010DXMS_test_container ;
-    pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/5021DX_10> ;
+    pmdco:input <https://w3id.org/ontofnct/resource/_specimen/5021DX_10> ;
     pmdco:output resource:1511010DXMS_final_elongation_d,
         resource:1511010DXMS_measured_ligament_area_AL,
         resource:1511010DXMS_measured_ligament_area_AL1,
@@ -789,8 +789,8 @@ resource:1511010DXMS_process a wild:SequentialActivity,
         resource:1511010DXMS_measured_stress_sigma_L,
         resource:1511010DXMS_time_to_failure_tf,
         resource:5021DX_10_dataset,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_10_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_10_testpiece_afterTest_2> ;
+        <https://w3id.org/ontofnct/resource/_specimen/5021DX_10_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/5021DX_10_specimen_afterTest_2> ;
     pmdco:participant resource:1511010DXMS_test_medium .
 
 resource:1511010DXMS_project a pmdco:Metadata,
@@ -881,7 +881,7 @@ resource:1511011DXMS_process a wild:SequentialActivity,
         resource:1511011DXMS_load_cell,
         resource:1511011DXMS_machine,
         resource:1511011DXMS_test_container ;
-    pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/5021DX_11> ;
+    pmdco:input <https://w3id.org/ontofnct/resource/_specimen/5021DX_11> ;
     pmdco:output resource:1511011DXMS_final_elongation_d,
         resource:1511011DXMS_measured_ligament_area_AL,
         resource:1511011DXMS_measured_ligament_area_AL1,
@@ -890,8 +890,8 @@ resource:1511011DXMS_process a wild:SequentialActivity,
         resource:1511011DXMS_measured_stress_sigma_L,
         resource:1511011DXMS_time_to_failure_tf,
         resource:5021DX_11_dataset,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_11_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_11_testpiece_afterTest_2> ;
+        <https://w3id.org/ontofnct/resource/_specimen/5021DX_11_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/5021DX_11_specimen_afterTest_2> ;
     pmdco:participant resource:1511011DXMS_test_medium .
 
 resource:1511011DXMS_project a pmdco:Metadata,
@@ -982,7 +982,7 @@ resource:1511012UVMS_process a wild:SequentialActivity,
         resource:1511012UVMS_load_cell,
         resource:1511012UVMS_machine,
         resource:1511012UVMS_test_container ;
-    pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/AGUV_12> ;
+    pmdco:input <https://w3id.org/ontofnct/resource/_specimen/AGUV_12> ;
     pmdco:output resource:1511012UVMS_final_elongation_d,
         resource:1511012UVMS_measured_ligament_area_AL,
         resource:1511012UVMS_measured_ligament_area_AL1,
@@ -991,8 +991,8 @@ resource:1511012UVMS_process a wild:SequentialActivity,
         resource:1511012UVMS_measured_stress_sigma_L,
         resource:1511012UVMS_time_to_failure_tf,
         resource:AGUV_12_dataset,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_12_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_12_testpiece_afterTest_2> ;
+        <https://w3id.org/ontofnct/resource/_specimen/AGUV_12_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/AGUV_12_specimen_afterTest_2> ;
     pmdco:participant resource:1511012UVMS_test_medium .
 
 resource:1511012UVMS_project a pmdco:Metadata,
@@ -1083,7 +1083,7 @@ resource:1511013UVMS_process a wild:SequentialActivity,
         resource:1511013UVMS_load_cell,
         resource:1511013UVMS_machine,
         resource:1511013UVMS_test_container ;
-    pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/AGUV_13> ;
+    pmdco:input <https://w3id.org/ontofnct/resource/_specimen/AGUV_13> ;
     pmdco:output resource:1511013UVMS_final_elongation_d,
         resource:1511013UVMS_measured_ligament_area_AL,
         resource:1511013UVMS_measured_ligament_area_AL1,
@@ -1092,8 +1092,8 @@ resource:1511013UVMS_process a wild:SequentialActivity,
         resource:1511013UVMS_measured_stress_sigma_L,
         resource:1511013UVMS_time_to_failure_tf,
         resource:AGUV_13_dataset,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_13_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_13_testpiece_afterTest_2> ;
+        <https://w3id.org/ontofnct/resource/_specimen/AGUV_13_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/AGUV_13_specimen_afterTest_2> ;
     pmdco:participant resource:1511013UVMS_test_medium .
 
 resource:1511013UVMS_project a pmdco:Metadata,
@@ -1184,7 +1184,7 @@ resource:16120244UVMS_process a wild:SequentialActivity,
         resource:16120244UVMS_load_cell,
         resource:16120244UVMS_machine,
         resource:16120244UVMS_test_container ;
-    pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/AGUV_244> ;
+    pmdco:input <https://w3id.org/ontofnct/resource/_specimen/AGUV_244> ;
     pmdco:output resource:16120244UVMS_final_elongation_d,
         resource:16120244UVMS_measured_ligament_area_AL,
         resource:16120244UVMS_measured_ligament_area_AL1,
@@ -1193,8 +1193,8 @@ resource:16120244UVMS_process a wild:SequentialActivity,
         resource:16120244UVMS_measured_stress_sigma_L,
         resource:16120244UVMS_time_to_failure_tf,
         resource:AGUV_244_dataset,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_244_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_244_testpiece_afterTest_2> ;
+        <https://w3id.org/ontofnct/resource/_specimen/AGUV_244_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/AGUV_244_specimen_afterTest_2> ;
     pmdco:participant resource:16120244UVMS_test_medium .
 
 resource:16120244UVMS_project a pmdco:Metadata,
@@ -1285,7 +1285,7 @@ resource:16120245UVMS_process a wild:SequentialActivity,
         resource:16120245UVMS_load_cell,
         resource:16120245UVMS_machine,
         resource:16120245UVMS_test_container ;
-    pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/AGUV_245> ;
+    pmdco:input <https://w3id.org/ontofnct/resource/_specimen/AGUV_245> ;
     pmdco:output resource:16120245UVMS_final_elongation_d,
         resource:16120245UVMS_measured_ligament_area_AL,
         resource:16120245UVMS_measured_ligament_area_AL1,
@@ -1294,8 +1294,8 @@ resource:16120245UVMS_process a wild:SequentialActivity,
         resource:16120245UVMS_measured_stress_sigma_L,
         resource:16120245UVMS_time_to_failure_tf,
         resource:AGUV_245_dataset,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_245_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_245_testpiece_afterTest_2> ;
+        <https://w3id.org/ontofnct/resource/_specimen/AGUV_245_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/AGUV_245_specimen_afterTest_2> ;
     pmdco:participant resource:16120245UVMS_test_medium .
 
 resource:16120245UVMS_project a pmdco:Metadata,
@@ -1386,7 +1386,7 @@ resource:16120248DXMS_process a wild:SequentialActivity,
         resource:16120248DXMS_load_cell,
         resource:16120248DXMS_machine,
         resource:16120248DXMS_test_container ;
-    pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/5021DX_248> ;
+    pmdco:input <https://w3id.org/ontofnct/resource/_specimen/5021DX_248> ;
     pmdco:output resource:16120248DXMS_final_elongation_d,
         resource:16120248DXMS_measured_ligament_area_AL,
         resource:16120248DXMS_measured_ligament_area_AL1,
@@ -1395,8 +1395,8 @@ resource:16120248DXMS_process a wild:SequentialActivity,
         resource:16120248DXMS_measured_stress_sigma_L,
         resource:16120248DXMS_time_to_failure_tf,
         resource:5021DX_248_dataset,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_248_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_248_testpiece_afterTest_2> ;
+        <https://w3id.org/ontofnct/resource/_specimen/5021DX_248_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/5021DX_248_specimen_afterTest_2> ;
     pmdco:participant resource:16120248DXMS_test_medium .
 
 resource:16120248DXMS_project a pmdco:Metadata,
@@ -1487,7 +1487,7 @@ resource:16120250DXMS_process a wild:SequentialActivity,
         resource:16120250DXMS_load_cell,
         resource:16120250DXMS_machine,
         resource:16120250DXMS_test_container ;
-    pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/5021DX_250> ;
+    pmdco:input <https://w3id.org/ontofnct/resource/_specimen/5021DX_250> ;
     pmdco:output resource:16120250DXMS_final_elongation_d,
         resource:16120250DXMS_measured_ligament_area_AL,
         resource:16120250DXMS_measured_ligament_area_AL1,
@@ -1496,8 +1496,8 @@ resource:16120250DXMS_process a wild:SequentialActivity,
         resource:16120250DXMS_measured_stress_sigma_L,
         resource:16120250DXMS_time_to_failure_tf,
         resource:5021DX_250_dataset,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_250_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_250_testpiece_afterTest_2> ;
+        <https://w3id.org/ontofnct/resource/_specimen/5021DX_250_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/5021DX_250_specimen_afterTest_2> ;
     pmdco:participant resource:16120250DXMS_test_medium .
 
 resource:16120250DXMS_project a pmdco:Metadata,
@@ -1588,7 +1588,7 @@ resource:16120251DXMS_process a wild:SequentialActivity,
         resource:16120251DXMS_load_cell,
         resource:16120251DXMS_machine,
         resource:16120251DXMS_test_container ;
-    pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/5021DX_251> ;
+    pmdco:input <https://w3id.org/ontofnct/resource/_specimen/5021DX_251> ;
     pmdco:output resource:16120251DXMS_final_elongation_d,
         resource:16120251DXMS_measured_ligament_area_AL,
         resource:16120251DXMS_measured_ligament_area_AL1,
@@ -1597,8 +1597,8 @@ resource:16120251DXMS_process a wild:SequentialActivity,
         resource:16120251DXMS_measured_stress_sigma_L,
         resource:16120251DXMS_time_to_failure_tf,
         resource:5021DX_251_dataset,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_251_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_251_testpiece_afterTest_2> ;
+        <https://w3id.org/ontofnct/resource/_specimen/5021DX_251_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/5021DX_251_specimen_afterTest_2> ;
     pmdco:participant resource:16120251DXMS_test_medium .
 
 resource:16120251DXMS_project a pmdco:Metadata,
@@ -1689,7 +1689,7 @@ resource:16120252DXMS_process a wild:SequentialActivity,
         resource:16120252DXMS_load_cell,
         resource:16120252DXMS_machine,
         resource:16120252DXMS_test_container ;
-    pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/5021DX_252> ;
+    pmdco:input <https://w3id.org/ontofnct/resource/_specimen/5021DX_252> ;
     pmdco:output resource:16120252DXMS_final_elongation_d,
         resource:16120252DXMS_measured_ligament_area_AL,
         resource:16120252DXMS_measured_ligament_area_AL1,
@@ -1698,8 +1698,8 @@ resource:16120252DXMS_process a wild:SequentialActivity,
         resource:16120252DXMS_measured_stress_sigma_L,
         resource:16120252DXMS_time_to_failure_tf,
         resource:5021DX_252_dataset,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_252_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_252_testpiece_afterTest_2> ;
+        <https://w3id.org/ontofnct/resource/_specimen/5021DX_252_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/5021DX_252_specimen_afterTest_2> ;
     pmdco:participant resource:16120252DXMS_test_medium .
 
 resource:16120252DXMS_project a pmdco:Metadata,
@@ -1790,7 +1790,7 @@ resource:16120253DXMS_process a wild:SequentialActivity,
         resource:16120253DXMS_load_cell,
         resource:16120253DXMS_machine,
         resource:16120253DXMS_test_container ;
-    pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/5021DX_253> ;
+    pmdco:input <https://w3id.org/ontofnct/resource/_specimen/5021DX_253> ;
     pmdco:output resource:16120253DXMS_final_elongation_d,
         resource:16120253DXMS_measured_ligament_area_AL,
         resource:16120253DXMS_measured_ligament_area_AL1,
@@ -1799,8 +1799,8 @@ resource:16120253DXMS_process a wild:SequentialActivity,
         resource:16120253DXMS_measured_stress_sigma_L,
         resource:16120253DXMS_time_to_failure_tf,
         resource:5021DX_253_dataset,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_253_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_253_testpiece_afterTest_2> ;
+        <https://w3id.org/ontofnct/resource/_specimen/5021DX_253_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/5021DX_253_specimen_afterTest_2> ;
     pmdco:participant resource:16120253DXMS_test_medium .
 
 resource:16120253DXMS_project a pmdco:Metadata,
@@ -1891,7 +1891,7 @@ resource:17010248UVMS_process a wild:SequentialActivity,
         resource:17010248UVMS_load_cell,
         resource:17010248UVMS_machine,
         resource:17010248UVMS_test_container ;
-    pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/AGUV_248> ;
+    pmdco:input <https://w3id.org/ontofnct/resource/_specimen/AGUV_248> ;
     pmdco:output resource:17010248UVMS_final_elongation_d,
         resource:17010248UVMS_measured_ligament_area_AL,
         resource:17010248UVMS_measured_ligament_area_AL1,
@@ -1900,8 +1900,8 @@ resource:17010248UVMS_process a wild:SequentialActivity,
         resource:17010248UVMS_measured_stress_sigma_L,
         resource:17010248UVMS_time_to_failure_tf,
         resource:AGUV_248_dataset,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_248_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_248_testpiece_afterTest_2> ;
+        <https://w3id.org/ontofnct/resource/_specimen/AGUV_248_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/AGUV_248_specimen_afterTest_2> ;
     pmdco:participant resource:17010248UVMS_test_medium .
 
 resource:17010248UVMS_project a pmdco:Metadata,
@@ -1992,7 +1992,7 @@ resource:17010253UVMS_process a wild:SequentialActivity,
         resource:17010253UVMS_load_cell,
         resource:17010253UVMS_machine,
         resource:17010253UVMS_test_container ;
-    pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/AGUV_253> ;
+    pmdco:input <https://w3id.org/ontofnct/resource/_specimen/AGUV_253> ;
     pmdco:output resource:17010253UVMS_final_elongation_d,
         resource:17010253UVMS_measured_ligament_area_AL,
         resource:17010253UVMS_measured_ligament_area_AL1,
@@ -2001,8 +2001,8 @@ resource:17010253UVMS_process a wild:SequentialActivity,
         resource:17010253UVMS_measured_stress_sigma_L,
         resource:17010253UVMS_time_to_failure_tf,
         resource:AGUV_253_dataset,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_253_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_253_testpiece_afterTest_2> ;
+        <https://w3id.org/ontofnct/resource/_specimen/AGUV_253_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/AGUV_253_specimen_afterTest_2> ;
     pmdco:participant resource:17010253UVMS_test_medium .
 
 resource:17010253UVMS_project a pmdco:Metadata,
@@ -2093,7 +2093,7 @@ resource:17020264UVMS_process a wild:SequentialActivity,
         resource:17020264UVMS_load_cell,
         resource:17020264UVMS_machine,
         resource:17020264UVMS_test_container ;
-    pmdco:input <https://w3id.org/ontofnct/resource/_testpiece/AGUV_264> ;
+    pmdco:input <https://w3id.org/ontofnct/resource/_specimen/AGUV_264> ;
     pmdco:output resource:17020264UVMS_final_elongation_d,
         resource:17020264UVMS_measured_ligament_area_AL,
         resource:17020264UVMS_measured_ligament_area_AL1,
@@ -2102,8 +2102,8 @@ resource:17020264UVMS_process a wild:SequentialActivity,
         resource:17020264UVMS_measured_stress_sigma_L,
         resource:17020264UVMS_time_to_failure_tf,
         resource:AGUV_264_dataset,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_264_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_264_testpiece_afterTest_2> ;
+        <https://w3id.org/ontofnct/resource/_specimen/AGUV_264_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/AGUV_264_specimen_afterTest_2> ;
     pmdco:participant resource:17020264UVMS_test_medium .
 
 resource:17020264UVMS_project a pmdco:Metadata,
@@ -2891,7 +2891,7 @@ resource:AGUV_9_schema a csvw:Schema ;
                 csvw:name "Temperature"^^xsd:string ;
                 pmdco:unit unit:DEG_C ] ) .
 
-<https://w3id.org/ontofnct/resource/_testpiece/5021DX_10> a pmdco:TestPiece ;
+<https://w3id.org/ontofnct/resource/_specimen/5021DX_10> a pmdco:Specimen ;
     pmdco:characteristic resource:1511010DXMS_final_elongation_d,
         resource:1511010DXMS_materialDescription,
         resource:1511010DXMS_measured_ligament_area_AL,
@@ -2904,11 +2904,11 @@ resource:AGUV_9_schema a csvw:Schema ;
         resource:1511010DXMS_thickness_t,
         resource:1511010DXMS_time_to_failure_tf,
         resource:1511010DXMS_width_w,
-        <https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_10> ;
-    pmdco:composedOf <https://w3id.org/ontofnct/resource/_testpiece/5021DX_10_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_10_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_specimen_name/5021DX_10> ;
+    pmdco:composedOf <https://w3id.org/ontofnct/resource/_specimen/5021DX_10_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/5021DX_10_specimen_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/5021DX_11> a pmdco:TestPiece ;
+<https://w3id.org/ontofnct/resource/_specimen/5021DX_11> a pmdco:Specimen ;
     pmdco:characteristic resource:1511011DXMS_final_elongation_d,
         resource:1511011DXMS_materialDescription,
         resource:1511011DXMS_measured_ligament_area_AL,
@@ -2921,11 +2921,11 @@ resource:AGUV_9_schema a csvw:Schema ;
         resource:1511011DXMS_thickness_t,
         resource:1511011DXMS_time_to_failure_tf,
         resource:1511011DXMS_width_w,
-        <https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_11> ;
-    pmdco:composedOf <https://w3id.org/ontofnct/resource/_testpiece/5021DX_11_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_11_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_specimen_name/5021DX_11> ;
+    pmdco:composedOf <https://w3id.org/ontofnct/resource/_specimen/5021DX_11_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/5021DX_11_specimen_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/5021DX_248> a pmdco:TestPiece ;
+<https://w3id.org/ontofnct/resource/_specimen/5021DX_248> a pmdco:Specimen ;
     pmdco:characteristic resource:16120248DXMS_final_elongation_d,
         resource:16120248DXMS_materialDescription,
         resource:16120248DXMS_measured_ligament_area_AL,
@@ -2938,11 +2938,11 @@ resource:AGUV_9_schema a csvw:Schema ;
         resource:16120248DXMS_thickness_t,
         resource:16120248DXMS_time_to_failure_tf,
         resource:16120248DXMS_width_w,
-        <https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_248> ;
-    pmdco:composedOf <https://w3id.org/ontofnct/resource/_testpiece/5021DX_248_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_248_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_specimen_name/5021DX_248> ;
+    pmdco:composedOf <https://w3id.org/ontofnct/resource/_specimen/5021DX_248_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/5021DX_248_specimen_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/5021DX_250> a pmdco:TestPiece ;
+<https://w3id.org/ontofnct/resource/_specimen/5021DX_250> a pmdco:Specimen ;
     pmdco:characteristic resource:16120250DXMS_final_elongation_d,
         resource:16120250DXMS_materialDescription,
         resource:16120250DXMS_measured_ligament_area_AL,
@@ -2955,11 +2955,11 @@ resource:AGUV_9_schema a csvw:Schema ;
         resource:16120250DXMS_thickness_t,
         resource:16120250DXMS_time_to_failure_tf,
         resource:16120250DXMS_width_w,
-        <https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_250> ;
-    pmdco:composedOf <https://w3id.org/ontofnct/resource/_testpiece/5021DX_250_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_250_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_specimen_name/5021DX_250> ;
+    pmdco:composedOf <https://w3id.org/ontofnct/resource/_specimen/5021DX_250_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/5021DX_250_specimen_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/5021DX_251> a pmdco:TestPiece ;
+<https://w3id.org/ontofnct/resource/_specimen/5021DX_251> a pmdco:Specimen ;
     pmdco:characteristic resource:16120251DXMS_final_elongation_d,
         resource:16120251DXMS_materialDescription,
         resource:16120251DXMS_measured_ligament_area_AL,
@@ -2972,11 +2972,11 @@ resource:AGUV_9_schema a csvw:Schema ;
         resource:16120251DXMS_thickness_t,
         resource:16120251DXMS_time_to_failure_tf,
         resource:16120251DXMS_width_w,
-        <https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_251> ;
-    pmdco:composedOf <https://w3id.org/ontofnct/resource/_testpiece/5021DX_251_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_251_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_specimen_name/5021DX_251> ;
+    pmdco:composedOf <https://w3id.org/ontofnct/resource/_specimen/5021DX_251_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/5021DX_251_specimen_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/5021DX_252> a pmdco:TestPiece ;
+<https://w3id.org/ontofnct/resource/_specimen/5021DX_252> a pmdco:Specimen ;
     pmdco:characteristic resource:16120252DXMS_final_elongation_d,
         resource:16120252DXMS_materialDescription,
         resource:16120252DXMS_measured_ligament_area_AL,
@@ -2989,11 +2989,11 @@ resource:AGUV_9_schema a csvw:Schema ;
         resource:16120252DXMS_thickness_t,
         resource:16120252DXMS_time_to_failure_tf,
         resource:16120252DXMS_width_w,
-        <https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_252> ;
-    pmdco:composedOf <https://w3id.org/ontofnct/resource/_testpiece/5021DX_252_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_252_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_specimen_name/5021DX_252> ;
+    pmdco:composedOf <https://w3id.org/ontofnct/resource/_specimen/5021DX_252_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/5021DX_252_specimen_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/5021DX_253> a pmdco:TestPiece ;
+<https://w3id.org/ontofnct/resource/_specimen/5021DX_253> a pmdco:Specimen ;
     pmdco:characteristic resource:16120253DXMS_final_elongation_d,
         resource:16120253DXMS_materialDescription,
         resource:16120253DXMS_measured_ligament_area_AL,
@@ -3006,11 +3006,11 @@ resource:AGUV_9_schema a csvw:Schema ;
         resource:16120253DXMS_thickness_t,
         resource:16120253DXMS_time_to_failure_tf,
         resource:16120253DXMS_width_w,
-        <https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_253> ;
-    pmdco:composedOf <https://w3id.org/ontofnct/resource/_testpiece/5021DX_253_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_253_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_specimen_name/5021DX_253> ;
+    pmdco:composedOf <https://w3id.org/ontofnct/resource/_specimen/5021DX_253_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/5021DX_253_specimen_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/5021DX_7> a pmdco:TestPiece ;
+<https://w3id.org/ontofnct/resource/_specimen/5021DX_7> a pmdco:Specimen ;
     pmdco:characteristic resource:1511007DXMS_final_elongation_d,
         resource:1511007DXMS_materialDescription,
         resource:1511007DXMS_measured_ligament_area_AL,
@@ -3023,11 +3023,11 @@ resource:AGUV_9_schema a csvw:Schema ;
         resource:1511007DXMS_thickness_t,
         resource:1511007DXMS_time_to_failure_tf,
         resource:1511007DXMS_width_w,
-        <https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_7> ;
-    pmdco:composedOf <https://w3id.org/ontofnct/resource/_testpiece/5021DX_7_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_7_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_specimen_name/5021DX_7> ;
+    pmdco:composedOf <https://w3id.org/ontofnct/resource/_specimen/5021DX_7_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/5021DX_7_specimen_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/5021DX_8> a pmdco:TestPiece ;
+<https://w3id.org/ontofnct/resource/_specimen/5021DX_8> a pmdco:Specimen ;
     pmdco:characteristic resource:1511008DXMS_final_elongation_d,
         resource:1511008DXMS_materialDescription,
         resource:1511008DXMS_measured_ligament_area_AL,
@@ -3040,11 +3040,11 @@ resource:AGUV_9_schema a csvw:Schema ;
         resource:1511008DXMS_thickness_t,
         resource:1511008DXMS_time_to_failure_tf,
         resource:1511008DXMS_width_w,
-        <https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_8> ;
-    pmdco:composedOf <https://w3id.org/ontofnct/resource/_testpiece/5021DX_8_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_8_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_specimen_name/5021DX_8> ;
+    pmdco:composedOf <https://w3id.org/ontofnct/resource/_specimen/5021DX_8_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/5021DX_8_specimen_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/5021DX_9> a pmdco:TestPiece ;
+<https://w3id.org/ontofnct/resource/_specimen/5021DX_9> a pmdco:Specimen ;
     pmdco:characteristic resource:1511009DXMS_final_elongation_d,
         resource:1511009DXMS_materialDescription,
         resource:1511009DXMS_measured_ligament_area_AL,
@@ -3057,11 +3057,11 @@ resource:AGUV_9_schema a csvw:Schema ;
         resource:1511009DXMS_thickness_t,
         resource:1511009DXMS_time_to_failure_tf,
         resource:1511009DXMS_width_w,
-        <https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_9> ;
-    pmdco:composedOf <https://w3id.org/ontofnct/resource/_testpiece/5021DX_9_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/5021DX_9_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_specimen_name/5021DX_9> ;
+    pmdco:composedOf <https://w3id.org/ontofnct/resource/_specimen/5021DX_9_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/5021DX_9_specimen_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/AGUV_12> a pmdco:TestPiece ;
+<https://w3id.org/ontofnct/resource/_specimen/AGUV_12> a pmdco:Specimen ;
     pmdco:characteristic resource:1511012UVMS_final_elongation_d,
         resource:1511012UVMS_materialDescription,
         resource:1511012UVMS_measured_ligament_area_AL,
@@ -3074,11 +3074,11 @@ resource:AGUV_9_schema a csvw:Schema ;
         resource:1511012UVMS_thickness_t,
         resource:1511012UVMS_time_to_failure_tf,
         resource:1511012UVMS_width_w,
-        <https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_12> ;
-    pmdco:composedOf <https://w3id.org/ontofnct/resource/_testpiece/AGUV_12_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_12_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_specimen_name/AGUV_12> ;
+    pmdco:composedOf <https://w3id.org/ontofnct/resource/_specimen/AGUV_12_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/AGUV_12_specimen_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/AGUV_13> a pmdco:TestPiece ;
+<https://w3id.org/ontofnct/resource/_specimen/AGUV_13> a pmdco:Specimen ;
     pmdco:characteristic resource:1511013UVMS_final_elongation_d,
         resource:1511013UVMS_materialDescription,
         resource:1511013UVMS_measured_ligament_area_AL,
@@ -3091,11 +3091,11 @@ resource:AGUV_9_schema a csvw:Schema ;
         resource:1511013UVMS_thickness_t,
         resource:1511013UVMS_time_to_failure_tf,
         resource:1511013UVMS_width_w,
-        <https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_13> ;
-    pmdco:composedOf <https://w3id.org/ontofnct/resource/_testpiece/AGUV_13_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_13_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_specimen_name/AGUV_13> ;
+    pmdco:composedOf <https://w3id.org/ontofnct/resource/_specimen/AGUV_13_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/AGUV_13_specimen_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/AGUV_244> a pmdco:TestPiece ;
+<https://w3id.org/ontofnct/resource/_specimen/AGUV_244> a pmdco:Specimen ;
     pmdco:characteristic resource:16120244UVMS_final_elongation_d,
         resource:16120244UVMS_materialDescription,
         resource:16120244UVMS_measured_ligament_area_AL,
@@ -3108,11 +3108,11 @@ resource:AGUV_9_schema a csvw:Schema ;
         resource:16120244UVMS_thickness_t,
         resource:16120244UVMS_time_to_failure_tf,
         resource:16120244UVMS_width_w,
-        <https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_244> ;
-    pmdco:composedOf <https://w3id.org/ontofnct/resource/_testpiece/AGUV_244_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_244_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_specimen_name/AGUV_244> ;
+    pmdco:composedOf <https://w3id.org/ontofnct/resource/_specimen/AGUV_244_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/AGUV_244_specimen_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/AGUV_245> a pmdco:TestPiece ;
+<https://w3id.org/ontofnct/resource/_specimen/AGUV_245> a pmdco:Specimen ;
     pmdco:characteristic resource:16120245UVMS_final_elongation_d,
         resource:16120245UVMS_materialDescription,
         resource:16120245UVMS_measured_ligament_area_AL,
@@ -3125,11 +3125,11 @@ resource:AGUV_9_schema a csvw:Schema ;
         resource:16120245UVMS_thickness_t,
         resource:16120245UVMS_time_to_failure_tf,
         resource:16120245UVMS_width_w,
-        <https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_245> ;
-    pmdco:composedOf <https://w3id.org/ontofnct/resource/_testpiece/AGUV_245_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_245_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_specimen_name/AGUV_245> ;
+    pmdco:composedOf <https://w3id.org/ontofnct/resource/_specimen/AGUV_245_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/AGUV_245_specimen_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/AGUV_248> a pmdco:TestPiece ;
+<https://w3id.org/ontofnct/resource/_specimen/AGUV_248> a pmdco:Specimen ;
     pmdco:characteristic resource:17010248UVMS_final_elongation_d,
         resource:17010248UVMS_materialDescription,
         resource:17010248UVMS_measured_ligament_area_AL,
@@ -3142,11 +3142,11 @@ resource:AGUV_9_schema a csvw:Schema ;
         resource:17010248UVMS_thickness_t,
         resource:17010248UVMS_time_to_failure_tf,
         resource:17010248UVMS_width_w,
-        <https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_248> ;
-    pmdco:composedOf <https://w3id.org/ontofnct/resource/_testpiece/AGUV_248_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_248_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_specimen_name/AGUV_248> ;
+    pmdco:composedOf <https://w3id.org/ontofnct/resource/_specimen/AGUV_248_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/AGUV_248_specimen_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/AGUV_253> a pmdco:TestPiece ;
+<https://w3id.org/ontofnct/resource/_specimen/AGUV_253> a pmdco:Specimen ;
     pmdco:characteristic resource:17010253UVMS_final_elongation_d,
         resource:17010253UVMS_materialDescription,
         resource:17010253UVMS_measured_ligament_area_AL,
@@ -3159,11 +3159,11 @@ resource:AGUV_9_schema a csvw:Schema ;
         resource:17010253UVMS_thickness_t,
         resource:17010253UVMS_time_to_failure_tf,
         resource:17010253UVMS_width_w,
-        <https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_253> ;
-    pmdco:composedOf <https://w3id.org/ontofnct/resource/_testpiece/AGUV_253_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_253_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_specimen_name/AGUV_253> ;
+    pmdco:composedOf <https://w3id.org/ontofnct/resource/_specimen/AGUV_253_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/AGUV_253_specimen_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/AGUV_264> a pmdco:TestPiece ;
+<https://w3id.org/ontofnct/resource/_specimen/AGUV_264> a pmdco:Specimen ;
     pmdco:characteristic resource:17020264UVMS_final_elongation_d,
         resource:17020264UVMS_materialDescription,
         resource:17020264UVMS_measured_ligament_area_AL,
@@ -3176,11 +3176,11 @@ resource:AGUV_9_schema a csvw:Schema ;
         resource:17020264UVMS_thickness_t,
         resource:17020264UVMS_time_to_failure_tf,
         resource:17020264UVMS_width_w,
-        <https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_264> ;
-    pmdco:composedOf <https://w3id.org/ontofnct/resource/_testpiece/AGUV_264_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_264_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_specimen_name/AGUV_264> ;
+    pmdco:composedOf <https://w3id.org/ontofnct/resource/_specimen/AGUV_264_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/AGUV_264_specimen_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/AGUV_7> a pmdco:TestPiece ;
+<https://w3id.org/ontofnct/resource/_specimen/AGUV_7> a pmdco:Specimen ;
     pmdco:characteristic resource:1511007UVMS_final_elongation_d,
         resource:1511007UVMS_materialDescription,
         resource:1511007UVMS_measured_ligament_area_AL,
@@ -3193,11 +3193,11 @@ resource:AGUV_9_schema a csvw:Schema ;
         resource:1511007UVMS_thickness_t,
         resource:1511007UVMS_time_to_failure_tf,
         resource:1511007UVMS_width_w,
-        <https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_7> ;
-    pmdco:composedOf <https://w3id.org/ontofnct/resource/_testpiece/AGUV_7_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_7_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_specimen_name/AGUV_7> ;
+    pmdco:composedOf <https://w3id.org/ontofnct/resource/_specimen/AGUV_7_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/AGUV_7_specimen_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/AGUV_8> a pmdco:TestPiece ;
+<https://w3id.org/ontofnct/resource/_specimen/AGUV_8> a pmdco:Specimen ;
     pmdco:characteristic resource:1511008UVMS_final_elongation_d,
         resource:1511008UVMS_materialDescription,
         resource:1511008UVMS_measured_ligament_area_AL,
@@ -3210,11 +3210,11 @@ resource:AGUV_9_schema a csvw:Schema ;
         resource:1511008UVMS_thickness_t,
         resource:1511008UVMS_time_to_failure_tf,
         resource:1511008UVMS_width_w,
-        <https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_8> ;
-    pmdco:composedOf <https://w3id.org/ontofnct/resource/_testpiece/AGUV_8_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_8_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_specimen_name/AGUV_8> ;
+    pmdco:composedOf <https://w3id.org/ontofnct/resource/_specimen/AGUV_8_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/AGUV_8_specimen_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/AGUV_9> a pmdco:TestPiece ;
+<https://w3id.org/ontofnct/resource/_specimen/AGUV_9> a pmdco:Specimen ;
     pmdco:characteristic resource:1511009UVMS_final_elongation_d,
         resource:1511009UVMS_materialDescription,
         resource:1511009UVMS_measured_ligament_area_AL,
@@ -3227,248 +3227,248 @@ resource:AGUV_9_schema a csvw:Schema ;
         resource:1511009UVMS_thickness_t,
         resource:1511009UVMS_time_to_failure_tf,
         resource:1511009UVMS_width_w,
-        <https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_9> ;
-    pmdco:composedOf <https://w3id.org/ontofnct/resource/_testpiece/AGUV_9_testpiece_afterTest_1>,
-        <https://w3id.org/ontofnct/resource/_testpiece/AGUV_9_testpiece_afterTest_2> .
+        <https://w3id.org/ontofnct/resource/_specimen_name/AGUV_9> ;
+    pmdco:composedOf <https://w3id.org/ontofnct/resource/_specimen/AGUV_9_specimen_afterTest_1>,
+        <https://w3id.org/ontofnct/resource/_specimen/AGUV_9_specimen_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_10> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/5021DX_10> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "5021DX_10"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_10_afterTest_1> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/5021DX_10_afterTest_1> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "5021DX_10_afterTest_1"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_10_afterTest_2> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/5021DX_10_afterTest_2> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "5021DX_10_afterTest_2"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_11> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/5021DX_11> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "5021DX_11"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_11_afterTest_1> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/5021DX_11_afterTest_1> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "5021DX_11_afterTest_1"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_11_afterTest_2> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/5021DX_11_afterTest_2> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "5021DX_11_afterTest_2"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_248> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/5021DX_248> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "5021DX_248"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_248_afterTest_1> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/5021DX_248_afterTest_1> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "5021DX_248_afterTest_1"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_248_afterTest_2> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/5021DX_248_afterTest_2> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "5021DX_248_afterTest_2"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_250> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/5021DX_250> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "5021DX_250"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_250_afterTest_1> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/5021DX_250_afterTest_1> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "5021DX_250_afterTest_1"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_250_afterTest_2> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/5021DX_250_afterTest_2> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "5021DX_250_afterTest_2"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_251> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/5021DX_251> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "5021DX_251"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_251_afterTest_1> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/5021DX_251_afterTest_1> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "5021DX_251_afterTest_1"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_251_afterTest_2> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/5021DX_251_afterTest_2> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "5021DX_251_afterTest_2"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_252> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/5021DX_252> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "5021DX_252"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_252_afterTest_1> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/5021DX_252_afterTest_1> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "5021DX_252_afterTest_1"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_252_afterTest_2> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/5021DX_252_afterTest_2> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "5021DX_252_afterTest_2"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_253> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/5021DX_253> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "5021DX_253"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_253_afterTest_1> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/5021DX_253_afterTest_1> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "5021DX_253_afterTest_1"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_253_afterTest_2> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/5021DX_253_afterTest_2> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "5021DX_253_afterTest_2"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_7> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/5021DX_7> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "5021DX_7"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_7_afterTest_1> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/5021DX_7_afterTest_1> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "5021DX_7_afterTest_1"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_7_afterTest_2> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/5021DX_7_afterTest_2> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "5021DX_7_afterTest_2"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_8> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/5021DX_8> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "5021DX_8"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_8_afterTest_1> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/5021DX_8_afterTest_1> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "5021DX_8_afterTest_1"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_8_afterTest_2> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/5021DX_8_afterTest_2> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "5021DX_8_afterTest_2"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_9> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/5021DX_9> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "5021DX_9"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_9_afterTest_1> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/5021DX_9_afterTest_1> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "5021DX_9_afterTest_1"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_9_afterTest_2> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/5021DX_9_afterTest_2> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "5021DX_9_afterTest_2"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_12> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/AGUV_12> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "AGUV_12"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_12_afterTest_1> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/AGUV_12_afterTest_1> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "AGUV_12_afterTest_1"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_12_afterTest_2> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/AGUV_12_afterTest_2> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "AGUV_12_afterTest_2"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_13> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/AGUV_13> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "AGUV_13"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_13_afterTest_1> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/AGUV_13_afterTest_1> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "AGUV_13_afterTest_1"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_13_afterTest_2> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/AGUV_13_afterTest_2> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "AGUV_13_afterTest_2"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_244> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/AGUV_244> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "AGUV_244"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_244_afterTest_1> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/AGUV_244_afterTest_1> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "AGUV_244_afterTest_1"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_244_afterTest_2> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/AGUV_244_afterTest_2> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "AGUV_244_afterTest_2"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_245> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/AGUV_245> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "AGUV_245"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_245_afterTest_1> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/AGUV_245_afterTest_1> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "AGUV_245_afterTest_1"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_245_afterTest_2> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/AGUV_245_afterTest_2> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "AGUV_245_afterTest_2"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_248> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/AGUV_248> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "AGUV_248"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_248_afterTest_1> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/AGUV_248_afterTest_1> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "AGUV_248_afterTest_1"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_248_afterTest_2> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/AGUV_248_afterTest_2> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "AGUV_248_afterTest_2"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_253> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/AGUV_253> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "AGUV_253"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_253_afterTest_1> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/AGUV_253_afterTest_1> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "AGUV_253_afterTest_1"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_253_afterTest_2> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/AGUV_253_afterTest_2> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "AGUV_253_afterTest_2"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_264> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/AGUV_264> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "AGUV_264"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_264_afterTest_1> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/AGUV_264_afterTest_1> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "AGUV_264_afterTest_1"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_264_afterTest_2> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/AGUV_264_afterTest_2> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "AGUV_264_afterTest_2"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_7> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/AGUV_7> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "AGUV_7"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_7_afterTest_1> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/AGUV_7_afterTest_1> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "AGUV_7_afterTest_1"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_7_afterTest_2> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/AGUV_7_afterTest_2> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "AGUV_7_afterTest_2"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_8> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/AGUV_8> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "AGUV_8"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_8_afterTest_1> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/AGUV_8_afterTest_1> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "AGUV_8_afterTest_1"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_8_afterTest_2> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/AGUV_8_afterTest_2> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "AGUV_8_afterTest_2"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_9> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/AGUV_9> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "AGUV_9"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_9_afterTest_1> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/AGUV_9_afterTest_1> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "AGUV_9_afterTest_1"^^xsd:string .
 
-<https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_9_afterTest_2> a pmdco:Metadata,
-        pmdco:TestPieceName ;
+<https://w3id.org/ontofnct/resource/_specimen_name/AGUV_9_afterTest_2> a pmdco:Metadata,
+        pmdco:SpecimenName ;
     pmdco:value "AGUV_9_afterTest_2"^^xsd:string .
 
 resource:1511007DXMS_conditioning_time a base:ConditioningTime,
@@ -6291,125 +6291,125 @@ resource:17020264UVMS_width_w a pmdco:Measurement,
     pmdco:unit unit:MilliM ;
     pmdco:value "5.973"^^xsd:float .
 
-<https://w3id.org/ontofnct/resource/_testpiece/5021DX_10_testpiece_afterTest_1> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_10_afterTest_1> .
+<https://w3id.org/ontofnct/resource/_specimen/5021DX_10_specimen_afterTest_1> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/5021DX_10_afterTest_1> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/5021DX_10_testpiece_afterTest_2> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_10_afterTest_2> .
+<https://w3id.org/ontofnct/resource/_specimen/5021DX_10_specimen_afterTest_2> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/5021DX_10_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/5021DX_11_testpiece_afterTest_1> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_11_afterTest_1> .
+<https://w3id.org/ontofnct/resource/_specimen/5021DX_11_specimen_afterTest_1> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/5021DX_11_afterTest_1> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/5021DX_11_testpiece_afterTest_2> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_11_afterTest_2> .
+<https://w3id.org/ontofnct/resource/_specimen/5021DX_11_specimen_afterTest_2> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/5021DX_11_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/5021DX_248_testpiece_afterTest_1> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_248_afterTest_1> .
+<https://w3id.org/ontofnct/resource/_specimen/5021DX_248_specimen_afterTest_1> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/5021DX_248_afterTest_1> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/5021DX_248_testpiece_afterTest_2> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_248_afterTest_2> .
+<https://w3id.org/ontofnct/resource/_specimen/5021DX_248_specimen_afterTest_2> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/5021DX_248_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/5021DX_250_testpiece_afterTest_1> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_250_afterTest_1> .
+<https://w3id.org/ontofnct/resource/_specimen/5021DX_250_specimen_afterTest_1> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/5021DX_250_afterTest_1> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/5021DX_250_testpiece_afterTest_2> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_250_afterTest_2> .
+<https://w3id.org/ontofnct/resource/_specimen/5021DX_250_specimen_afterTest_2> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/5021DX_250_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/5021DX_251_testpiece_afterTest_1> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_251_afterTest_1> .
+<https://w3id.org/ontofnct/resource/_specimen/5021DX_251_specimen_afterTest_1> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/5021DX_251_afterTest_1> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/5021DX_251_testpiece_afterTest_2> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_251_afterTest_2> .
+<https://w3id.org/ontofnct/resource/_specimen/5021DX_251_specimen_afterTest_2> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/5021DX_251_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/5021DX_252_testpiece_afterTest_1> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_252_afterTest_1> .
+<https://w3id.org/ontofnct/resource/_specimen/5021DX_252_specimen_afterTest_1> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/5021DX_252_afterTest_1> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/5021DX_252_testpiece_afterTest_2> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_252_afterTest_2> .
+<https://w3id.org/ontofnct/resource/_specimen/5021DX_252_specimen_afterTest_2> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/5021DX_252_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/5021DX_253_testpiece_afterTest_1> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_253_afterTest_1> .
+<https://w3id.org/ontofnct/resource/_specimen/5021DX_253_specimen_afterTest_1> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/5021DX_253_afterTest_1> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/5021DX_253_testpiece_afterTest_2> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_253_afterTest_2> .
+<https://w3id.org/ontofnct/resource/_specimen/5021DX_253_specimen_afterTest_2> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/5021DX_253_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/5021DX_7_testpiece_afterTest_1> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_7_afterTest_1> .
+<https://w3id.org/ontofnct/resource/_specimen/5021DX_7_specimen_afterTest_1> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/5021DX_7_afterTest_1> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/5021DX_7_testpiece_afterTest_2> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_7_afterTest_2> .
+<https://w3id.org/ontofnct/resource/_specimen/5021DX_7_specimen_afterTest_2> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/5021DX_7_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/5021DX_8_testpiece_afterTest_1> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_8_afterTest_1> .
+<https://w3id.org/ontofnct/resource/_specimen/5021DX_8_specimen_afterTest_1> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/5021DX_8_afterTest_1> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/5021DX_8_testpiece_afterTest_2> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_8_afterTest_2> .
+<https://w3id.org/ontofnct/resource/_specimen/5021DX_8_specimen_afterTest_2> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/5021DX_8_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/5021DX_9_testpiece_afterTest_1> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_9_afterTest_1> .
+<https://w3id.org/ontofnct/resource/_specimen/5021DX_9_specimen_afterTest_1> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/5021DX_9_afterTest_1> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/5021DX_9_testpiece_afterTest_2> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/5021DX_9_afterTest_2> .
+<https://w3id.org/ontofnct/resource/_specimen/5021DX_9_specimen_afterTest_2> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/5021DX_9_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/AGUV_12_testpiece_afterTest_1> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_12_afterTest_1> .
+<https://w3id.org/ontofnct/resource/_specimen/AGUV_12_specimen_afterTest_1> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/AGUV_12_afterTest_1> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/AGUV_12_testpiece_afterTest_2> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_12_afterTest_2> .
+<https://w3id.org/ontofnct/resource/_specimen/AGUV_12_specimen_afterTest_2> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/AGUV_12_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/AGUV_13_testpiece_afterTest_1> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_13_afterTest_1> .
+<https://w3id.org/ontofnct/resource/_specimen/AGUV_13_specimen_afterTest_1> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/AGUV_13_afterTest_1> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/AGUV_13_testpiece_afterTest_2> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_13_afterTest_2> .
+<https://w3id.org/ontofnct/resource/_specimen/AGUV_13_specimen_afterTest_2> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/AGUV_13_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/AGUV_244_testpiece_afterTest_1> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_244_afterTest_1> .
+<https://w3id.org/ontofnct/resource/_specimen/AGUV_244_specimen_afterTest_1> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/AGUV_244_afterTest_1> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/AGUV_244_testpiece_afterTest_2> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_244_afterTest_2> .
+<https://w3id.org/ontofnct/resource/_specimen/AGUV_244_specimen_afterTest_2> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/AGUV_244_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/AGUV_245_testpiece_afterTest_1> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_245_afterTest_1> .
+<https://w3id.org/ontofnct/resource/_specimen/AGUV_245_specimen_afterTest_1> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/AGUV_245_afterTest_1> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/AGUV_245_testpiece_afterTest_2> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_245_afterTest_2> .
+<https://w3id.org/ontofnct/resource/_specimen/AGUV_245_specimen_afterTest_2> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/AGUV_245_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/AGUV_248_testpiece_afterTest_1> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_248_afterTest_1> .
+<https://w3id.org/ontofnct/resource/_specimen/AGUV_248_specimen_afterTest_1> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/AGUV_248_afterTest_1> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/AGUV_248_testpiece_afterTest_2> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_248_afterTest_2> .
+<https://w3id.org/ontofnct/resource/_specimen/AGUV_248_specimen_afterTest_2> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/AGUV_248_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/AGUV_253_testpiece_afterTest_1> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_253_afterTest_1> .
+<https://w3id.org/ontofnct/resource/_specimen/AGUV_253_specimen_afterTest_1> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/AGUV_253_afterTest_1> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/AGUV_253_testpiece_afterTest_2> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_253_afterTest_2> .
+<https://w3id.org/ontofnct/resource/_specimen/AGUV_253_specimen_afterTest_2> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/AGUV_253_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/AGUV_264_testpiece_afterTest_1> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_264_afterTest_1> .
+<https://w3id.org/ontofnct/resource/_specimen/AGUV_264_specimen_afterTest_1> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/AGUV_264_afterTest_1> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/AGUV_264_testpiece_afterTest_2> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_264_afterTest_2> .
+<https://w3id.org/ontofnct/resource/_specimen/AGUV_264_specimen_afterTest_2> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/AGUV_264_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/AGUV_7_testpiece_afterTest_1> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_7_afterTest_1> .
+<https://w3id.org/ontofnct/resource/_specimen/AGUV_7_specimen_afterTest_1> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/AGUV_7_afterTest_1> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/AGUV_7_testpiece_afterTest_2> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_7_afterTest_2> .
+<https://w3id.org/ontofnct/resource/_specimen/AGUV_7_specimen_afterTest_2> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/AGUV_7_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/AGUV_8_testpiece_afterTest_1> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_8_afterTest_1> .
+<https://w3id.org/ontofnct/resource/_specimen/AGUV_8_specimen_afterTest_1> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/AGUV_8_afterTest_1> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/AGUV_8_testpiece_afterTest_2> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_8_afterTest_2> .
+<https://w3id.org/ontofnct/resource/_specimen/AGUV_8_specimen_afterTest_2> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/AGUV_8_afterTest_2> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/AGUV_9_testpiece_afterTest_1> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_9_afterTest_1> .
+<https://w3id.org/ontofnct/resource/_specimen/AGUV_9_specimen_afterTest_1> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/AGUV_9_afterTest_1> .
 
-<https://w3id.org/ontofnct/resource/_testpiece/AGUV_9_testpiece_afterTest_2> a pmdco:TestPiece ;
-    pmdco:characteristic <https://w3id.org/ontofnct/resource/_testpiece_name/AGUV_9_afterTest_2> .
+<https://w3id.org/ontofnct/resource/_specimen/AGUV_9_specimen_afterTest_2> a pmdco:Specimen ;
+    pmdco:characteristic <https://w3id.org/ontofnct/resource/_specimen_name/AGUV_9_afterTest_2> .
 
 resource:1511007DXMS_final_elongation_d a base:FinalElongation,
         pmdco:Measurement,

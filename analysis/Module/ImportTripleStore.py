@@ -11,9 +11,7 @@ def get_triple_store(link_core, link_ontoFNCT, link_data):
     triple_store = or2.World()
     triple_store.get_ontology(link_core).load() # https://w3id.org/pmd/co
     triple_store.get_ontology(link_ontoFNCT).load()  # https://w3id.org/ontofnct
-    # triple_store.get_ontology("file://ontology.rdf").load()  # Local file import of OntoFNCT
     triple_store.get_ontology(link_data).load()  # Examplary data mapped file on GitHub (https://github.com/MarkusSchilling/ontoFNCT/ontoFNCT_exemplary_data_mapping.rdf)
-    # triple_store.get_ontology("file://ontoFNCT_exemplary_data_PE-HD.rdf").load()  # Local file import to triple store
     return triple_store
 
 # "https://raw.githubusercontent.com/MarkusSchilling/ontoFNCT/main/analysis/ontoFNCT_exemplary_data_PE-HD.rdf"
@@ -29,12 +27,12 @@ def get_dataframe(triple_store):
     ?p pmdco:characteristic ?processIDInst .
     ?processIDInst a pmdco:ProcessIdentifier .
     ?processIDInst pmdco:value ?processID .
-    ?s a pmdco:TestPiece .
+    ?s a pmdco:Specimen .
     ?p pmdco:input ?s .
     ?s pmdco:characteristic ?materialDesc .
     ?materialDesc a pmdco:materialDesignation .
     ?materialDesc pmdco:value ?material .
-    ?p pmdco:characteristic ?mediumInst .
+    ?p pmdco:participant ?mediumInst .
     ?mediumInst a pmdco:Medium .
     ?mediumInst pmdco:value ?medium .
     ?p pmdco:output ?tfInst .
