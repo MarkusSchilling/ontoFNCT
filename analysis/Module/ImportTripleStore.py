@@ -41,7 +41,7 @@ def get_dataframe(triple_store):
     ?tfInst a ontoFNCT:TimeToFailure .
     ?tfInst pmdco:value ?timeToFailure .
     ?p pmdco:output ?stressInst .
-    ?stressInst a ontoFNCT:NominalTensileStress .
+    ?stressInst a ontoFNCT:MeasuredTensileStress .
     ?stressInst pmdco:value ?stressMeasured .
     } ORDER BY ?material ?medium ?stressMeasured
     """

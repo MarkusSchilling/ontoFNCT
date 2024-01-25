@@ -6441,7 +6441,7 @@ resource:1511007DXMS_measured_notch_depth_nm a base:NotchDepth,
     pmdco:unit unit:MilliM ;
     pmdco:value "0.973"^^xsd:float .
 
-resource:1511007DXMS_measured_stress_sigma_L a base:NominalTensileStress,
+resource:1511007DXMS_measured_stress_sigma_L a base:MeasuredTensileStress,
         pmdco:Measurement,
         pmdco:SecondaryData ;
     pmdco:unit unit:MegaPa ;
@@ -6487,7 +6487,7 @@ resource:1511007UVMS_measured_notch_depth_nm a base:NotchDepth,
     pmdco:unit unit:MilliM ;
     pmdco:value "1.025"^^xsd:float .
 
-resource:1511007UVMS_measured_stress_sigma_L a base:NominalTensileStress,
+resource:1511007UVMS_measured_stress_sigma_L a base:MeasuredTensileStress,
         pmdco:Measurement,
         pmdco:SecondaryData ;
     pmdco:unit unit:MegaPa ;
@@ -6533,7 +6533,7 @@ resource:1511008DXMS_measured_notch_depth_nm a base:NotchDepth,
     pmdco:unit unit:MilliM ;
     pmdco:value "1.02"^^xsd:float .
 
-resource:1511008DXMS_measured_stress_sigma_L a base:NominalTensileStress,
+resource:1511008DXMS_measured_stress_sigma_L a base:MeasuredTensileStress,
         pmdco:Measurement,
         pmdco:SecondaryData ;
     pmdco:unit unit:MegaPa ;
@@ -6579,7 +6579,7 @@ resource:1511008UVMS_measured_notch_depth_nm a base:NotchDepth,
     pmdco:unit unit:MilliM ;
     pmdco:value "1.03"^^xsd:float .
 
-resource:1511008UVMS_measured_stress_sigma_L a base:NominalTensileStress,
+resource:1511008UVMS_measured_stress_sigma_L a base:MeasuredTensileStress,
         pmdco:Measurement,
         pmdco:SecondaryData ;
     pmdco:unit unit:MegaPa ;
@@ -6625,7 +6625,7 @@ resource:1511009DXMS_measured_notch_depth_nm a base:NotchDepth,
     pmdco:unit unit:MilliM ;
     pmdco:value "1.025"^^xsd:float .
 
-resource:1511009DXMS_measured_stress_sigma_L a base:NominalTensileStress,
+resource:1511009DXMS_measured_stress_sigma_L a base:MeasuredTensileStress,
         pmdco:Measurement,
         pmdco:SecondaryData ;
     pmdco:unit unit:MegaPa ;
@@ -6671,7 +6671,7 @@ resource:1511009UVMS_measured_notch_depth_nm a base:NotchDepth,
     pmdco:unit unit:MilliM ;
     pmdco:value "1.03"^^xsd:float .
 
-resource:1511009UVMS_measured_stress_sigma_L a base:NominalTensileStress,
+resource:1511009UVMS_measured_stress_sigma_L a base:MeasuredTensileStress,
         pmdco:Measurement,
         pmdco:SecondaryData ;
     pmdco:unit unit:MegaPa ;
@@ -6717,7 +6717,7 @@ resource:1511010DXMS_measured_notch_depth_nm a base:NotchDepth,
     pmdco:unit unit:MilliM ;
     pmdco:value "1.01"^^xsd:float .
 
-resource:1511010DXMS_measured_stress_sigma_L a base:NominalTensileStress,
+resource:1511010DXMS_measured_stress_sigma_L a base:MeasuredTensileStress,
         pmdco:Measurement,
         pmdco:SecondaryData ;
     pmdco:unit unit:MegaPa ;
@@ -6763,7 +6763,7 @@ resource:1511011DXMS_measured_notch_depth_nm a base:NotchDepth,
     pmdco:unit unit:MilliM ;
     pmdco:value "1.025"^^xsd:float .
 
-resource:1511011DXMS_measured_stress_sigma_L a base:NominalTensileStress,
+resource:1511011DXMS_measured_stress_sigma_L a base:MeasuredTensileStress,
         pmdco:Measurement,
         pmdco:SecondaryData ;
     pmdco:unit unit:MegaPa ;
@@ -6809,7 +6809,7 @@ resource:1511012UVMS_measured_notch_depth_nm a base:NotchDepth,
     pmdco:unit unit:MilliM ;
     pmdco:value "1.03"^^xsd:float .
 
-resource:1511012UVMS_measured_stress_sigma_L a base:NominalTensileStress,
+resource:1511012UVMS_measured_stress_sigma_L a base:MeasuredTensileStress,
         pmdco:Measurement,
         pmdco:SecondaryData ;
     pmdco:unit unit:MegaPa ;
@@ -6855,7 +6855,7 @@ resource:1511013UVMS_measured_notch_depth_nm a base:NotchDepth,
     pmdco:unit unit:MilliM ;
     pmdco:value "1.0"^^xsd:float .
 
-resource:1511013UVMS_measured_stress_sigma_L a base:NominalTensileStress,
+resource:1511013UVMS_measured_stress_sigma_L a base:MeasuredTensileStress,
         pmdco:Measurement,
         pmdco:SecondaryData ;
     pmdco:unit unit:MegaPa ;
@@ -6901,7 +6901,7 @@ resource:16120244UVMS_measured_notch_depth_nm a base:NotchDepth,
     pmdco:unit unit:MilliM ;
     pmdco:value "0.988"^^xsd:float .
 
-resource:16120244UVMS_measured_stress_sigma_L a base:NominalTensileStress,
+resource:16120244UVMS_measured_stress_sigma_L a base:MeasuredTensileStress,
         pmdco:Measurement,
         pmdco:SecondaryData ;
     pmdco:unit unit:MegaPa ;
@@ -6947,7 +6947,7 @@ resource:16120245UVMS_measured_notch_depth_nm a base:NotchDepth,
     pmdco:unit unit:MilliM ;
     pmdco:value "0.98"^^xsd:float .
 
-resource:16120245UVMS_measured_stress_sigma_L a base:NominalTensileStress,
+resource:16120245UVMS_measured_stress_sigma_L a base:MeasuredTensileStress,
         pmdco:Measurement,
         pmdco:SecondaryData ;
     pmdco:unit unit:MegaPa ;
@@ -6993,7 +6993,7 @@ resource:16120248DXMS_measured_notch_depth_nm a base:NotchDepth,
     pmdco:unit unit:MilliM ;
     pmdco:value "1.008"^^xsd:float .
 
-resource:16120248DXMS_measured_stress_sigma_L a base:NominalTensileStress,
+resource:16120248DXMS_measured_stress_sigma_L a base:MeasuredTensileStress,
         pmdco:Measurement,
         pmdco:SecondaryData ;
     pmdco:unit unit:MegaPa ;
@@ -7039,7 +7039,7 @@ resource:16120250DXMS_measured_notch_depth_nm a base:NotchDepth,
     pmdco:unit unit:MilliM ;
     pmdco:value "0.98"^^xsd:float .
 
-resource:16120250DXMS_measured_stress_sigma_L a base:NominalTensileStress,
+resource:16120250DXMS_measured_stress_sigma_L a base:MeasuredTensileStress,
         pmdco:Measurement,
         pmdco:SecondaryData ;
     pmdco:unit unit:MegaPa ;
@@ -7085,7 +7085,7 @@ resource:16120251DXMS_measured_notch_depth_nm a base:NotchDepth,
     pmdco:unit unit:MilliM ;
     pmdco:value "0.995"^^xsd:float .
 
-resource:16120251DXMS_measured_stress_sigma_L a base:NominalTensileStress,
+resource:16120251DXMS_measured_stress_sigma_L a base:MeasuredTensileStress,
         pmdco:Measurement,
         pmdco:SecondaryData ;
     pmdco:unit unit:MegaPa ;
@@ -7131,7 +7131,7 @@ resource:16120252DXMS_measured_notch_depth_nm a base:NotchDepth,
     pmdco:unit unit:MilliM ;
     pmdco:value "1.033"^^xsd:float .
 
-resource:16120252DXMS_measured_stress_sigma_L a base:NominalTensileStress,
+resource:16120252DXMS_measured_stress_sigma_L a base:MeasuredTensileStress,
         pmdco:Measurement,
         pmdco:SecondaryData ;
     pmdco:unit unit:MegaPa ;
@@ -7177,7 +7177,7 @@ resource:16120253DXMS_measured_notch_depth_nm a base:NotchDepth,
     pmdco:unit unit:MilliM ;
     pmdco:value "0.998"^^xsd:float .
 
-resource:16120253DXMS_measured_stress_sigma_L a base:NominalTensileStress,
+resource:16120253DXMS_measured_stress_sigma_L a base:MeasuredTensileStress,
         pmdco:Measurement,
         pmdco:SecondaryData ;
     pmdco:unit unit:MegaPa ;
@@ -7223,7 +7223,7 @@ resource:17010248UVMS_measured_notch_depth_nm a base:NotchDepth,
     pmdco:unit unit:MilliM ;
     pmdco:value "1.005"^^xsd:float .
 
-resource:17010248UVMS_measured_stress_sigma_L a base:NominalTensileStress,
+resource:17010248UVMS_measured_stress_sigma_L a base:MeasuredTensileStress,
         pmdco:Measurement,
         pmdco:SecondaryData ;
     pmdco:unit unit:MegaPa ;
@@ -7269,7 +7269,7 @@ resource:17010253UVMS_measured_notch_depth_nm a base:NotchDepth,
     pmdco:unit unit:MilliM ;
     pmdco:value "0.988"^^xsd:float .
 
-resource:17010253UVMS_measured_stress_sigma_L a base:NominalTensileStress,
+resource:17010253UVMS_measured_stress_sigma_L a base:MeasuredTensileStress,
         pmdco:Measurement,
         pmdco:SecondaryData ;
     pmdco:unit unit:MegaPa ;
@@ -7315,7 +7315,7 @@ resource:17020264UVMS_measured_notch_depth_nm a base:NotchDepth,
     pmdco:unit unit:MilliM ;
     pmdco:value "1.023"^^xsd:float .
 
-resource:17020264UVMS_measured_stress_sigma_L a base:NominalTensileStress,
+resource:17020264UVMS_measured_stress_sigma_L a base:MeasuredTensileStress,
         pmdco:Measurement,
         pmdco:SecondaryData ;
     pmdco:unit unit:MegaPa ;
