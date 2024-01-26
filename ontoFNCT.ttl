@@ -31,17 +31,17 @@ OntoFNCT at GitHub: https://github.com/MarkusSchilling/ontoFNCT"""@en ;
 #    Classes
 #################################################################
 
-###  http://w3id.org/ontofnct/ActualTensileStress
-<http://w3id.org/ontofnct/ActualTensileStress> rdf:type owl:Class ;
+###  https://w3id.org/ontofnct/ActualTensileStress
+<https://w3id.org/ontofnct/ActualTensileStress> rdf:type owl:Class ;
                                                owl:equivalentClass [ rdf:type owl:Restriction ;
                                                                      owl:onProperty <https://w3id.org/pmd/co/participant> ;
-                                                                     owl:someValuesFrom <http://w3id.org/ontofnct/MeasuredLigamentArea>
+                                                                     owl:someValuesFrom <https://w3id.org/ontofnct/MeasuredLigamentArea>
                                                                    ] ,
                                                                    [ rdf:type owl:Restriction ;
                                                                      owl:onProperty <https://w3id.org/pmd/co/participant> ;
                                                                      owl:someValuesFrom <https://w3id.org/pmd/co/Force>
                                                                    ] ;
-                                               rdfs:subClassOf <http://w3id.org/ontofnct/TensileStress> ;
+                                               rdfs:subClassOf <https://w3id.org/ontofnct/TensileStress> ;
                                                rdfs:comment "Symbol: sigma_L" ;
                                                rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
                                                rdfs:label "Actual Tensile Stress"@en ,
@@ -55,10 +55,10 @@ Note: It is expressed in megapascals (MPa)."""@en ;
                                                <https://w3id.org/pmd/co/definitionSource> "ISO 16770:2019-09" .
 
 
-###  http://w3id.org/ontofnct/BrittleFailure
-<http://w3id.org/ontofnct/BrittleFailure> rdf:type owl:Class ;
-                                          rdfs:subClassOf <http://w3id.org/ontofnct/Failure> ;
-                                          owl:disjointWith <http://w3id.org/ontofnct/DuctileFailure> ;
+###  https://w3id.org/ontofnct/BrittleFailure
+<https://w3id.org/ontofnct/BrittleFailure> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/ontofnct/Failure> ;
+                                          owl:disjointWith <https://w3id.org/ontofnct/DuctileFailure> ;
                                           rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
                                           rdfs:label "Brittle Failure"@en ,
                                                      "Sprödbruch"@de ;
@@ -74,8 +74,8 @@ Note: The beginning of the transition to ductile failure behaviour may be indica
                                           <https://w3id.org/pmd/co/definitionSource> "ISO 16770:2019-09" .
 
 
-###  http://w3id.org/ontofnct/ConditioningTime
-<http://w3id.org/ontofnct/ConditioningTime> rdf:type owl:Class ;
+###  https://w3id.org/ontofnct/ConditioningTime
+<https://w3id.org/ontofnct/ConditioningTime> rdf:type owl:Class ;
                                             rdfs:subClassOf <https://w3id.org/pmd/co/Time> ;
                                             rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
                                             rdfs:label "Conditioning Time"@en ,
@@ -85,8 +85,8 @@ Note: The beginning of the transition to ductile failure behaviour may be indica
                                             <https://w3id.org/pmd/co/definitionSource> <https://maclellanrubber.com/definitions/conditioning> .
 
 
-###  http://w3id.org/ontofnct/CriterionOfBrittleness
-<http://w3id.org/ontofnct/CriterionOfBrittleness> rdf:type owl:Class ;
+###  https://w3id.org/ontofnct/CriterionOfBrittleness
+<https://w3id.org/ontofnct/CriterionOfBrittleness> rdf:type owl:Class ;
                                                   rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
                                                   rdfs:comment "Symbol: B" ;
                                                   rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
@@ -100,8 +100,8 @@ Anmerkung: Das Kriterium der Sprödigkeit ist ein vergleichender skalarer Wert, 
 Note: The criterion of brittleness is a comparative scalar, given without unit."""@en .
 
 
-###  http://w3id.org/ontofnct/Depth
-<http://w3id.org/ontofnct/Depth> rdf:type owl:Class ;
+###  https://w3id.org/ontofnct/Depth
+<https://w3id.org/ontofnct/Depth> rdf:type owl:Class ;
                                  rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
                                  rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
                                  rdfs:label "Depth"@en ,
@@ -116,9 +116,9 @@ Note: Depth also denotes the quality of being deep."""@en ;
                                  <https://w3id.org/pmd/co/definitionSource> <https://www.dictionary.com/browse/depth> .
 
 
-###  http://w3id.org/ontofnct/DuctileFailure
-<http://w3id.org/ontofnct/DuctileFailure> rdf:type owl:Class ;
-                                          rdfs:subClassOf <http://w3id.org/ontofnct/Failure> ;
+###  https://w3id.org/ontofnct/DuctileFailure
+<https://w3id.org/ontofnct/DuctileFailure> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/ontofnct/Failure> ;
                                           rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
                                           rdfs:label "Ductile Failure"@en ,
                                                      "Duktilbruch"@de ;
@@ -127,8 +127,8 @@ Note: Depth also denotes the quality of being deep."""@en ;
                                           <https://w3id.org/pmd/co/definitionSource> "ISO 16770:2019-09" .
 
 
-###  http://w3id.org/ontofnct/Elongation
-<http://w3id.org/ontofnct/Elongation> rdf:type owl:Class ;
+###  https://w3id.org/ontofnct/Elongation
+<https://w3id.org/ontofnct/Elongation> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
                                       rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
                                       rdfs:label "Elongation"@en ,
@@ -137,8 +137,8 @@ Note: Depth also denotes the quality of being deep."""@en ;
                                                                                        "This class describes the increase in the original length of an object, such as a test specimen, at any moment during a test."@en .
 
 
-###  http://w3id.org/ontofnct/ExtensometerCapacity
-<http://w3id.org/ontofnct/ExtensometerCapacity> rdf:type owl:Class ;
+###  https://w3id.org/ontofnct/ExtensometerCapacity
+<https://w3id.org/ontofnct/ExtensometerCapacity> rdf:type owl:Class ;
                                                 rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
                                                 rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
                                                 rdfs:label "Extensometer Capacity"@en ,
@@ -151,8 +151,8 @@ Hinweis: Üblicherweise wird die maximale Länge des Aufnehmers (maximaler Messb
 Note: Typically, the maximum extensometer length (maximal measurement range) is given."""@en .
 
 
-###  http://w3id.org/ontofnct/Failure
-<http://w3id.org/ontofnct/Failure> rdf:type owl:Class ;
+###  https://w3id.org/ontofnct/Failure
+<https://w3id.org/ontofnct/Failure> rdf:type owl:Class ;
                                    rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
                                    rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
                                    rdfs:label "Bruch"@de ,
@@ -162,9 +162,9 @@ Note: Typically, the maximum extensometer length (maximal measurement range) is 
                                    <https://w3id.org/pmd/co/definitionSource> "ISO 16770:2019-09" .
 
 
-###  http://w3id.org/ontofnct/FinalElongation
-<http://w3id.org/ontofnct/FinalElongation> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://w3id.org/ontofnct/Elongation> ;
+###  https://w3id.org/ontofnct/FinalElongation
+<https://w3id.org/ontofnct/FinalElongation> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/ontofnct/Elongation> ;
                                            rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
                                            rdfs:label "Enddehnung"@de ,
                                                       "Final Elongation"@en ;
@@ -172,11 +172,11 @@ Note: Typically, the maximum extensometer length (maximal measurement range) is 
                                                                                             "This class describes the elongation of a test specimen at the end of a test. This elongation may or may not be permanent to the object under consideration, depending on the associated material behavior."@en .
 
 
-###  http://w3id.org/ontofnct/FullNotchCreepTest
-<http://w3id.org/ontofnct/FullNotchCreepTest> rdf:type owl:Class ;
+###  https://w3id.org/ontofnct/FullNotchCreepTest
+<https://w3id.org/ontofnct/FullNotchCreepTest> rdf:type owl:Class ;
                                               owl:equivalentClass [ rdf:type owl:Restriction ;
                                                                     owl:onProperty <https://w3id.org/pmd/co/participant> ;
-                                                                    owl:someValuesFrom <http://w3id.org/ontofnct/FullNotchCreepTestDevice>
+                                                                    owl:someValuesFrom <https://w3id.org/ontofnct/FullNotchCreepTestDevice>
                                                                   ] ,
                                                                   [ rdf:type owl:Restriction ;
                                                                     owl:onProperty <https://w3id.org/pmd/co/participant> ;
@@ -199,8 +199,8 @@ Note: For testing of PE-based container materials, other environments can also b
                                               <https://w3id.org/pmd/co/definitionSource> "ISO 16770:2019-09" .
 
 
-###  http://w3id.org/ontofnct/FullNotchCreepTestDevice
-<http://w3id.org/ontofnct/FullNotchCreepTestDevice> rdf:type owl:Class ;
+###  https://w3id.org/ontofnct/FullNotchCreepTestDevice
+<https://w3id.org/ontofnct/FullNotchCreepTestDevice> rdf:type owl:Class ;
                                                     rdfs:subClassOf <https://w3id.org/pmd/co/TestingMachine> ;
                                                     rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
                                                     rdfs:label "Full-notch creep test device"@en ,
@@ -209,8 +209,8 @@ Note: For testing of PE-based container materials, other environments can also b
                                                                                                      "The full-notch creep test device is a machine to conduct a full-notch creep test. The control and monitoring of the test, the measurements, and the data processing are usually performed by computer. However, this may also be performed manually."@en .
 
 
-###  http://w3id.org/ontofnct/LeverArmRatio
-<http://w3id.org/ontofnct/LeverArmRatio> rdf:type owl:Class ;
+###  https://w3id.org/ontofnct/LeverArmRatio
+<https://w3id.org/ontofnct/LeverArmRatio> rdf:type owl:Class ;
                                          rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
                                          rdfs:comment "Der Abstand zwischen dem Drehpunkt eines Hebels und dem Punkt, an dem die Kraft aufgebracht wird, ist wichtig für die Bestimmung des mechanischen Vorteils eines Hebels, da er die Höhe der Kraft, die ausgeübt werden kann, und den Abstand, über den diese Kraft aufgebracht wird, beeinflusst."@de ,
                                                       "The distance between the pivot point (or fulcrum) of a lever and the point where the force is applied is important in determining the mechanical advantage of a lever, as it affects the amount of force that can be exerted and the distance over which that force is applied."@en ;
@@ -221,8 +221,8 @@ Note: For testing of PE-based container materials, other environments can also b
                                                                                           "This class describes the ratio of a lever arm which is a term used in physics to describe the distance between the point where a force is applied and the point where that force is producing a rotational effect. In other words, it is the distance between the pivot point (or fulcrum) of a lever and the point where the force is applied."@en .
 
 
-###  http://w3id.org/ontofnct/MeasuredLigamentArea
-<http://w3id.org/ontofnct/MeasuredLigamentArea> rdf:type owl:Class ;
+###  https://w3id.org/ontofnct/MeasuredLigamentArea
+<https://w3id.org/ontofnct/MeasuredLigamentArea> rdf:type owl:Class ;
                                                 rdfs:subClassOf <https://w3id.org/pmd/co/CrossSectionArea> ;
                                                 rdfs:comment "Symbol: A_L" ;
                                                 rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
@@ -237,8 +237,8 @@ Note: It is expressed in square millimetres (mm2)."""@en ;
                                                 <https://w3id.org/pmd/co/definitionSource> "ISO 16770:2019-09" .
 
 
-###  http://w3id.org/ontofnct/NominalLigamentArea
-<http://w3id.org/ontofnct/NominalLigamentArea> rdf:type owl:Class ;
+###  https://w3id.org/ontofnct/NominalLigamentArea
+<https://w3id.org/ontofnct/NominalLigamentArea> rdf:type owl:Class ;
                                                rdfs:subClassOf <https://w3id.org/pmd/co/CrossSectionArea> ;
                                                rdfs:comment "Symbol: A_n" ;
                                                rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
@@ -249,17 +249,17 @@ Note: It is expressed in square millimetres (mm2)."""@en ;
                                                <https://w3id.org/pmd/co/definitionSource> "ISO 16770:2019-09" .
 
 
-###  http://w3id.org/ontofnct/NominalTensileStress
-<http://w3id.org/ontofnct/NominalTensileStress> rdf:type owl:Class ;
+###  https://w3id.org/ontofnct/NominalTensileStress
+<https://w3id.org/ontofnct/NominalTensileStress> rdf:type owl:Class ;
                                                 owl:equivalentClass [ rdf:type owl:Restriction ;
                                                                       owl:onProperty <https://w3id.org/pmd/co/participant> ;
-                                                                      owl:someValuesFrom <http://w3id.org/ontofnct/NominalLigamentArea>
+                                                                      owl:someValuesFrom <https://w3id.org/ontofnct/NominalLigamentArea>
                                                                     ] ,
                                                                     [ rdf:type owl:Restriction ;
                                                                       owl:onProperty <https://w3id.org/pmd/co/participant> ;
                                                                       owl:someValuesFrom <https://w3id.org/pmd/co/Force>
                                                                     ] ;
-                                                rdfs:subClassOf <http://w3id.org/ontofnct/TensileStress> ;
+                                                rdfs:subClassOf <https://w3id.org/ontofnct/TensileStress> ;
                                                 rdfs:comment "Symbol: sigma_n" ;
                                                 rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
                                                 rdfs:label "Nominal Tensile Stress"@en ,
@@ -273,8 +273,8 @@ Note: It is expressed in megapascals (MPa)."""@en ;
                                                 <https://w3id.org/pmd/co/definitionSource> "ISO 16770:2019-09" .
 
 
-###  http://w3id.org/ontofnct/Notch
-<http://w3id.org/ontofnct/Notch> rdf:type owl:Class ;
+###  https://w3id.org/ontofnct/Notch
+<https://w3id.org/ontofnct/Notch> rdf:type owl:Class ;
                                  rdfs:subClassOf <https://w3id.org/pmd/co/Object> ;
                                  rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
                                  rdfs:label "Kerbe"@de ,
@@ -283,9 +283,9 @@ Note: It is expressed in megapascals (MPa)."""@en ;
                                                                                   "In mechanical engineering and materials science, a notch refers to a V-shaped, U-shaped, or semi-circular defect deliberately introduced into a planar material. In structural components, a notch causes a stress concentration which can result in the initiation and growth of fatigue cracks. Notches are used in materials characterization to determine fracture mechanics related properties such as fracture toughness and rates of fatigue crack growth."@en .
 
 
-###  http://w3id.org/ontofnct/NotchDepth
-<http://w3id.org/ontofnct/NotchDepth> rdf:type owl:Class ;
-                                      rdfs:subClassOf <http://w3id.org/ontofnct/Depth> ;
+###  https://w3id.org/ontofnct/NotchDepth
+<https://w3id.org/ontofnct/NotchDepth> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/ontofnct/Depth> ;
                                       rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
                                       rdfs:label "Kerbtiefe"@de ,
                                                  "Notch Depth"@en ;
@@ -293,8 +293,8 @@ Note: It is expressed in megapascals (MPa)."""@en ;
                                                                                        "This class describes the depth of a notch that may have been introduced to an object, such as, e.g., a test specimen, deliberately or unintentionally."@en .
 
 
-###  http://w3id.org/ontofnct/Preload
-<http://w3id.org/ontofnct/Preload> rdf:type owl:Class ;
+###  https://w3id.org/ontofnct/Preload
+<https://w3id.org/ontofnct/Preload> rdf:type owl:Class ;
                                    rdfs:subClassOf <https://w3id.org/pmd/co/Force> ;
                                    rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
                                    rdfs:label "Preload"@en ,
@@ -303,8 +303,8 @@ Note: It is expressed in megapascals (MPa)."""@en ;
                                                                                     "This class describes the force used to load a test specimen prior to the performance of a test procedure."@en .
 
 
-###  http://w3id.org/ontofnct/PreloadTime
-<http://w3id.org/ontofnct/PreloadTime> rdf:type owl:Class ;
+###  https://w3id.org/ontofnct/PreloadTime
+<https://w3id.org/ontofnct/PreloadTime> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/Time> ;
                                        rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
                                        rdfs:label "Preload Time"@en ,
@@ -313,9 +313,9 @@ Note: It is expressed in megapascals (MPa)."""@en ;
                                                                                         "This class describes the time (duration) for which a preload (force used to load a test specimen prior to the performance of a test procedure) is applied."@en .
 
 
-###  http://w3id.org/ontofnct/ReferenceTensileStress
-<http://w3id.org/ontofnct/ReferenceTensileStress> rdf:type owl:Class ;
-                                                  rdfs:subClassOf <http://w3id.org/ontofnct/TensileStress> ;
+###  https://w3id.org/ontofnct/ReferenceTensileStress
+<https://w3id.org/ontofnct/ReferenceTensileStress> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <https://w3id.org/ontofnct/TensileStress> ;
                                                   rdfs:comment "Symbol: sigma_L,ref" ;
                                                   rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
                                                   rdfs:label "Reference Tensile Stress"@en ,
@@ -329,8 +329,8 @@ Note: It is expressed in megapascals (MPa)."""@en ;
                                                   <https://w3id.org/pmd/co/definitionSource> "ISO 16770:2019-09" .
 
 
-###  http://w3id.org/ontofnct/TensileStress
-<http://w3id.org/ontofnct/TensileStress> rdf:type owl:Class ;
+###  https://w3id.org/ontofnct/TensileStress
+<https://w3id.org/ontofnct/TensileStress> rdf:type owl:Class ;
                                          rdfs:subClassOf <https://w3id.org/pmd/co/Stress> ;
                                          rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
                                          rdfs:label "Tensile Stress"@en ,
@@ -340,8 +340,8 @@ Note: It is expressed in megapascals (MPa)."""@en ;
                                          <https://w3id.org/pmd/co/definitionSource> "ISO 16770:2019-09" .
 
 
-###  http://w3id.org/ontofnct/TestContainer
-<http://w3id.org/ontofnct/TestContainer> rdf:type owl:Class ;
+###  https://w3id.org/ontofnct/TestContainer
+<https://w3id.org/ontofnct/TestContainer> rdf:type owl:Class ;
                                          rdfs:subClassOf <https://w3id.org/pmd/co/ProcessingNode> ;
                                          rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
                                          rdfs:label "Prüfbehälter"@de ,
@@ -351,8 +351,8 @@ Note: It is expressed in megapascals (MPa)."""@en ;
                                          <https://w3id.org/pmd/co/definitionSource> <https://dictionary.cambridge.org/dictionary/english/container> .
 
 
-###  http://w3id.org/ontofnct/TestForceIncreaseRate
-<http://w3id.org/ontofnct/TestForceIncreaseRate> rdf:type owl:Class ;
+###  https://w3id.org/ontofnct/TestForceIncreaseRate
+<https://w3id.org/ontofnct/TestForceIncreaseRate> rdf:type owl:Class ;
                                                  rdfs:subClassOf <https://w3id.org/pmd/co/TestingRate> ;
                                                  rdfs:isDefinedBy <https://w3id.org/ontofnct> ,
                                                                   "This class describes the rate of the increase of the force applied to a test specimen during a test."@en ;
@@ -361,11 +361,11 @@ Note: It is expressed in megapascals (MPa)."""@en ;
                                                  <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt die Steigerungsrate der Kraft, die während einer Prüfung auf einen Probekörper aufgebracht wird und einwirkt."@de .
 
 
-###  http://w3id.org/ontofnct/TimeToFailure
-<http://w3id.org/ontofnct/TimeToFailure> rdf:type owl:Class ;
+###  https://w3id.org/ontofnct/TimeToFailure
+<https://w3id.org/ontofnct/TimeToFailure> rdf:type owl:Class ;
                                          owl:equivalentClass [ rdf:type owl:Restriction ;
                                                                owl:onProperty <https://w3id.org/pmd/co/participant> ;
-                                                               owl:someValuesFrom <http://w3id.org/ontofnct/ActualTensileStress>
+                                                               owl:someValuesFrom <https://w3id.org/ontofnct/ActualTensileStress>
                                                              ] ;
                                          rdfs:subClassOf <https://w3id.org/pmd/co/Duration> ;
                                          rdfs:comment "Versagenszeit"@de ,
@@ -380,11 +380,11 @@ Anmerkung: Die Versagenszeit wird in Stunden (h) angegeben."""@de ,
 Note: The time to failure time is expressed in hours (h)."""@en .
 
 
-###  http://w3id.org/ontofnct/TimeToFailureAtTheReferenceTensileStress
-<http://w3id.org/ontofnct/TimeToFailureAtTheReferenceTensileStress> rdf:type owl:Class ;
+###  https://w3id.org/ontofnct/TimeToFailureAtTheReferenceTensileStress
+<https://w3id.org/ontofnct/TimeToFailureAtTheReferenceTensileStress> rdf:type owl:Class ;
                                                                     owl:equivalentClass [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/pmd/co/participant> ;
-                                                                                          owl:someValuesFrom <http://w3id.org/ontofnct/ReferenceTensileStress>
+                                                                                          owl:someValuesFrom <https://w3id.org/ontofnct/ReferenceTensileStress>
                                                                                         ] ;
                                                                     rdfs:subClassOf <https://w3id.org/pmd/co/Duration> ;
                                                                     rdfs:comment "Symbol: t_f,ref" ;
@@ -414,7 +414,7 @@ Note: It is expressed in hours (h)."""@en ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://w3id.org/ontofnct/CriterionOfBrittleness> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/ontofnct/CriterionOfBrittleness> ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> :criterion
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
@@ -440,7 +440,7 @@ Note: It is expressed in hours (h)."""@en ;
                                          ] ;
    <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://w3id.org/ontofnct/DuctileFailure> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/ontofnct/DuctileFailure> ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> :criterion
                                                      ] ;
                                            rdf:rest rdf:nil
@@ -453,7 +453,7 @@ Note: It is expressed in hours (h)."""@en ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://w3id.org/ontofnct/CriterionOfBrittleness> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/ontofnct/CriterionOfBrittleness> ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> :criterion
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
@@ -491,7 +491,7 @@ Note: It is expressed in hours (h)."""@en ;
                                          ] ;
    <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://w3id.org/ontofnct/BrittleFailure> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/ontofnct/BrittleFailure> ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> :criterion
                                                      ] ;
                                            rdf:rest rdf:nil
