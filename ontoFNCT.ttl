@@ -4,7 +4,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://w3id.org/ontofnct> .
+@base <https://w3id.org/ontofnct/> .
 
 <https://w3id.org/ontofnct> rdf:type owl:Ontology ;
                              owl:versionIRI <https://w3id.org/ontofnct/1.0.0> ;
@@ -53,6 +53,16 @@ Anmerkung: Sie wird in Megapascal (MPa) angegeben."""@de ,
 
 Note: It is expressed in megapascals (MPa)."""@en ;
                      <https://w3id.org/pmd/co/definitionSource> "ISO 16770:2019-09" .
+
+
+###  https://w3id.org/ontofnct/BatchNumber
+:BatchNumber rdf:type owl:Class ;
+             rdfs:subClassOf <https://w3id.org/pmd/co/Identifier> ;
+             rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
+             rdfs:label "Batch Number"@en ,
+                        "Chargennummer"@de ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse bezieht sich auf eine eindeutige Kennung, die einer Gruppe von Artikeln zugewiesen wird, die unter ähnlichen Bedingungen hergestellt oder produziert werden, typischerweise innerhalb desselben Produktionslaufs oder Zeitrahmens. Die Chargennummer hilft bei der Verfolgung und Verwaltung dieser Artikel während ihres gesamten Lebenszyklus, einschließlich Produktion, Vertrieb und Aktivitäten nach dem Verkauf wie Rückrufe oder Qualitätskontrollmaßnahmen."@de ,
+                                                              "This class refers to a unique identifier assigned to a group of items manufactured or produced together under similar conditions, typically within the same production run or timeframe. The batch number helps track and manage these items throughout their lifecycle, including production, distribution, and post-sale activities such as recalls or quality control measures."@en .
 
 
 ###  https://w3id.org/ontofnct/BrittleFailure
@@ -170,6 +180,16 @@ Note: Typically, the maximum extensometer length (maximal measurement range) is 
                             "Final Elongation"@en ;
                  <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt die Dehnung eines Prüfkörpers am Ende einer Prüfung. Diese Dehnung kann je nach Materialverhalten für das betrachtete Objekt permanent sein oder nicht."@de ,
                                                                   "This class describes the elongation of a test specimen at the end of a test. This elongation may or may not be permanent to the object under consideration, depending on the associated material behavior."@en .
+
+
+###  https://w3id.org/ontofnct/FractureTypeTransitionPoint
+:FractureTypeTransitionPoint rdf:type owl:Class ;
+                             rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
+                             rdfs:label <https://w3id.org/ontofnct> ,
+                                        "Brucharten-Übergangspunkt"@de ,
+                                        "Fracture Type Transition Point"@en ;
+                             <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt den Spannungswert, der den Übergang von Spröd- zu Zähbruch bei FNCT-Prüfkörpern für eine bestimmte, eindeutige Kombination von Material und Umgebungsflüssigkeit angibt, wie sie typischerweise in einer Reihe von FNCT-Versuchen ermittelt wird."@de ,
+                                                                              "This class describes the stress value denoting the transition from brittle to ductile fracture occurring to FNCT specimens valid for a specific, distinct material and environmental fluid combination as typically determined in a series of FNCT experiments."@en .
 
 
 ###  https://w3id.org/ontofnct/FullNotchCreepTest
@@ -293,6 +313,18 @@ Note: It is expressed in megapascals (MPa)."""@en ;
                                                              "This class describes the depth of a notch that may have been introduced to an object, such as, e.g., a test specimen, deliberately or unintentionally."@en .
 
 
+###  https://w3id.org/ontofnct/NotchingSpeed
+:NotchingSpeed rdf:type owl:Class ;
+               rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
+               rdfs:comment "In accordance with the corresponding test standard, the notching speed of FNCT specimens is measured in mm/min."@en ,
+                            "In Übereinstimmung mit der entsprechenden Prüfnorm wird die Kerbgeschwindigkeit von FNCT-Proben in mm/min gemessen."@de ;
+               rdfs:label <https://w3id.org/ontofnct> ,
+                          "Kerbgeschwindigkeit"@de ,
+                          "Notching Speed"@en ;
+               <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt die Geschwindigkeit, mit der das Material während des Kerbvorgangs geschnitten wird. Beim Kerben wird ein Schnitt in einem Material erzeugt. Die Kerbgeschwindigkeit gibt an, wie schnell dieser Schnitt erfolgt."@de ,
+                                                                "This class describes the rate at which the material iscut during the notching process. Notching involves creating a cut in a material. The notching speed indicates how quickly this cutting action occurs."@en .
+
+
 ###  https://w3id.org/ontofnct/Preload
 :Preload rdf:type owl:Class ;
          rdfs:subClassOf <https://w3id.org/pmd/co/Force> ;
@@ -368,8 +400,8 @@ Note: It is expressed in megapascals (MPa)."""@en ;
                                      owl:someValuesFrom :ActualTensileStress
                                    ] ;
                rdfs:subClassOf <https://w3id.org/pmd/co/Duration> ;
-               rdfs:comment "Symbol: t_f" ,
-                            "Versagenszeit"@de ;
+               rdfs:comment "Versagenszeit"@de ,
+                            "Symbol: t_f" ;
                rdfs:isDefinedBy <https://w3id.org/ontofnct> ;
                rdfs:label "Time To Failure"@en ;
                <http://www.w3.org/2004/02/skos/core#definition> """Diese Klasse beschreibt die Zeit bis zum Versagen eines einzelnen Prüfkörpers, die der tatsächlichen Zugspannung für diesen einzeln geprüften Prüfkörper zugeordnet wird.
@@ -498,4 +530,4 @@ Note: It is expressed in hours (h)."""@en ;
                                          ]
  ] .
 
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
