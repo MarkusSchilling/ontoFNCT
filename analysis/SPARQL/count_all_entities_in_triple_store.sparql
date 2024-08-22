@@ -1,0 +1,4 @@
+SELECT (COUNT(?s) AS ?number_of_instances)
+WHERE {
+    ?s ?p ?o
+}

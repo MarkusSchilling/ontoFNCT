@@ -1,0 +1,6 @@
+PREFIX ontoFNCT: <https://w3id.org/ontofnct/>
+
+SELECT (COUNT(?p) AS ?FNCT_tests_count)
+WHERE {
+    ?p a ontoFNCT:FullNotchCreepTest .
+}

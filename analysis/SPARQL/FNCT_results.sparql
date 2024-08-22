@@ -1,0 +1,24 @@
+PREFIX pmdco: <https://w3id.org/pmd/co/>
+PREFIX ontoFNCT: <https://w3id.org/ontofnct/>
+
+SELECT DISTINCT ?processID ?material ?medium ?timeToFailure ?stressMeasured
+WHERE {
+    ?p a ontoFNCT:FullNotchCreepTest .
+    ?p pmdco:characteristic ?processIDInst .
+    ?processIDInst a pmdco:ProcessIdentifier .
+    ?processIDInst pmdco:value ?processID .
+    ?s a pmdco:Specimen .
+    ?p pmdco:input ?s .
+    ?s pmdco:characteristic ?materialDesc .
+    ?materialDesc a pmdco:materialDesignation .
+    ?materialDesc pmdco:value ?material .
+    ?p pmdco:participant ?mediumInst .
+    ?mediumInst a pmdco:Medium .
+    ?mediumInst pmdco:value ?medium .
+    ?p pmdco:output ?tfInst .
+    ?tfInst a ontoFNCT:TimeToFailure .
+    ?tfInst pmdco:value ?timeToFailure .
+    ?p pmdco:output ?stressInst .
+    ?stressInst a ontoFNCT:MeasuredTensileStress .
+    ?stressInst pmdco:value ?stressMeasured .
+} ORDER BY ?material ?medium ?stressMeasured

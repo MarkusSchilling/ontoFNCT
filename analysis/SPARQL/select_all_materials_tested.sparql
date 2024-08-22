@@ -1,0 +1,15 @@
+PREFIX pmdco: <https://w3id.org/pmd/co/>
+PREFIX ontoFNCT: <https://w3id.org/ontofnct/>
+
+SELECT DISTINCT ?material
+WHERE {
+    ?p a ontoFNCT:FullNotchCreepTest .
+    ?p pmdco:characteristic ?processIDInst .
+    ?processIDInst a pmdco:ProcessIdentifier .
+    ?processIDInst pmdco:value ?processID .
+    ?s a pmdco:Specimen .
+    ?p pmdco:input ?s .
+    ?s pmdco:characteristic ?materialDesc .
+    ?materialDesc a pmdco:materialDesignation .
+    ?materialDesc pmdco:value ?material .
+} ORDER BY ?material

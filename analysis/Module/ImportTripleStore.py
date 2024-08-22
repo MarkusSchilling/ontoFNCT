@@ -1,21 +1,19 @@
 ### read in dataframe
 import owlready2 as or2
 from Module import Functions as f
-# For exemplary reasons, OWLready2 is used to create a local triple store to perform queries
-#triple_store = or2.World(filename="triple_store.sqlite3")
+# To show the general procedure as an example, OWLready2 is used to create a local triple store to perform queries
 
-# Load the required ontologies: Owlready2 doesn't follow the redirects from https://w3id.org/...
-# We provide the download links for the ontologies directly.
-# https://owlready2.readthedocs.io/en/latest/onto.html?highlight=rdf%20xml#loading-an-ontology-from-owl-files
+# Load the required ontologies that are directly provided by the download links for the ontologies (hosted on GitHub).
+# More information: https://owlready2.readthedocs.io/en/latest/onto.html?highlight=rdf%20xml#loading-an-ontology-from-owl-files
 def get_triple_store(link_core, link_ontoFNCT, link_data):
     triple_store = or2.World()
     triple_store.get_ontology(link_core).load() # https://w3id.org/pmd/co
     triple_store.get_ontology(link_ontoFNCT).load()  # https://w3id.org/ontofnct
-    triple_store.get_ontology(link_data).load()  # Examplary data mapped file on GitHub (https://github.com/MarkusSchilling/ontoFNCT/ontoFNCT_exemplary_data_mapping.rdf)
+    triple_store.get_ontology(link_data).load()  # Example data mapped file on GitHub (https://github.com/MarkusSchilling/ontoFNCT/ontoFNCT_exemplary_data_mapping.rdf)
     return triple_store
 
 # "https://raw.githubusercontent.com/MarkusSchilling/ontoFNCT/main/analysis/ontoFNCT_exemplary_data_PE-HD.rdf"
-# Query for the number of instances of type "FNCT" in the dataset (number of FNCT tests included)
+# Query to obtain material names, media measured in and the FNCT results considering time to failure and the measured stress
 def get_dataframe(triple_store):
     query=("""
     PREFIX pmdco: <https://w3id.org/pmd/co/>
