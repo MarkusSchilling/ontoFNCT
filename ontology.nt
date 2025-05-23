@@ -1,0 +1,444 @@
+<https://w3id.org/ontofnct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/ontofnct> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/ontofnct/1.0.0> .
+<https://w3id.org/ontofnct> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/pmd/co/2.0.8> .
+<https://w3id.org/ontofnct> <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0001-9753-345X> .
+<https://w3id.org/ontofnct> <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-4970-7627> .
+<https://w3id.org/ontofnct> <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-7094-5371> .
+<https://w3id.org/ontofnct> <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0009-0001-0315-3964> .
+<https://w3id.org/ontofnct> <http://purl.org/dc/elements/1.1/license> <http://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/ontofnct> <http://purl.org/dc/terms/bibliographicCitation> "Markus Schilling, Niklas Marschall, Ute Niebergall, Martin Böhning. (December 04th, 2023) OntoFNCT: full-notch creep test ontology. Version 1.0.0, https://w3id.org/ontofnct/"@en .
+<https://w3id.org/ontofnct> <http://purl.org/dc/terms/created> "2023-12" .
+<https://w3id.org/ontofnct> <http://purl.org/dc/terms/title> "Full-notch creep test ontology (OntoFNCT)"@en .
+<https://w3id.org/ontofnct> <http://www.w3.org/2000/01/rdf-schema#comment> "This is the stable version of the full-notch creep test ontology (OntoFNCT) that ontologically represents the full-notch creep test. OntoFNCT has been developed in accordance with the corresponding test standard ISO 16770:2019-09 Plastics - Determination of environmental stress cracking (ESC) of polyethylene - Full-notch creep test (FNCT). \n\nThe OntoFNCT provides conceptualizations that are supposed to be valid for the description of full-notch creep tests and associated data in accordance with the corresponding test standard. By using OntoFNCT for storing full-notch creep test data, all data will be well structured and based on a common vocabulary agreed on by an expert group (generation of FAIR data) which is meant to lead to enhanced data interoperability. This comprises several data categories such as primary data, secondary data and metadata. Data will be human and machine readable. The usage of OntoFNCT facilitates data retrieval and downstream usage. Due to a close connection to the mid-level PMD core ontology (PMDco), the interoperability of full-notch creep test data is enhanced and querying in combination with other aspects and data within the broad field of materials science and engineering (MSE) is facilitated.\n\nThe class structure of OntoFNCT forms a comprehensible and semantic layer for unified storage of data generated in a full-notch creep test including the possibility to record data from analysis and re-evaluation. Furthermore, extensive metadata allows to assess data quality and reliability. Following the open world assumption, object properties are deliberately low restrictive and sparse.\n\nOntoFNCT at GitHub: https://github.com/MarkusSchilling/ontoFNCT"@en .
+<https://w3id.org/ontofnct> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0" .
+<https://w3id.org/ontofnct> <http://www.w3.org/ns/prov#editorialNote> "The full-notch creep test ontology (OntoFNCT) is based on the mid-level PMD Core Ontology (PMDco) that was created in the frame of the joint project of platform MaterialDigital (PMD). Therefore, OntoFNCT imports the PMDco, the namespace of which is to be found on: https://w3id.org/pmd/co."@en .
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/ontofnct/ActualTensileStress
+<https://w3id.org/ontofnct/ActualTensileStress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontofnct/ActualTensileStress> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontofnct/MeasuredLigamentArea> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/pmd/co/characteristic> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontofnct/ActualTensileStress> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/pmd/co/Force> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/pmd/co/characteristic> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontofnct/ActualTensileStress> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontofnct/TensileStress> .
+<https://w3id.org/ontofnct/ActualTensileStress> <http://www.w3.org/2000/01/rdf-schema#comment> "Symbol: sigma_L" .
+<https://w3id.org/ontofnct/ActualTensileStress> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ontofnct> .
+<https://w3id.org/ontofnct/ActualTensileStress> <http://www.w3.org/2000/01/rdf-schema#label> "Actual Tensile Stress"@en .
+<https://w3id.org/ontofnct/ActualTensileStress> <http://www.w3.org/2000/01/rdf-schema#label> "Diese Klasse beschreibt die Normalkraft pro Flächeneinheit der gemessenen Ligamentfläche des Prüfkörpers.\n\nAnmerkung: Sie wird in Megapascal (MPa) angegeben."@de .
+<https://w3id.org/ontofnct/ActualTensileStress> <http://www.w3.org/2000/01/rdf-schema#label> "Tatsächliche Zugspannung"@de .
+<https://w3id.org/ontofnct/ActualTensileStress> <http://www.w3.org/2000/01/rdf-schema#label> "This class describes the normal force per unit area of the measured ligament area of the test specimen.\n\nNote: It is expressed in megapascals (MPa)."@en .
+<https://w3id.org/ontofnct/ActualTensileStress> <https://w3id.org/pmd/co/definitionSource> "ISO 16770:2019-09" .
+# 
+# https://w3id.org/ontofnct/BatchNumber
+<https://w3id.org/ontofnct/BatchNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontofnct/BatchNumber> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pmd/co/Identifier> .
+<https://w3id.org/ontofnct/BatchNumber> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ontofnct> .
+<https://w3id.org/ontofnct/BatchNumber> <http://www.w3.org/2000/01/rdf-schema#label> "Batch Number"@en .
+<https://w3id.org/ontofnct/BatchNumber> <http://www.w3.org/2000/01/rdf-schema#label> "Chargennummer"@de .
+<https://w3id.org/ontofnct/BatchNumber> <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse bezieht sich auf eine eindeutige Kennung, die einer Gruppe von Artikeln zugewiesen wird, die unter ähnlichen Bedingungen hergestellt oder produziert werden, typischerweise innerhalb desselben Produktionslaufs oder Zeitrahmens. Die Chargennummer hilft bei der Verfolgung und Verwaltung dieser Artikel während ihres gesamten Lebenszyklus, einschließlich Produktion, Vertrieb und Aktivitäten nach dem Verkauf wie Rückrufe oder Qualitätskontrollmaßnahmen."@de .
+<https://w3id.org/ontofnct/BatchNumber> <http://www.w3.org/2004/02/skos/core#definition> "This class refers to a unique identifier assigned to a group of items manufactured or produced together under similar conditions, typically within the same production run or timeframe. The batch number helps track and manage these items throughout their lifecycle, including production, distribution, and post-sale activities such as recalls or quality control measures."@en .
+# 
+# https://w3id.org/ontofnct/BrittleFailure
+<https://w3id.org/ontofnct/BrittleFailure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontofnct/BrittleFailure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontofnct/Failure> .
+<https://w3id.org/ontofnct/BrittleFailure> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/ontofnct/DuctileFailure> .
+<https://w3id.org/ontofnct/BrittleFailure> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ontofnct> .
+<https://w3id.org/ontofnct/BrittleFailure> <http://www.w3.org/2000/01/rdf-schema#label> "Brittle Failure"@en .
+<https://w3id.org/ontofnct/BrittleFailure> <http://www.w3.org/2000/01/rdf-schema#label> "Sprödbruch"@de .
+<https://w3id.org/ontofnct/BrittleFailure> <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt eine Art des Versagens, bei der die Bruchfläche mit bloßem Auge keine bleibende Materialverformung, wie z. B. Dehnung, Streckung oder Einschnürung, erkennen lässt.\n\nAnmerkung: Wenn die spröde Fläche weniger als 20 % des gesamten Ligaments ausmacht, wird das Versagen als duktil eingestuft.\n\nAnmerkung: Der Beginn des Übergangs zum duktilen Versagensverhalten kann durch ein verlängertes Ligament angezeigt werden, das sich in der Mitte bilden kann (Zentralligament)."@de .
+<https://w3id.org/ontofnct/BrittleFailure> <http://www.w3.org/2004/02/skos/core#definition> "This class describes a sort of failure, in which the fracture surface exhibits no permanent material deformation to the naked human eye, such as, e.g. stretching, elongation or necking down\n\nNote: If the brittle area is less than 20 % of the total ligament, the failure is ranked as ductile.\nNote: The beginning of the transition to ductile failure behaviour may be indicated by an extended ligament, which may form in the centre."@en .
+<https://w3id.org/ontofnct/BrittleFailure> <https://w3id.org/pmd/co/definitionSource> "ISO 16770:2019-09" .
+# 
+# https://w3id.org/ontofnct/ConditioningTime
+<https://w3id.org/ontofnct/ConditioningTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontofnct/ConditioningTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pmd/co/Time> .
+<https://w3id.org/ontofnct/ConditioningTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ontofnct> .
+<https://w3id.org/ontofnct/ConditioningTime> <http://www.w3.org/2000/01/rdf-schema#label> "Conditioning Time"@en .
+<https://w3id.org/ontofnct/ConditioningTime> <http://www.w3.org/2000/01/rdf-schema#label> "Konditionierungszeit"@de .
+<https://w3id.org/ontofnct/ConditioningTime> <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt die Zeit (Dauer), die verwendet wird, um ein Material vor der Prüfung kontrollierten Standard-Umgebungs- und/oder Belastungsbedingungen auszusetzen."@de .
+<https://w3id.org/ontofnct/ConditioningTime> <http://www.w3.org/2004/02/skos/core#definition> "This class describes the time (duration) that is used to subject a material to standard and controlled environmental and/or stress conditions prior to testing."@en .
+<https://w3id.org/ontofnct/ConditioningTime> <https://w3id.org/pmd/co/definitionSource> <https://maclellanrubber.com/definitions/conditioning> .
+# 
+# https://w3id.org/ontofnct/CriterionOfBrittleness
+<https://w3id.org/ontofnct/CriterionOfBrittleness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontofnct/CriterionOfBrittleness> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pmd/co/ValueObject> .
+<https://w3id.org/ontofnct/CriterionOfBrittleness> <http://www.w3.org/2000/01/rdf-schema#comment> "Symbol: B" .
+<https://w3id.org/ontofnct/CriterionOfBrittleness> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ontofnct> .
+<https://w3id.org/ontofnct/CriterionOfBrittleness> <http://www.w3.org/2000/01/rdf-schema#label> "Criterion of brittleness"@en .
+<https://w3id.org/ontofnct/CriterionOfBrittleness> <http://www.w3.org/2000/01/rdf-schema#label> "Kriterium der Sprödigkeit"@de .
+<https://w3id.org/ontofnct/CriterionOfBrittleness> <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt ein Maß für die Sprödigkeit des Bruchs eines FNCT-Prüfkörpers, das auf Parametern der Bruchflächenrauheit, der Höhe ausgeprägter Bruchflächenmerkmale sowie deren Anteilen auf Bruchflächenbereichen beruht. Dieses Maß kann als Kriterium für die Bewertung eines durch den FNCT erfolgten Bruchs verwendet werden.\n\nAnmerkung: Das Kriterium der Sprödigkeit ist ein vergleichender skalarer Wert, der ohne Einheit angegeben wird."@de .
+<https://w3id.org/ontofnct/CriterionOfBrittleness> <http://www.w3.org/2004/02/skos/core#definition> "This class describes a measure of the brittleness of the fracture of an FNCT test piece that is based on fracture surface roughness parameters, heights of distinct fracture surface features, and proportions of fracture surface areas. This measure can be used as a criterion for evaluating a fracture caused by the FNCT.\n\nNote: The criterion of brittleness is a comparative scalar, given without unit."@en .
+# 
+# https://w3id.org/ontofnct/Depth
+<https://w3id.org/ontofnct/Depth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontofnct/Depth> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pmd/co/ValueObject> .
+<https://w3id.org/ontofnct/Depth> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ontofnct> .
+<https://w3id.org/ontofnct/Depth> <http://www.w3.org/2000/01/rdf-schema#label> "Depth"@en .
+<https://w3id.org/ontofnct/Depth> <http://www.w3.org/2000/01/rdf-schema#label> "Tiefe"@de .
+<https://w3id.org/ontofnct/Depth> <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt eine Dimension, die durch ein Objekt oder einen Körper aus einem Material genommen wird, normalerweise von einer oberen Oberfläche nach unten, von einer äußeren Oberfläche horizontal nach innen oder von oben nach unten von etwas, das als eine von mehreren Schichten betrachtet wird.\n\n\nAnmerkung: Tiefe bezeichnet die Eigenschaft, tief zu sein."@de .
+<https://w3id.org/ontofnct/Depth> <http://www.w3.org/2004/02/skos/core#definition> "This class describes a dimension taken through an object or body of material, usually downward from an upper surface, horizontally inward from an outer surface, or from top to bottom of something regarded as one of several layers.\n\nNote: Depth also denotes the quality of being deep."@en .
+<https://w3id.org/ontofnct/Depth> <https://w3id.org/pmd/co/definitionSource> <https://www.dictionary.com/browse/depth> .
+# 
+# https://w3id.org/ontofnct/DuctileFailure
+<https://w3id.org/ontofnct/DuctileFailure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontofnct/DuctileFailure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontofnct/Failure> .
+<https://w3id.org/ontofnct/DuctileFailure> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ontofnct> .
+<https://w3id.org/ontofnct/DuctileFailure> <http://www.w3.org/2000/01/rdf-schema#label> "Ductile Failure"@en .
+<https://w3id.org/ontofnct/DuctileFailure> <http://www.w3.org/2000/01/rdf-schema#label> "Duktilbruch"@de .
+<https://w3id.org/ontofnct/DuctileFailure> <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt eine Art des Versagens, bei der die Bruchfläche deutlich eine dauerhafte Materialverformung mit Dehnung, Streckung und Einschnürung aufweist."@de .
+<https://w3id.org/ontofnct/DuctileFailure> <http://www.w3.org/2004/02/skos/core#definition> "This class describes a sort of failure, in which the fracture surface clearly exhibits permanent material deformation with stretching, elongation and necking down."@en .
+<https://w3id.org/ontofnct/DuctileFailure> <https://w3id.org/pmd/co/definitionSource> "ISO 16770:2019-09" .
+# 
+# https://w3id.org/ontofnct/Elongation
+<https://w3id.org/ontofnct/Elongation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontofnct/Elongation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pmd/co/ValueObject> .
+<https://w3id.org/ontofnct/Elongation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ontofnct> .
+<https://w3id.org/ontofnct/Elongation> <http://www.w3.org/2000/01/rdf-schema#label> "Elongation"@en .
+<https://w3id.org/ontofnct/Elongation> <http://www.w3.org/2000/01/rdf-schema#label> "Verlängerung"@de .
+<https://w3id.org/ontofnct/Elongation> <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt die Zunahme der ursprünglichen Länge eines Objekts, z. B. eines Prüfkörpers, zu einem beliebigen Zeitpunkt während einer Prüfung."@de .
+<https://w3id.org/ontofnct/Elongation> <http://www.w3.org/2004/02/skos/core#definition> "This class describes the increase in the original length of an object, such as a test specimen, at any moment during a test."@en .
+# 
+# https://w3id.org/ontofnct/ExtensometerCapacity
+<https://w3id.org/ontofnct/ExtensometerCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontofnct/ExtensometerCapacity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pmd/co/ValueObject> .
+<https://w3id.org/ontofnct/ExtensometerCapacity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ontofnct> .
+<https://w3id.org/ontofnct/ExtensometerCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "Extensometer Capacity"@en .
+<https://w3id.org/ontofnct/ExtensometerCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "Extensometer-Kapazität"@de .
+<https://w3id.org/ontofnct/ExtensometerCapacity> <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt die maximale Kapazität eines Längenänderungsaufnehmers, die Längenänderung eines Objekts, z. B. eines Probekörpers, zu messen. \n\nHinweis: Üblicherweise wird die maximale Länge des Aufnehmers (maximaler Messbereich) angegeben."@de .
+<https://w3id.org/ontofnct/ExtensometerCapacity> <http://www.w3.org/2004/02/skos/core#definition> "This class describes the maximal capability of an extensometer to measure changes in the length of an object, such as a test specimen. \n\nNote: Typically, the maximum extensometer length (maximal measurement range) is given."@en .
+# 
+# https://w3id.org/ontofnct/Failure
+<https://w3id.org/ontofnct/Failure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontofnct/Failure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pmd/co/ValueObject> .
+<https://w3id.org/ontofnct/Failure> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ontofnct> .
+<https://w3id.org/ontofnct/Failure> <http://www.w3.org/2000/01/rdf-schema#label> "Bruch"@de .
+<https://w3id.org/ontofnct/Failure> <http://www.w3.org/2000/01/rdf-schema#label> "Failure"@en .
+<https://w3id.org/ontofnct/Failure> <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt qualitativ die vollständige Trennung der beiden Hälften des Prüfkörpers. Diese qualitative Angabe soll durch einen booleschen Wert beschrieben werden, der angibt, ob der Probekörper vollständig versagt hat oder nicht."@de .
+<https://w3id.org/ontofnct/Failure> <http://www.w3.org/2004/02/skos/core#definition> "This class describes qualitatively the complete separation of the two halves of the test specimen. The quality is intended to be described by a boolean value representing wheter or not the test specimen showed entire failure."@en .
+<https://w3id.org/ontofnct/Failure> <https://w3id.org/pmd/co/definitionSource> "ISO 16770:2019-09" .
+# 
+# https://w3id.org/ontofnct/FinalElongation
+<https://w3id.org/ontofnct/FinalElongation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontofnct/FinalElongation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontofnct/Elongation> .
+<https://w3id.org/ontofnct/FinalElongation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ontofnct> .
+<https://w3id.org/ontofnct/FinalElongation> <http://www.w3.org/2000/01/rdf-schema#label> "Enddehnung"@de .
+<https://w3id.org/ontofnct/FinalElongation> <http://www.w3.org/2000/01/rdf-schema#label> "Final Elongation"@en .
+<https://w3id.org/ontofnct/FinalElongation> <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt die Dehnung eines Prüfkörpers am Ende einer Prüfung. Diese Dehnung kann je nach Materialverhalten für das betrachtete Objekt permanent sein oder nicht."@de .
+<https://w3id.org/ontofnct/FinalElongation> <http://www.w3.org/2004/02/skos/core#definition> "This class describes the elongation of a test specimen at the end of a test. This elongation may or may not be permanent to the object under consideration, depending on the associated material behavior."@en .
+# 
+# https://w3id.org/ontofnct/FractureTypeTransitionPoint
+<https://w3id.org/ontofnct/FractureTypeTransitionPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontofnct/FractureTypeTransitionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pmd/co/ValueObject> .
+<https://w3id.org/ontofnct/FractureTypeTransitionPoint> <http://www.w3.org/2000/01/rdf-schema#label> <https://w3id.org/ontofnct> .
+<https://w3id.org/ontofnct/FractureTypeTransitionPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Brucharten-Übergangspunkt"@de .
+<https://w3id.org/ontofnct/FractureTypeTransitionPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Fracture Type Transition Point"@en .
+<https://w3id.org/ontofnct/FractureTypeTransitionPoint> <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt den Spannungswert, der den Übergang von Spröd- zu Zähbruch bei FNCT-Prüfkörpern für eine bestimmte, eindeutige Kombination von Material und Umgebungsflüssigkeit angibt, wie sie typischerweise in einer Reihe von FNCT-Versuchen ermittelt wird."@de .
+<https://w3id.org/ontofnct/FractureTypeTransitionPoint> <http://www.w3.org/2004/02/skos/core#definition> "This class describes the stress value denoting the transition from brittle to ductile fracture occurring to FNCT specimens valid for a specific, distinct material and environmental fluid combination as typically determined in a series of FNCT experiments."@en .
+# 
+# https://w3id.org/ontofnct/FullNotchCreepTest
+<https://w3id.org/ontofnct/FullNotchCreepTest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontofnct/FullNotchCreepTest> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontofnct/FullNotchCreepTestDevice> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/pmd/co/participant> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontofnct/FullNotchCreepTest> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/pmd/co/Specimen> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/pmd/co/participant> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontofnct/FullNotchCreepTest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pmd/co/MechanicalTestingProcess> .
+<https://w3id.org/ontofnct/FullNotchCreepTest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ontofnct> .
+<https://w3id.org/ontofnct/FullNotchCreepTest> <http://www.w3.org/2000/01/rdf-schema#label> "Full-Notch Creep Test"@en .
+<https://w3id.org/ontofnct/FullNotchCreepTest> <http://www.w3.org/2000/01/rdf-schema#label> "Medien-Zeitstand-Zugversuch"@de .
+<https://w3id.org/ontofnct/FullNotchCreepTest> <http://www.w3.org/2004/02/skos/core#definition> "Der Medien-Zeitstand-Zugversuch (FNCT) ist ein mechanisches Prüfverfahren, das zur Charakterisierung des Verhaltens von Polyethylen (PE) gegenüber des umgebungsbedingten Spannungsrisses verwendet wird. \nEin Probekörper in Form eines Vierkantstabs mit mittig (zentral) angebrachten koplanaren Kerben auf jeder Seite wird in einer temperaturgeregelten Umgebung, die eine oberflächenaktive Netzmittellösung enthält, einer statischen Belastung ausgesetzt. Die Geometrie des Probekörpers ist so beschaffen, dass sich ebene Dehnungsbedingungen ergeben und unter geeigneten Zugbelastungs- und Temperaturbedingungen ein Sprödbruch auftritt. Die Zeit bis zum Auftreten dieses Sprödbruchs infolge der Belastung wird aufgezeichnet.\n\nAnmerkung: Destilliertes Wasser ist ebenfalls eine geeignete Umgebung für die Durchführung dieser Prüfung.\nHinweis: Für die Prüfung von Behältermaterialien auf PE-Basis können auch andere Umgebungen verwendet werden, z. B. Gefahrgut und Chemikalien oder geeignete flüssige Prüfmedien."@de .
+<https://w3id.org/ontofnct/FullNotchCreepTest> <http://www.w3.org/2004/02/skos/core#definition> "The full-notch creep test (FNCT) is a mechanical test method that is used to characterize the environmental stress cracking (ESC) behavior of polyethylene (PE) materials. \nA test specimen in the form of a square-section bar with coplanar notches in each face at the centre is subjected to a static load in a temperature-controlled environment containing a surface-active detergent solution. The geometry of the test specimen is such that plane strain conditions are obtained, and brittle failure occurs under appropriate tensile load and temperature conditions. The time for this brittle failure to occur after loading is recorded.\n\nNote: Distilled water is also a suitable environment for carrying out this test.\nNote: For testing of PE-based container materials, other environments can also be used, such as dangerous goods and chemicals or suitable liquid test media."@en .
+<https://w3id.org/ontofnct/FullNotchCreepTest> <https://w3id.org/pmd/co/definitionSource> "ISO 16770:2019-09" .
+# 
+# https://w3id.org/ontofnct/FullNotchCreepTestDevice
+<https://w3id.org/ontofnct/FullNotchCreepTestDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontofnct/FullNotchCreepTestDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pmd/co/TestingMachine> .
+<https://w3id.org/ontofnct/FullNotchCreepTestDevice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ontofnct> .
+<https://w3id.org/ontofnct/FullNotchCreepTestDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Full-notch creep test device"@en .
+<https://w3id.org/ontofnct/FullNotchCreepTestDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Medien-Zeitstand-Zugprüfmaschine"@de .
+<https://w3id.org/ontofnct/FullNotchCreepTestDevice> <http://www.w3.org/2004/02/skos/core#definition> "Eine Medien-Zeitstand-Zugprüfmaschine ist eine Maschine zur Durchführung eines Medien-Zeitstand-Zugversuchs. Die Steuerung und Überwachung des Versuchs, die Messungen und die Datenverarbeitung erfolgen in der Regel per Computer. Dies kann jedoch auch manuell erfolgen."@de .
+<https://w3id.org/ontofnct/FullNotchCreepTestDevice> <http://www.w3.org/2004/02/skos/core#definition> "The full-notch creep test device is a machine to conduct a full-notch creep test. The control and monitoring of the test, the measurements, and the data processing are usually performed by computer. However, this may also be performed manually."@en .
+# 
+# https://w3id.org/ontofnct/LeverArmRatio
+<https://w3id.org/ontofnct/LeverArmRatio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontofnct/LeverArmRatio> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pmd/co/ValueObject> .
+<https://w3id.org/ontofnct/LeverArmRatio> <http://www.w3.org/2000/01/rdf-schema#comment> "Der Abstand zwischen dem Drehpunkt eines Hebels und dem Punkt, an dem die Kraft aufgebracht wird, ist wichtig für die Bestimmung des mechanischen Vorteils eines Hebels, da er die Höhe der Kraft, die ausgeübt werden kann, und den Abstand, über den diese Kraft aufgebracht wird, beeinflusst."@de .
+<https://w3id.org/ontofnct/LeverArmRatio> <http://www.w3.org/2000/01/rdf-schema#comment> "The distance between the pivot point (or fulcrum) of a lever and the point where the force is applied is important in determining the mechanical advantage of a lever, as it affects the amount of force that can be exerted and the distance over which that force is applied."@en .
+<https://w3id.org/ontofnct/LeverArmRatio> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ontofnct> .
+<https://w3id.org/ontofnct/LeverArmRatio> <http://www.w3.org/2000/01/rdf-schema#label> "Hebelarmverhältnis"@de .
+<https://w3id.org/ontofnct/LeverArmRatio> <http://www.w3.org/2000/01/rdf-schema#label> "Lever-arm Ratio"@en .
+<https://w3id.org/ontofnct/LeverArmRatio> <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt das Verhältnis eines Hebelarms. Dieser Begriff wird in der Physik verwendet, um den Abstand zwischen dem Punkt, an dem eine Kraft angreift, und dem Punkt, an dem diese Kraft eine Rotationswirkung erzeugt, zu beschreiben. Mit anderen Worten ist es der Abstand zwischen dem Drehpunkt eines Hebels und dem Punkt, an dem die Kraft angreift."@de .
+<https://w3id.org/ontofnct/LeverArmRatio> <http://www.w3.org/2004/02/skos/core#definition> "This class describes the ratio of a lever arm which is a term used in physics to describe the distance between the point where a force is applied and the point where that force is producing a rotational effect. In other words, it is the distance between the pivot point (or fulcrum) of a lever and the point where the force is applied."@en .
+# 
+# https://w3id.org/ontofnct/MeasuredLigamentArea
+<https://w3id.org/ontofnct/MeasuredLigamentArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontofnct/MeasuredLigamentArea> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pmd/co/CrossSectionArea> .
+<https://w3id.org/ontofnct/MeasuredLigamentArea> <http://www.w3.org/2000/01/rdf-schema#comment> "Symbol: A_L" .
+<https://w3id.org/ontofnct/MeasuredLigamentArea> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ontofnct> .
+<https://w3id.org/ontofnct/MeasuredLigamentArea> <http://www.w3.org/2000/01/rdf-schema#label> "Gemessene Ligamentfläche"@de .
+<https://w3id.org/ontofnct/MeasuredLigamentArea> <http://www.w3.org/2000/01/rdf-schema#label> "Measured Ligament Area"@en .
+<https://w3id.org/ontofnct/MeasuredLigamentArea> <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt die nach der Prüfung ermittelte tatsächliche verbleibenden Querschnittsfläche des Probekörpers nach der Kerbung .\n\nAnmerkung: Sie wird in Quadratmillimetern (mm2) angegeben."@de .
+<https://w3id.org/ontofnct/MeasuredLigamentArea> <http://www.w3.org/2004/02/skos/core#definition> "This class describes the actual cross-sectional area of the test specimen remaining after notching determined after testing.\n\nNote: It is expressed in square millimetres (mm2)."@en .
+<https://w3id.org/ontofnct/MeasuredLigamentArea> <https://w3id.org/pmd/co/definitionSource> "ISO 16770:2019-09" .
+# 
+# https://w3id.org/ontofnct/NominalLigamentArea
+<https://w3id.org/ontofnct/NominalLigamentArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontofnct/NominalLigamentArea> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pmd/co/CrossSectionArea> .
+<https://w3id.org/ontofnct/NominalLigamentArea> <http://www.w3.org/2000/01/rdf-schema#comment> "Symbol: A_n" .
+<https://w3id.org/ontofnct/NominalLigamentArea> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ontofnct> .
+<https://w3id.org/ontofnct/NominalLigamentArea> <http://www.w3.org/2000/01/rdf-schema#label> "Nominal Ligament Area"@en .
+<https://w3id.org/ontofnct/NominalLigamentArea> <http://www.w3.org/2000/01/rdf-schema#label> "Nominelle Ligamentfläche"@de .
+<https://w3id.org/ontofnct/NominalLigamentArea> <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt die nach der Kerbung verbleibende Querschnittsfläche des Probekörpers."@de .
+<https://w3id.org/ontofnct/NominalLigamentArea> <http://www.w3.org/2004/02/skos/core#definition> "This class describes the cross-sectional area of the test specimen remaining after notching."@en .
+<https://w3id.org/ontofnct/NominalLigamentArea> <https://w3id.org/pmd/co/definitionSource> "ISO 16770:2019-09" .
+# 
+# https://w3id.org/ontofnct/NominalTensileStress
+<https://w3id.org/ontofnct/NominalTensileStress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontofnct/NominalTensileStress> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontofnct/NominalLigamentArea> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/pmd/co/characteristic> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontofnct/NominalTensileStress> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/pmd/co/Force> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/pmd/co/characteristic> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontofnct/NominalTensileStress> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontofnct/TensileStress> .
+<https://w3id.org/ontofnct/NominalTensileStress> <http://www.w3.org/2000/01/rdf-schema#comment> "Symbol: sigma_n" .
+<https://w3id.org/ontofnct/NominalTensileStress> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ontofnct> .
+<https://w3id.org/ontofnct/NominalTensileStress> <http://www.w3.org/2000/01/rdf-schema#label> "Nominal Tensile Stress"@en .
+<https://w3id.org/ontofnct/NominalTensileStress> <http://www.w3.org/2000/01/rdf-schema#label> "Nominelle Zugspannung"@de .
+<https://w3id.org/ontofnct/NominalTensileStress> <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt die Normalkraft pro Flächeneinheit der nominalen Ligamentfläche eines Prüfkörpers.\n\nAnmerkung: Sie wird in Megapascal (MPa) angegeben."@de .
+<https://w3id.org/ontofnct/NominalTensileStress> <http://www.w3.org/2004/02/skos/core#definition> "This class describes the normal force per unit area of the nominal ligament area of the test specimen.\n\nNote: It is expressed in megapascals (MPa)."@en .
+<https://w3id.org/ontofnct/NominalTensileStress> <https://w3id.org/pmd/co/definitionSource> "ISO 16770:2019-09" .
+# 
+# https://w3id.org/ontofnct/Notch
+<https://w3id.org/ontofnct/Notch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontofnct/Notch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pmd/co/Object> .
+<https://w3id.org/ontofnct/Notch> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ontofnct> .
+<https://w3id.org/ontofnct/Notch> <http://www.w3.org/2000/01/rdf-schema#label> "Kerbe"@de .
+<https://w3id.org/ontofnct/Notch> <http://www.w3.org/2000/01/rdf-schema#label> "Notch"@en .
+<https://w3id.org/ontofnct/Notch> <http://www.w3.org/2004/02/skos/core#definition> "Im Bereich der Materialwissenschaft und Werkstofftechnik bezeichnet eine Kerbe einen V-förmigen, U-förmigen oder halbkreisförmigen Defekt, der absichtlich in ein planes Material eingebracht wird. In Bauteilen verursacht eine Kerbe eine Spannungskonzentration, die zur Entstehung und zum Wachstum von Ermüdungsrissen führen kann. Kerben werden bei der Materialcharakterisierung verwendet, um bruchmechanische Eigenschaften wie die Bruchzähigkeit und die Wachstumsrate von Ermüdungsrissen zu bestimmen."@de .
+<https://w3id.org/ontofnct/Notch> <http://www.w3.org/2004/02/skos/core#definition> "In mechanical engineering and materials science, a notch refers to a V-shaped, U-shaped, or semi-circular defect deliberately introduced into a planar material. In structural components, a notch causes a stress concentration which can result in the initiation and growth of fatigue cracks. Notches are used in materials characterization to determine fracture mechanics related properties such as fracture toughness and rates of fatigue crack growth."@en .
+# 
+# https://w3id.org/ontofnct/NotchDepth
+<https://w3id.org/ontofnct/NotchDepth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontofnct/NotchDepth> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontofnct/Depth> .
+<https://w3id.org/ontofnct/NotchDepth> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ontofnct> .
+<https://w3id.org/ontofnct/NotchDepth> <http://www.w3.org/2000/01/rdf-schema#label> "Kerbtiefe"@de .
+<https://w3id.org/ontofnct/NotchDepth> <http://www.w3.org/2000/01/rdf-schema#label> "Notch Depth"@en .
+<https://w3id.org/ontofnct/NotchDepth> <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt die Tiefe einer Kerbe, die absichtlich oder unabsichtlich in ein Objekt, wie z. B. in einen Prüfkörper, eingebracht worden sein kann."@de .
+<https://w3id.org/ontofnct/NotchDepth> <http://www.w3.org/2004/02/skos/core#definition> "This class describes the depth of a notch that may have been introduced to an object, such as, e.g., a test specimen, deliberately or unintentionally."@en .
+# 
+# https://w3id.org/ontofnct/NotchingSpeed
+<https://w3id.org/ontofnct/NotchingSpeed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontofnct/NotchingSpeed> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pmd/co/ValueObject> .
+<https://w3id.org/ontofnct/NotchingSpeed> <http://www.w3.org/2000/01/rdf-schema#comment> "In accordance with the corresponding test standard, the notching speed of FNCT specimens is measured in mm/min."@en .
+<https://w3id.org/ontofnct/NotchingSpeed> <http://www.w3.org/2000/01/rdf-schema#comment> "In Übereinstimmung mit der entsprechenden Prüfnorm wird die Kerbgeschwindigkeit von FNCT-Proben in mm/min gemessen."@de .
+<https://w3id.org/ontofnct/NotchingSpeed> <http://www.w3.org/2000/01/rdf-schema#label> <https://w3id.org/ontofnct> .
+<https://w3id.org/ontofnct/NotchingSpeed> <http://www.w3.org/2000/01/rdf-schema#label> "Kerbgeschwindigkeit"@de .
+<https://w3id.org/ontofnct/NotchingSpeed> <http://www.w3.org/2000/01/rdf-schema#label> "Notching Speed"@en .
+<https://w3id.org/ontofnct/NotchingSpeed> <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt die Geschwindigkeit, mit der das Material während des Kerbvorgangs geschnitten wird. Beim Kerben wird ein Schnitt in einem Material erzeugt. Die Kerbgeschwindigkeit gibt an, wie schnell dieser Schnitt erfolgt."@de .
+<https://w3id.org/ontofnct/NotchingSpeed> <http://www.w3.org/2004/02/skos/core#definition> "This class describes the rate at which the material iscut during the notching process. Notching involves creating a cut in a material. The notching speed indicates how quickly this cutting action occurs."@en .
+# 
+# https://w3id.org/ontofnct/Preload
+<https://w3id.org/ontofnct/Preload> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontofnct/Preload> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pmd/co/Force> .
+<https://w3id.org/ontofnct/Preload> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ontofnct> .
+<https://w3id.org/ontofnct/Preload> <http://www.w3.org/2000/01/rdf-schema#label> "Preload"@en .
+<https://w3id.org/ontofnct/Preload> <http://www.w3.org/2000/01/rdf-schema#label> "Vorkraft"@de .
+<https://w3id.org/ontofnct/Preload> <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt die Kraft, die zur Belastung eines Prüfkörpers vor der Durchführung einer Prüfung verwendet wird."@de .
+<https://w3id.org/ontofnct/Preload> <http://www.w3.org/2004/02/skos/core#definition> "This class describes the force used to load a test specimen prior to the performance of a test procedure."@en .
+# 
+# https://w3id.org/ontofnct/PreloadTime
+<https://w3id.org/ontofnct/PreloadTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontofnct/PreloadTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pmd/co/Time> .
+<https://w3id.org/ontofnct/PreloadTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ontofnct> .
+<https://w3id.org/ontofnct/PreloadTime> <http://www.w3.org/2000/01/rdf-schema#label> "Preload Time"@en .
+<https://w3id.org/ontofnct/PreloadTime> <http://www.w3.org/2000/01/rdf-schema#label> "Vorkraft-Belastungszeit"@de .
+<https://w3id.org/ontofnct/PreloadTime> <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt die Zeit (Dauer), für die eine Vorlast (Kraft, die zur Belastung eines Probekörpers vor der Durchführung eines Prüfverfahrens verwendet wird) aufgebracht wird."@de .
+<https://w3id.org/ontofnct/PreloadTime> <http://www.w3.org/2004/02/skos/core#definition> "This class describes the time (duration) for which a preload (force used to load a test specimen prior to the performance of a test procedure) is applied."@en .
+# 
+# https://w3id.org/ontofnct/ReferenceTensileStress
+<https://w3id.org/ontofnct/ReferenceTensileStress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontofnct/ReferenceTensileStress> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontofnct/TensileStress> .
+<https://w3id.org/ontofnct/ReferenceTensileStress> <http://www.w3.org/2000/01/rdf-schema#comment> "Symbol: sigma_L,ref" .
+<https://w3id.org/ontofnct/ReferenceTensileStress> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ontofnct> .
+<https://w3id.org/ontofnct/ReferenceTensileStress> <http://www.w3.org/2000/01/rdf-schema#label> "Reference Tensile Stress"@en .
+<https://w3id.org/ontofnct/ReferenceTensileStress> <http://www.w3.org/2000/01/rdf-schema#label> "Referenz-Zugspannung"@de .
+<https://w3id.org/ontofnct/ReferenceTensileStress> <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt die ermittelte Normalkraft pro Flächeneinheit der gemessenen Ligamentfläche der Prüfkröper, die zur Bestimmung der vergleichbaren Zeit bis zum Versagen verwendet wurden.\n\nAnmerkung: Sie wird in Megapascal (MPa) angegeben."@de .
+<https://w3id.org/ontofnct/ReferenceTensileStress> <http://www.w3.org/2004/02/skos/core#definition> "This class describes the selected normal force per unit area of the measured ligament area of the test specimen used for determination of comparable time to failure.\n\nNote: It is expressed in megapascals (MPa)."@en .
+<https://w3id.org/ontofnct/ReferenceTensileStress> <https://w3id.org/pmd/co/definitionSource> "ISO 16770:2019-09" .
+# 
+# https://w3id.org/ontofnct/TensileStress
+<https://w3id.org/ontofnct/TensileStress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontofnct/TensileStress> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pmd/co/Stress> .
+<https://w3id.org/ontofnct/TensileStress> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ontofnct> .
+<https://w3id.org/ontofnct/TensileStress> <http://www.w3.org/2000/01/rdf-schema#label> "Tensile Stress"@en .
+<https://w3id.org/ontofnct/TensileStress> <http://www.w3.org/2000/01/rdf-schema#label> "Zugspannung"@de .
+<https://w3id.org/ontofnct/TensileStress> <http://www.w3.org/2004/02/skos/core#definition> "Der Begriff Zugspannung ist eine physikalische Größe, die eine Kraft beschreibt, die auf einen Bereich eines betrachteten, auseinanderzuziehenden Objekts während eines Verformungsprozesses einwirkt. Wenn ein Objekt auseinandergezogen wird, unterliegt es einer Zugspannung und kann eine Dehnung erfahren."@de .
+<https://w3id.org/ontofnct/TensileStress> <http://www.w3.org/2004/02/skos/core#definition> "The entity tensile stress is a physical quantity that describes a force imposed on an area of a considered object present during a drawing (tensile) deformation process. When an object is pulled apart, it is subject to tensile stress and may undergo elongation."@en .
+<https://w3id.org/ontofnct/TensileStress> <https://w3id.org/pmd/co/definitionSource> "ISO 16770:2019-09" .
+# 
+# https://w3id.org/ontofnct/TestContainer
+<https://w3id.org/ontofnct/TestContainer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontofnct/TestContainer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pmd/co/ProcessingNode> .
+<https://w3id.org/ontofnct/TestContainer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ontofnct> .
+<https://w3id.org/ontofnct/TestContainer> <http://www.w3.org/2000/01/rdf-schema#label> "Prüfbehälter"@de .
+<https://w3id.org/ontofnct/TestContainer> <http://www.w3.org/2000/01/rdf-schema#label> "Test Container"@en .
+<https://w3id.org/ontofnct/TestContainer> <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt ein hohles Objekt, wie z. B. eine Schachtel, eine Flasche oder einen Zylinder, das zur Aufnahme von etwas verwendet werden kann, insbesondere um es zu tragen oder aufzubewahren (Behälter), und das an einem Prüfverfahren beteiligt ist."@de .
+<https://w3id.org/ontofnct/TestContainer> <http://www.w3.org/2004/02/skos/core#definition> "This class describes a hollow object, such as a box, a cylinder, or a bottle, that can be used for holding something, especially to carry or store it (container) and which is involved in a testing procedure."@en .
+<https://w3id.org/ontofnct/TestContainer> <https://w3id.org/pmd/co/definitionSource> <https://dictionary.cambridge.org/dictionary/english/container> .
+# 
+# https://w3id.org/ontofnct/TestForceIncreaseRate
+<https://w3id.org/ontofnct/TestForceIncreaseRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontofnct/TestForceIncreaseRate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pmd/co/TestingRate> .
+<https://w3id.org/ontofnct/TestForceIncreaseRate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ontofnct> .
+<https://w3id.org/ontofnct/TestForceIncreaseRate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "This class describes the rate of the increase of the force applied to a test specimen during a test."@en .
+<https://w3id.org/ontofnct/TestForceIncreaseRate> <http://www.w3.org/2000/01/rdf-schema#label> "Test Force Increase Rate"@en .
+<https://w3id.org/ontofnct/TestForceIncreaseRate> <http://www.w3.org/2000/01/rdf-schema#label> "Test-Kraftanstiegsrate"@de .
+<https://w3id.org/ontofnct/TestForceIncreaseRate> <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt die Steigerungsrate der Kraft, die während einer Prüfung auf einen Probekörper aufgebracht wird und einwirkt."@de .
+# 
+# https://w3id.org/ontofnct/TimeToFailure
+<https://w3id.org/ontofnct/TimeToFailure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontofnct/TimeToFailure> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontofnct/ActualTensileStress> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/pmd/co/characteristic> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontofnct/TimeToFailure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pmd/co/Duration> .
+<https://w3id.org/ontofnct/TimeToFailure> <http://www.w3.org/2000/01/rdf-schema#comment> "Versagenszeit"@de .
+<https://w3id.org/ontofnct/TimeToFailure> <http://www.w3.org/2000/01/rdf-schema#comment> "Symbol: t_f" .
+<https://w3id.org/ontofnct/TimeToFailure> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ontofnct> .
+<https://w3id.org/ontofnct/TimeToFailure> <http://www.w3.org/2000/01/rdf-schema#label> "Time To Failure"@en .
+<https://w3id.org/ontofnct/TimeToFailure> <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt die Zeit bis zum Versagen eines einzelnen Prüfkörpers, die der tatsächlichen Zugspannung für diesen einzeln geprüften Prüfkörper zugeordnet wird.\n\nAnmerkung: Die Versagenszeit wird in Stunden (h) angegeben."@de .
+<https://w3id.org/ontofnct/TimeToFailure> <http://www.w3.org/2004/02/skos/core#definition> "This class describes the time to failure of an individual test specimen, which is assigned to the actual tensile stress for this individually tested test specimen.\n\nNote: The time to failure time is expressed in hours (h)."@en .
+# 
+# https://w3id.org/ontofnct/TimeToFailureAtTheReferenceTensileStress
+<https://w3id.org/ontofnct/TimeToFailureAtTheReferenceTensileStress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontofnct/TimeToFailureAtTheReferenceTensileStress> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontofnct/ReferenceTensileStress> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/pmd/co/characteristic> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontofnct/TimeToFailureAtTheReferenceTensileStress> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pmd/co/Duration> .
+<https://w3id.org/ontofnct/TimeToFailureAtTheReferenceTensileStress> <http://www.w3.org/2000/01/rdf-schema#comment> "Symbol: t_f,ref" .
+<https://w3id.org/ontofnct/TimeToFailureAtTheReferenceTensileStress> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ontofnct> .
+<https://w3id.org/ontofnct/TimeToFailureAtTheReferenceTensileStress> <http://www.w3.org/2000/01/rdf-schema#label> "Time To Failure At The Reference Tensile Stress"@en .
+<https://w3id.org/ontofnct/TimeToFailureAtTheReferenceTensileStress> <http://www.w3.org/2000/01/rdf-schema#label> "Versagenszeit bei der Referenz-Zugspannung"@de .
+<https://w3id.org/ontofnct/TimeToFailureAtTheReferenceTensileStress> <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt die Zeit bis zum Versagen, die der Referenz-Zugspannung zugeordnet ist und durch Interpolation der gemessenen Zeit bis zum Versagen in Abhängigkeit von der tatsächlichen Zugspannung für einzelne geprüfte Proben ermittelt wird.\n\nAnmerkung: Sie wird in Stunden (h) angegeben."@de .
+<https://w3id.org/ontofnct/TimeToFailureAtTheReferenceTensileStress> <http://www.w3.org/2004/02/skos/core#definition> "This class describes the time to failure corresponding to the reference tensile stress, calculated by interpolating in the measured dependence of time to failure vs. actual tensile stress for individual tested specimens.\n\nNote: It is expressed in hours (h)."@en .
+<https://w3id.org/ontofnct/TimeToFailureAtTheReferenceTensileStress> <https://w3id.org/pmd/co/definitionSource> "ISO 16770:2019-09" .
+# 
+_:genid9 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid10 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# 
+# #################################################################
+# #
+# #    Rules
+# #
+# #################################################################
+# 
+# 
+<https://w3id.org/ontofnct/criterion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<https://w3id.org/ontofnct/v> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:genid11 <http://www.w3.org/2000/01/rdf-schema#comment> "This rule is supposed to check whether a brittle or ductile failure was obtained from an FNCT procedure by checking the value of the criterion of brittleness. If the value of the criterion of brittleness is greater than 0.5, a new entity (individual) of ontofnct:DuctileFailure is created." .
+_:genid11 <http://www.w3.org/2000/01/rdf-schema#label> "CriterionOfBrittlenessDuctile_Check" .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid11 <http://www.w3.org/2003/11/swrl#body> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid13 .
+_:genid13 <http://www.w3.org/2003/11/swrl#arguments> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "0.5"^^<http://www.w3.org/2001/XMLSchema#float> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontofnct/v> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> .
+<http://www.w3.org/2003/11/swrlb#greaterThan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Builtin> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid17 .
+_:genid17 <http://www.w3.org/2003/11/swrl#argument2> <https://w3id.org/ontofnct/v> .
+_:genid17 <http://www.w3.org/2003/11/swrl#argument1> <https://w3id.org/ontofnct/criterion> .
+_:genid17 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/pmd/co/value> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid19 .
+_:genid19 <http://www.w3.org/2003/11/swrl#argument1> <https://w3id.org/ontofnct/criterion> .
+_:genid19 <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/ontofnct/CriterionOfBrittleness> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid11 <http://www.w3.org/2003/11/swrl#head> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid21 .
+_:genid21 <http://www.w3.org/2003/11/swrl#argument1> <https://w3id.org/ontofnct/criterion> .
+_:genid21 <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/ontofnct/DuctileFailure> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid22 <http://www.w3.org/2000/01/rdf-schema#comment> "This rule is supposed to check whether a brittle or ductile failure was obtained from an FNCT procedure by checking the value of the criterion of brittleness. If this is the case, a new entity (individual) of ontofnct:BrittleFailure is created." .
+_:genid22 <http://www.w3.org/2000/01/rdf-schema#label> "CriterionOfBrittleness_Check" .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid22 <http://www.w3.org/2003/11/swrl#body> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid24 .
+_:genid24 <http://www.w3.org/2003/11/swrl#argument1> <https://w3id.org/ontofnct/criterion> .
+_:genid24 <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/ontofnct/CriterionOfBrittleness> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid26 .
+_:genid26 <http://www.w3.org/2003/11/swrl#arguments> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "0.5"^^<http://www.w3.org/2001/XMLSchema#float> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontofnct/v> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#equal> .
+<http://www.w3.org/2003/11/swrlb#equal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Builtin> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid30 .
+_:genid30 <http://www.w3.org/2003/11/swrl#arguments> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "0.5"^^<http://www.w3.org/2001/XMLSchema#float> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontofnct/v> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid30 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> .
+<http://www.w3.org/2003/11/swrlb#lessThan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Builtin> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid34 .
+_:genid34 <http://www.w3.org/2003/11/swrl#argument2> <https://w3id.org/ontofnct/v> .
+_:genid34 <http://www.w3.org/2003/11/swrl#argument1> <https://w3id.org/ontofnct/criterion> .
+_:genid34 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/pmd/co/value> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid22 <http://www.w3.org/2003/11/swrl#head> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid36 .
+_:genid36 <http://www.w3.org/2003/11/swrl#argument1> <https://w3id.org/ontofnct/criterion> .
+_:genid36 <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/ontofnct/BrittleFailure> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
