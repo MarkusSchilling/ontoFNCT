@@ -5,20 +5,35 @@
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
 @prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
 @base            <https://w3id.org/ontofnct/alignment/dolce/> .
 
 <https://w3id.org/ontofnct/alignment/dolce>
     a owl:Ontology ;
+    owl:versionIRI <https://w3id.org/ontofnct/alignment/dolce/1.0.0> ;
+    owl:versionInfo "1.0.0" ;
     rdfs:label "OntoFNCT–DOLCE alignment module"@en ;
     rdfs:comment "Optional alignment module providing a minimal set of mapping axioms between PMDco/OntoFNCT and DOLCEbasicOWL. This module is intentionally lightweight and kept separate from the core OntoFNCT ontology."@en ;
-    dcterms:created "2026-02-13"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    dcterms:title "OntoFNCT–DOLCE alignment module"@en ;
+    dcterms:created "2026-02-13"^^xsd:date ;
     dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
+
+    # Provenance / traceability annotations
+    prov:wasDerivedFrom <https://w3id.org/ontofnct/1.0.0> , <https://w3id.org/DOLCE/OWL/DOLCEbasic> ;
+    dcterms:source <https://www.iso.org/standard/78927.html> ;
+    dcterms:bibliographicCitation "ISO/IEC 21838-3:2023 Information technology — Top-level ontologies (TLO) — Part 3: Descriptive ontology for linguistic and cognitive engineering (DOLCE)."@en ;
+    dcterms:bibliographicCitation "DOLCE-basic in OWL (DOLCEbasicOWL), https://w3id.org/DOLCE/OWL/DOLCEbasic (version 3.5)."@en ;
+
+    # Imports kept explicit; this module can be loaded on demand
     owl:imports <https://w3id.org/ontofnct/1.0.0> ;
     owl:imports <https://w3id.org/DOLCE/OWL/DOLCEbasic> .
 
 #################################################################
 # Minimal, cautious mapping axioms (subsumptions only)
+# NOTE: owl:equivalentClass is intentionally avoided to keep the
+# alignment conservative and prevent unintended inferences.
 #################################################################
 
 # Objects in PMDco (including material specimens and devices) are endurants in DOLCE.
