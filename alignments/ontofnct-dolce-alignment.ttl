@@ -1,0 +1,37 @@
+@prefix ontofnct: <https://w3id.org/ontofnct/> .
+@prefix pmd:     <https://w3id.org/pmd/co/> .
+@prefix dolce:   <https://w3id.org/DOLCE/OWL/DOLCEbasic#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@base            <https://w3id.org/ontofnct/alignment/dolce/> .
+
+<https://w3id.org/ontofnct/alignment/dolce>
+    a owl:Ontology ;
+    rdfs:label "OntoFNCT–DOLCE alignment module"@en ;
+    rdfs:comment "Optional alignment module providing a minimal set of mapping axioms between PMDco/OntoFNCT and DOLCEbasicOWL. This module is intentionally lightweight and kept separate from the core OntoFNCT ontology."@en ;
+    dcterms:created "2026-02-13"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
+    owl:imports <https://w3id.org/ontofnct/1.0.0> ;
+    owl:imports <https://w3id.org/DOLCE/OWL/DOLCEbasic> .
+
+#################################################################
+# Minimal, cautious mapping axioms (subsumptions only)
+#################################################################
+
+# Objects in PMDco (including material specimens and devices) are endurants in DOLCE.
+pmd:Object rdfs:subClassOf dolce:Endurant .
+
+# Processes in PMDco are perdurants in DOLCE.
+pmd:Process rdfs:subClassOf dolce:Perdurant .
+
+# Mechanical testing processes are a specialization of processes and thus perdurants.
+pmd:MechanicalTestingProcess rdfs:subClassOf dolce:Perdurant .
+
+# Specimens are physical entities, hence physical endurants.
+pmd:Specimen rdfs:subClassOf dolce:PhysicalEndurant .
+
+# Value objects (values, measured quantities, etc.) are treated as qualities in DOLCE.
+pmd:ValueObject rdfs:subClassOf dolce:Quality .
