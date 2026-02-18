@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Full-notch creep test ontology (OntoFNCT)</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ontofnct","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ontofnct","name":"Full-notch creep test ontology (OntoFNCT)", "headline":"This is the stable version of the full-notch creep test ontology (OntoFNCT) that ontologically represents the full-notch creep test. OntoFNCT has been developed in accordance with the corresponding test standard ISO 16770:2019-09 Plastics - Determination of environmental stress cracking (ESC) of polyethylene - Full-notch creep test (FNCT). The OntoFNCT provides conceptualizations that are supposed to be valid for the description of full-notch creep tests and associated data in accordance with the corresponding test standard. By using OntoFNCT for storing full-notch creep test data, all data will be well structured and based on a common vocabulary agreed on by an expert group (generation of FAIR data) which is meant to lead to enhanced data interoperability. This comprises several data categories such as primary data, secondary data and metadata. Data will be human and machine readable. The usage of OntoFNCT facilitates data retrieval and downstream usage. Due to a close connection to the mid-level PMD core ontology (PMDco), the interoperability of full-notch creep test data is enhanced and querying in combination with other aspects and data within the broad field of materials science and engineering (MSE) is facilitated.The class structure of OntoFNCT forms a comprehensible and semantic layer for unified storage of data generated in a full-notch creep test including the possibility to record data from analysis and re-evaluation. Furthermore, extensive metadata allows to assess data quality and reliability. Following the open world assumption, object properties are deliberately low restrictive and sparse.OntoFNCT at GitHub: https://github.com/MarkusSchilling/ontoFNCT", "datePublished":"2023-12", "version":"1.0.0", "author":[{"@type":"Person","name":"https://orcid.org/0000-0001-9753-345X","url":"https://orcid.org/0000-0001-9753-345X"},{"@type":"Person","name":"https://orcid.org/0000-0002-4970-7627","url":"https://orcid.org/0000-0002-4970-7627"},{"@type":"Person","name":"https://orcid.org/0000-0002-7094-5371","url":"https://orcid.org/0000-0002-7094-5371"},{"@type":"Person","name":"https://orcid.org/0009-0001-0315-3964","url":"https://orcid.org/0009-0001-0315-3964"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-de.html"><b>de</b></a> <a href="index-en.html"><b>en</b></a> </div>
+<h1>Full-notch creep test ontology (OntoFNCT)</h1>
+<h2>Release 2023-12</h2>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="https://w3id.org/ontofnct/1.0.0">https://w3id.org/ontofnct/1.0.0</a></dd>
+<dt>Revision:</dt>
+<dd>1.0.0</dd>
+<dt>Authors:</dt>
+<dd><a href="https://orcid.org/0000-0001-9753-345X">https://orcid.org/0000-0001-9753-345X</a></dd><dd><a href="https://orcid.org/0000-0002-4970-7627">https://orcid.org/0000-0002-4970-7627</a></dd><dd><a href="https://orcid.org/0000-0002-7094-5371">https://orcid.org/0000-0002-7094-5371</a></dd><dd><a href="https://orcid.org/0009-0001-0315-3964">https://orcid.org/0009-0001-0315-3964</a></dd>
+
+<dt>Imported Ontologies:</dt>
+<dd><a href="http://www.w3.org/ns/prov-o#">prov-o#</a></dd><dd><a href="http://www.w3.org/ns/prov-o-inverses#">prov-o-inverses#</a></dd><dd><a href="https://w3id.org/pmd/co">co</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://insertlicenseURIhere.org" target="_blank"><img src="https://img.shields.io/badge/License-license%20name%20goes%20here-blue.svg" alt="http://insertlicenseURIhere.org" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Markus Schilling, Niklas Marschall, Ute Niebergall, Martin Böhning. (December 04th, 2023) OntoFNCT: full-notch creep test ontology. Version 1.0.0, https://w3id.org/ontofnct/</dd>
+</dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This is the stable version of the full-notch creep test ontology (OntoFNCT) that ontologically represents the full-notch creep test. OntoFNCT has been developed in accordance with the corresponding test standard ISO 16770:2019-09 Plastics - Determination of environmental stress cracking (ESC) of polyethylene - Full-notch creep test (FNCT). 
+
+The OntoFNCT provides conceptualizations that are supposed to be valid for the description of full-notch creep tests and associated data in accordance with the corresponding test standard. By using OntoFNCT for storing full-notch creep test data, all data will be well structured and based on a common vocabulary agreed on by an expert group (generation of FAIR data) which is meant to lead to enhanced data interoperability. This comprises several data categories such as primary data, secondary data and metadata. Data will be human and machine readable. The usage of OntoFNCT facilitates data retrieval and downstream usage. Due to a close connection to the mid-level PMD core ontology (PMDco), the interoperability of full-notch creep test data is enhanced and querying in combination with other aspects and data within the broad field of materials science and engineering (MSE) is facilitated.
+
+The class structure of OntoFNCT forms a comprehensible and semantic layer for unified storage of data generated in a full-notch creep test including the possibility to record data from analysis and re-evaluation. Furthermore, extensive metadata allows to assess data quality and reliability. Following the open world assumption, object properties are deliberately low restrictive and sparse.
+
+OntoFNCT at GitHub: https://github.com/MarkusSchilling/ontoFNCT</span>
+</div>
+<div id="toc"></div>  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">Full-notch creep test ontology (OntoFNCT): Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#/ActualTensileStress" title="https://w3id.org/ontofnct/ActualTensileStress">Actual Tensile Stress</a>
+   </li>
+   <li>
+      <a href="#/BatchNumber" title="https://w3id.org/ontofnct/BatchNumber">Batch Number</a>
+   </li>
+   <li>
+      <a href="#/BrittleFailure" title="https://w3id.org/ontofnct/BrittleFailure">Brittle Failure</a>
+   </li>
+   <li>
+      <a href="#/ConditioningTime" title="https://w3id.org/ontofnct/ConditioningTime">Conditioning Time</a>
+   </li>
+   <li>
+      <a href="#/CriterionOfBrittleness" title="https://w3id.org/ontofnct/CriterionOfBrittleness">Criterion of brittleness</a>
+   </li>
+   <li>
+      <a href="#/Depth" title="https://w3id.org/ontofnct/Depth">Depth</a>
+   </li>
+   <li>
+      <a href="#/DuctileFailure" title="https://w3id.org/ontofnct/DuctileFailure">Ductile Failure</a>
+   </li>
+   <li>
+      <a href="#/Elongation" title="https://w3id.org/ontofnct/Elongation">Elongation</a>
+   </li>
+   <li>
+      <a href="#/ExtensometerCapacity" title="https://w3id.org/ontofnct/ExtensometerCapacity">Extensometer Capacity</a>
+   </li>
+   <li>
+      <a href="#/Failure" title="https://w3id.org/ontofnct/Failure">Failure</a>
+   </li>
+   <li>
+      <a href="#/FinalElongation" title="https://w3id.org/ontofnct/FinalElongation">Final Elongation</a>
+   </li>
+   <li>
+      <a href="#/FractureTypeTransitionPoint"
+         title="https://w3id.org/ontofnct/FractureTypeTransitionPoint">Fracture Type Transition Point</a>
+   </li>
+   <li>
+      <a href="#/FullNotchCreepTest" title="https://w3id.org/ontofnct/FullNotchCreepTest">Full-Notch Creep Test</a>
+   </li>
+   <li>
+      <a href="#/FullNotchCreepTestDevice"
+         title="https://w3id.org/ontofnct/FullNotchCreepTestDevice">Full-notch creep test device</a>
+   </li>
+   <li>
+      <a href="#/LeverArmRatio" title="https://w3id.org/ontofnct/LeverArmRatio">Lever-arm Ratio</a>
+   </li>
+   <li>
+      <a href="#/MeasuredLigamentArea" title="https://w3id.org/ontofnct/MeasuredLigamentArea">Measured Ligament Area</a>
+   </li>
+   <li>
+      <a href="#/NominalLigamentArea" title="https://w3id.org/ontofnct/NominalLigamentArea">Nominal Ligament Area</a>
+   </li>
+   <li>
+      <a href="#/NominalTensileStress" title="https://w3id.org/ontofnct/NominalTensileStress">Nominal Tensile Stress</a>
+   </li>
+   <li>
+      <a href="#/Notch" title="https://w3id.org/ontofnct/Notch">Notch</a>
+   </li>
+   <li>
+      <a href="#/NotchDepth" title="https://w3id.org/ontofnct/NotchDepth">Notch Depth</a>
+   </li>
+   <li>
+      <a href="#/NotchingSpeed" title="https://w3id.org/ontofnct/NotchingSpeed">Notching Speed</a>
+   </li>
+   <li>
+      <a href="#/Preload" title="https://w3id.org/ontofnct/Preload">Preload</a>
+   </li>
+   <li>
+      <a href="#/PreloadTime" title="https://w3id.org/ontofnct/PreloadTime">Preload Time</a>
+   </li>
+   <li>
+      <a href="#/ReferenceTensileStress" title="https://w3id.org/ontofnct/ReferenceTensileStress">Reference Tensile Stress</a>
+   </li>
+   <li>
+      <a href="#/TensileStress" title="https://w3id.org/ontofnct/TensileStress">Tensile Stress</a>
+   </li>
+   <li>
+      <a href="#/TestContainer" title="https://w3id.org/ontofnct/TestContainer">Test Container</a>
+   </li>
+   <li>
+      <a href="#/TestForceIncreaseRate" title="https://w3id.org/ontofnct/TestForceIncreaseRate">Test Force Increase Rate</a>
+   </li>
+   <li>
+      <a href="#/TimeToFailure" title="https://w3id.org/ontofnct/TimeToFailure">Time To Failure</a>
+   </li>
+   <li>
+      <a href="#/TimeToFailureAtTheReferenceTensileStress"
+         title="https://w3id.org/ontofnct/TimeToFailureAtTheReferenceTensileStress">Time To Failure At The Reference Tensile Stress</a>
+   </li>
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for Full-notch creep test ontology (OntoFNCT) classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Full-notch creep test ontology (OntoFNCT).
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#/ActualTensileStress" title="https://w3id.org/ontofnct/ActualTensileStress">Actual Tensile Stress</a>
+      </li>
+      <li>
+         <a href="#/BatchNumber" title="https://w3id.org/ontofnct/BatchNumber">Batch Number</a>
+      </li>
+      <li>
+         <a href="#/BrittleFailure" title="https://w3id.org/ontofnct/BrittleFailure">Brittle Failure</a>
+      </li>
+      <li>
+         <a href="#/ConditioningTime" title="https://w3id.org/ontofnct/ConditioningTime">Conditioning Time</a>
+      </li>
+      <li>
+         <a href="#/CriterionOfBrittleness" title="https://w3id.org/ontofnct/CriterionOfBrittleness">Criterion of brittleness</a>
+      </li>
+      <li>
+         <a href="#/Depth" title="https://w3id.org/ontofnct/Depth">Depth</a>
+      </li>
+      <li>
+         <a href="#/DuctileFailure" title="https://w3id.org/ontofnct/DuctileFailure">Ductile Failure</a>
+      </li>
+      <li>
+         <a href="#/Elongation" title="https://w3id.org/ontofnct/Elongation">Elongation</a>
+      </li>
+      <li>
+         <a href="#/ExtensometerCapacity" title="https://w3id.org/ontofnct/ExtensometerCapacity">Extensometer Capacity</a>
+      </li>
+      <li>
+         <a href="#/Failure" title="https://w3id.org/ontofnct/Failure">Failure</a>
+      </li>
+      <li>
+         <a href="#/FinalElongation" title="https://w3id.org/ontofnct/FinalElongation">Final Elongation</a>
+      </li>
+      <li>
+         <a href="#/FractureTypeTransitionPoint"
+            title="https://w3id.org/ontofnct/FractureTypeTransitionPoint">Fracture Type Transition Point</a>
+      </li>
+      <li>
+         <a href="#/FullNotchCreepTest" title="https://w3id.org/ontofnct/FullNotchCreepTest">Full-Notch Creep Test</a>
+      </li>
+      <li>
+         <a href="#/FullNotchCreepTestDevice"
+            title="https://w3id.org/ontofnct/FullNotchCreepTestDevice">Full-notch creep test device</a>
+      </li>
+      <li>
+         <a href="#/LeverArmRatio" title="https://w3id.org/ontofnct/LeverArmRatio">Lever-arm Ratio</a>
+      </li>
+      <li>
+         <a href="#/MeasuredLigamentArea" title="https://w3id.org/ontofnct/MeasuredLigamentArea">Measured Ligament Area</a>
+      </li>
+      <li>
+         <a href="#/NominalLigamentArea" title="https://w3id.org/ontofnct/NominalLigamentArea">Nominal Ligament Area</a>
+      </li>
+      <li>
+         <a href="#/NominalTensileStress" title="https://w3id.org/ontofnct/NominalTensileStress">Nominal Tensile Stress</a>
+      </li>
+      <li>
+         <a href="#/Notch" title="https://w3id.org/ontofnct/Notch">Notch</a>
+      </li>
+      <li>
+         <a href="#/NotchDepth" title="https://w3id.org/ontofnct/NotchDepth">Notch Depth</a>
+      </li>
+      <li>
+         <a href="#/NotchingSpeed" title="https://w3id.org/ontofnct/NotchingSpeed">Notching Speed</a>
+      </li>
+      <li>
+         <a href="#/Preload" title="https://w3id.org/ontofnct/Preload">Preload</a>
+      </li>
+      <li>
+         <a href="#/PreloadTime" title="https://w3id.org/ontofnct/PreloadTime">Preload Time</a>
+      </li>
+      <li>
+         <a href="#/ReferenceTensileStress" title="https://w3id.org/ontofnct/ReferenceTensileStress">Reference Tensile Stress</a>
+      </li>
+      <li>
+         <a href="#/TensileStress" title="https://w3id.org/ontofnct/TensileStress">Tensile Stress</a>
+      </li>
+      <li>
+         <a href="#/TestContainer" title="https://w3id.org/ontofnct/TestContainer">Test Container</a>
+      </li>
+      <li>
+         <a href="#/TestForceIncreaseRate" title="https://w3id.org/ontofnct/TestForceIncreaseRate">Test Force Increase Rate</a>
+      </li>
+      <li>
+         <a href="#/TimeToFailure" title="https://w3id.org/ontofnct/TimeToFailure">Time To Failure</a>
+      </li>
+      <li>
+         <a href="#/TimeToFailureAtTheReferenceTensileStress"
+            title="https://w3id.org/ontofnct/TimeToFailureAtTheReferenceTensileStress">Time To Failure At The Reference Tensile Stress</a>
+      </li>
+   </ul>
+   <div class="entity" id="/ActualTensileStress">
+      <h3>Actual Tensile Stress<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/ontofnct/ActualTensileStress</p>
+      <div class="comment">
+         <span class="markdown">Symbol: sigma_L</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/ontofnct">https://w3id.org/ontofnct</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/characteristic"
+               target="_blank"
+               title="https://w3id.org/pmd/co/characteristic">characteristic</a> 
+            <span class="logic">some</span> 
+            <a href="#/MeasuredLigamentArea" title="https://w3id.org/ontofnct/MeasuredLigamentArea">Measured Ligament Area</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="https://w3id.org/pmd/co/characteristic"
+               target="_blank"
+               title="https://w3id.org/pmd/co/characteristic">characteristic</a> 
+            <span class="logic">some</span> 
+            <a href="https://w3id.org/pmd/co/Force"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Force">force</a>
+         </dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/TensileStress" title="https://w3id.org/ontofnct/TensileStress">Tensile Stress</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/BatchNumber">
+      <h3>Batch Number<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/ontofnct/BatchNumber</p>
+      <div class="comment">
+         <span class="markdown">This class refers to a unique identifier assigned to a group of items manufactured or produced together under similar conditions, typically within the same production run or timeframe. The batch number helps track and manage these items throughout their lifecycle, including production, distribution, and post-sale activities such as recalls or quality control measures.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/ontofnct">https://w3id.org/ontofnct</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Identifier"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Identifier">identifier</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/BrittleFailure">
+      <h3>Brittle Failure<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/ontofnct/BrittleFailure</p>
+      <div class="comment">
+         <span class="markdown">This class describes a sort of failure, in which the fracture surface exhibits no permanent material deformation to the naked human eye, such as, e.g. stretching, elongation or necking down
+
+Note: If the brittle area is less than 20 % of the total ligament, the failure is ranked as ductile.
+Note: The beginning of the transition to ductile failure behaviour may be indicated by an extended ligament, which may form in the centre.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/ontofnct">https://w3id.org/ontofnct</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/Failure" title="https://w3id.org/ontofnct/Failure">Failure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#/DuctileFailure" title="https://w3id.org/ontofnct/DuctileFailure">Ductile Failure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/ConditioningTime">
+      <h3>Conditioning Time<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/ontofnct/ConditioningTime</p>
+      <div class="comment">
+         <span class="markdown">This class describes the time (duration) that is used to subject a material to standard and controlled environmental and/or stress conditions prior to testing.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/ontofnct">https://w3id.org/ontofnct</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Time"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Time">time</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/CriterionOfBrittleness">
+      <h3>Criterion of brittleness<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/ontofnct/CriterionOfBrittleness</p>
+      <div class="comment">
+         <span class="markdown">Symbol: B</span>
+      </div>
+      <div class="comment">
+         <span class="markdown">This class describes a measure of the brittleness of the fracture of an FNCT test piece that is based on fracture surface roughness parameters, heights of distinct fracture surface features, and proportions of fracture surface areas. This measure can be used as a criterion for evaluating a fracture caused by the FNCT.
+
+Note: The criterion of brittleness is a comparative scalar, given without unit.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/ontofnct">https://w3id.org/ontofnct</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/ValueObject"
+               target="_blank"
+               title="https://w3id.org/pmd/co/ValueObject">value object</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/Depth">
+      <h3>Depth<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/ontofnct/Depth</p>
+      <div class="comment">
+         <span class="markdown">This class describes a dimension taken through an object or body of material, usually downward from an upper surface, horizontally inward from an outer surface, or from top to bottom of something regarded as one of several layers.
+
+Note: Depth also denotes the quality of being deep.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/ontofnct">https://w3id.org/ontofnct</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/ValueObject"
+               target="_blank"
+               title="https://w3id.org/pmd/co/ValueObject">value object</a>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#/NotchDepth" title="https://w3id.org/ontofnct/NotchDepth">Notch Depth</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/DuctileFailure">
+      <h3>Ductile Failure<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/ontofnct/DuctileFailure</p>
+      <div class="comment">
+         <span class="markdown">This class describes a sort of failure, in which the fracture surface clearly exhibits permanent material deformation with stretching, elongation and necking down.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/ontofnct">https://w3id.org/ontofnct</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/Failure" title="https://w3id.org/ontofnct/Failure">Failure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#/BrittleFailure" title="https://w3id.org/ontofnct/BrittleFailure">Brittle Failure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/Elongation">
+      <h3>Elongation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/ontofnct/Elongation</p>
+      <div class="comment">
+         <span class="markdown">This class describes the increase in the original length of an object, such as a test specimen, at any moment during a test.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/ontofnct">https://w3id.org/ontofnct</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/ValueObject"
+               target="_blank"
+               title="https://w3id.org/pmd/co/ValueObject">value object</a>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#/FinalElongation" title="https://w3id.org/ontofnct/FinalElongation">Final Elongation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/ExtensometerCapacity">
+      <h3>Extensometer Capacity<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/ontofnct/ExtensometerCapacity</p>
+      <div class="comment">
+         <span class="markdown">This class describes the maximal capability of an extensometer to measure changes in the length of an object, such as a test specimen. 
+
+Note: Typically, the maximum extensometer length (maximal measurement range) is given.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/ontofnct">https://w3id.org/ontofnct</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/ValueObject"
+               target="_blank"
+               title="https://w3id.org/pmd/co/ValueObject">value object</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/Failure">
+      <h3>Failure<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/ontofnct/Failure</p>
+      <div class="comment">
+         <span class="markdown">This class describes qualitatively the complete separation of the two halves of the test specimen. The quality is intended to be described by a boolean value representing wheter or not the test specimen showed entire failure.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/ontofnct">https://w3id.org/ontofnct</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/ValueObject"
+               target="_blank"
+               title="https://w3id.org/pmd/co/ValueObject">value object</a>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#/BrittleFailure" title="https://w3id.org/ontofnct/BrittleFailure">Brittle Failure</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/DuctileFailure" title="https://w3id.org/ontofnct/DuctileFailure">Ductile Failure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/FinalElongation">
+      <h3>Final Elongation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/ontofnct/FinalElongation</p>
+      <div class="comment">
+         <span class="markdown">This class describes the elongation of a test specimen at the end of a test. This elongation may or may not be permanent to the object under consideration, depending on the associated material behavior.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/ontofnct">https://w3id.org/ontofnct</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/Elongation" title="https://w3id.org/ontofnct/Elongation">Elongation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/FractureTypeTransitionPoint">
+      <h3>Fracture Type Transition Point<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/ontofnct/FractureTypeTransitionPoint</p>
+      <div class="comment">
+         <span class="markdown">This class describes the stress value denoting the transition from brittle to ductile fracture occurring to FNCT specimens valid for a specific, distinct material and environmental fluid combination as typically determined in a series of FNCT experiments.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/ValueObject"
+               target="_blank"
+               title="https://w3id.org/pmd/co/ValueObject">value object</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/FullNotchCreepTest">
+      <h3>Full-Notch Creep Test<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/ontofnct/FullNotchCreepTest</p>
+      <div class="comment">
+         <span class="markdown">The full-notch creep test (FNCT) is a mechanical test method that is used to characterize the environmental stress cracking (ESC) behavior of polyethylene (PE) materials. 
+A test specimen in the form of a square-section bar with coplanar notches in each face at the centre is subjected to a static load in a temperature-controlled environment containing a surface-active detergent solution. The geometry of the test specimen is such that plane strain conditions are obtained, and brittle failure occurs under appropriate tensile load and temperature conditions. The time for this brittle failure to occur after loading is recorded.
+
+Note: Distilled water is also a suitable environment for carrying out this test.
+Note: For testing of PE-based container materials, other environments can also be used, such as dangerous goods and chemicals or suitable liquid test media.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/ontofnct">https://w3id.org/ontofnct</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/participant"
+               target="_blank"
+               title="https://w3id.org/pmd/co/participant">participant</a> 
+            <span class="logic">some</span> 
+            <a href="#/FullNotchCreepTestDevice"
+               title="https://w3id.org/ontofnct/FullNotchCreepTestDevice">Full-notch creep test device</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="https://w3id.org/pmd/co/participant"
+               target="_blank"
+               title="https://w3id.org/pmd/co/participant">participant</a> 
+            <span class="logic">some</span> 
+            <a href="https://w3id.org/pmd/co/Specimen"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Specimen">specimen</a>
+         </dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/MechanicalTestingProcess"
+               target="_blank"
+               title="https://w3id.org/pmd/co/MechanicalTestingProcess">mechanical testing process</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/FullNotchCreepTestDevice">
+      <h3>Full-notch creep test device<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/ontofnct/FullNotchCreepTestDevice</p>
+      <div class="comment">
+         <span class="markdown">The full-notch creep test device is a machine to conduct a full-notch creep test. The control and monitoring of the test, the measurements, and the data processing are usually performed by computer. However, this may also be performed manually.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/ontofnct">https://w3id.org/ontofnct</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/TestingMachine"
+               target="_blank"
+               title="https://w3id.org/pmd/co/TestingMachine">testing machine</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/LeverArmRatio">
+      <h3>Lever-arm Ratio<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/ontofnct/LeverArmRatio</p>
+      <div class="comment">
+         <span class="markdown">The distance between the pivot point (or fulcrum) of a lever and the point where the force is applied is important in determining the mechanical advantage of a lever, as it affects the amount of force that can be exerted and the distance over which that force is applied.</span>
+      </div>
+      <div class="comment">
+         <span class="markdown">This class describes the ratio of a lever arm which is a term used in physics to describe the distance between the point where a force is applied and the point where that force is producing a rotational effect. In other words, it is the distance between the pivot point (or fulcrum) of a lever and the point where the force is applied.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/ontofnct">https://w3id.org/ontofnct</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/ValueObject"
+               target="_blank"
+               title="https://w3id.org/pmd/co/ValueObject">value object</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/MeasuredLigamentArea">
+      <h3>Measured Ligament Area<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/ontofnct/MeasuredLigamentArea</p>
+      <div class="comment">
+         <span class="markdown">Symbol: A_L</span>
+      </div>
+      <div class="comment">
+         <span class="markdown">This class describes the actual cross-sectional area of the test specimen remaining after notching determined after testing.
+
+Note: It is expressed in square millimetres (mm2).</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/ontofnct">https://w3id.org/ontofnct</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/CrossSectionArea"
+               target="_blank"
+               title="https://w3id.org/pmd/co/CrossSectionArea">cross section area</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/NominalLigamentArea">
+      <h3>Nominal Ligament Area<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/ontofnct/NominalLigamentArea</p>
+      <div class="comment">
+         <span class="markdown">Symbol: A_n</span>
+      </div>
+      <div class="comment">
+         <span class="markdown">This class describes the cross-sectional area of the test specimen remaining after notching.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/ontofnct">https://w3id.org/ontofnct</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/CrossSectionArea"
+               target="_blank"
+               title="https://w3id.org/pmd/co/CrossSectionArea">cross section area</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/NominalTensileStress">
+      <h3>Nominal Tensile Stress<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/ontofnct/NominalTensileStress</p>
+      <div class="comment">
+         <span class="markdown">Symbol: sigma_n</span>
+      </div>
+      <div class="comment">
+         <span class="markdown">This class describes the normal force per unit area of the nominal ligament area of the test specimen.
+
+Note: It is expressed in megapascals (MPa).</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/ontofnct">https://w3id.org/ontofnct</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/characteristic"
+               target="_blank"
+               title="https://w3id.org/pmd/co/characteristic">characteristic</a> 
+            <span class="logic">some</span> 
+            <a href="#/NominalLigamentArea" title="https://w3id.org/ontofnct/NominalLigamentArea">Nominal Ligament Area</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="https://w3id.org/pmd/co/characteristic"
+               target="_blank"
+               title="https://w3id.org/pmd/co/characteristic">characteristic</a> 
+            <span class="logic">some</span> 
+            <a href="https://w3id.org/pmd/co/Force"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Force">force</a>
+         </dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/TensileStress" title="https://w3id.org/ontofnct/TensileStress">Tensile Stress</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/Notch">
+      <h3>Notch<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/ontofnct/Notch</p>
+      <div class="comment">
+         <span class="markdown">In mechanical engineering and materials science, a notch refers to a V-shaped, U-shaped, or semi-circular defect deliberately introduced into a planar material. In structural components, a notch causes a stress concentration which can result in the initiation and growth of fatigue cracks. Notches are used in materials characterization to determine fracture mechanics related properties such as fracture toughness and rates of fatigue crack growth.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/ontofnct">https://w3id.org/ontofnct</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Object"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Object">object</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/NotchDepth">
+      <h3>Notch Depth<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/ontofnct/NotchDepth</p>
+      <div class="comment">
+         <span class="markdown">This class describes the depth of a notch that may have been introduced to an object, such as, e.g., a test specimen, deliberately or unintentionally.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/ontofnct">https://w3id.org/ontofnct</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/Depth" title="https://w3id.org/ontofnct/Depth">Depth</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/NotchingSpeed">
+      <h3>Notching Speed<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/ontofnct/NotchingSpeed</p>
+      <div class="comment">
+         <span class="markdown">In accordance with the corresponding test standard, the notching speed of FNCT specimens is measured in mm/min.</span>
+      </div>
+      <div class="comment">
+         <span class="markdown">This class describes the rate at which the material iscut during the notching process. Notching involves creating a cut in a material. The notching speed indicates how quickly this cutting action occurs.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/ValueObject"
+               target="_blank"
+               title="https://w3id.org/pmd/co/ValueObject">value object</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/Preload">
+      <h3>Preload<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/ontofnct/Preload</p>
+      <div class="comment">
+         <span class="markdown">This class describes the force used to load a test specimen prior to the performance of a test procedure.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/ontofnct">https://w3id.org/ontofnct</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Force"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Force">force</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/PreloadTime">
+      <h3>Preload Time<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/ontofnct/PreloadTime</p>
+      <div class="comment">
+         <span class="markdown">This class describes the time (duration) for which a preload (force used to load a test specimen prior to the performance of a test procedure) is applied.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/ontofnct">https://w3id.org/ontofnct</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Time"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Time">time</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/ReferenceTensileStress">
+      <h3>Reference Tensile Stress<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/ontofnct/ReferenceTensileStress</p>
+      <div class="comment">
+         <span class="markdown">Symbol: sigma_L,ref</span>
+      </div>
+      <div class="comment">
+         <span class="markdown">This class describes the selected normal force per unit area of the measured ligament area of the test specimen used for determination of comparable time to failure.
+
+Note: It is expressed in megapascals (MPa).</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/ontofnct">https://w3id.org/ontofnct</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/TensileStress" title="https://w3id.org/ontofnct/TensileStress">Tensile Stress</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TensileStress">
+      <h3>Tensile Stress<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/ontofnct/TensileStress</p>
+      <div class="comment">
+         <span class="markdown">The entity tensile stress is a physical quantity that describes a force imposed on an area of a considered object present during a drawing (tensile) deformation process. When an object is pulled apart, it is subject to tensile stress and may undergo elongation.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/ontofnct">https://w3id.org/ontofnct</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Stress"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Stress">stress</a>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#/ActualTensileStress" title="https://w3id.org/ontofnct/ActualTensileStress">Actual Tensile Stress</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/NominalTensileStress" title="https://w3id.org/ontofnct/NominalTensileStress">Nominal Tensile Stress</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/ReferenceTensileStress" title="https://w3id.org/ontofnct/ReferenceTensileStress">Reference Tensile Stress</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TestContainer">
+      <h3>Test Container<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/ontofnct/TestContainer</p>
+      <div class="comment">
+         <span class="markdown">This class describes a hollow object, such as a box, a cylinder, or a bottle, that can be used for holding something, especially to carry or store it (container) and which is involved in a testing procedure.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/ontofnct">https://w3id.org/ontofnct</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/ProcessingNode"
+               target="_blank"
+               title="https://w3id.org/pmd/co/ProcessingNode">processing node</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TestForceIncreaseRate">
+      <h3>Test Force Increase Rate<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/ontofnct/TestForceIncreaseRate</p>
+      <div class="comment">
+         <span class="markdown">Diese Klasse beschreibt die Steigerungsrate der Kraft, die während einer Prüfung auf einen Probekörper aufgebracht wird und einwirkt.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/ontofnct">https://w3id.org/ontofnct</a>
+         </dd>
+         <dd>https://w3id.org/ontofnct</dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/TestingRate"
+               target="_blank"
+               title="https://w3id.org/pmd/co/TestingRate">testing rate</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TimeToFailure">
+      <h3>Time To Failure<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/ontofnct/TimeToFailure</p>
+      <div class="comment">
+         <span class="markdown">Versagenszeit</span>
+      </div>
+      <div class="comment">
+         <span class="markdown">This class describes the time to failure of an individual test specimen, which is assigned to the actual tensile stress for this individually tested test specimen.
+
+Note: The time to failure time is expressed in hours (h).</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/ontofnct">https://w3id.org/ontofnct</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/characteristic"
+               target="_blank"
+               title="https://w3id.org/pmd/co/characteristic">characteristic</a> 
+            <span class="logic">some</span> 
+            <a href="#/ActualTensileStress" title="https://w3id.org/ontofnct/ActualTensileStress">Actual Tensile Stress</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Duration"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Duration">duration</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TimeToFailureAtTheReferenceTensileStress">
+      <h3>Time To Failure At The Reference Tensile Stress<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/ontofnct/TimeToFailureAtTheReferenceTensileStress</p>
+      <div class="comment">
+         <span class="markdown">Symbol: t_f,ref</span>
+      </div>
+      <div class="comment">
+         <span class="markdown">This class describes the time to failure corresponding to the reference tensile stress, calculated by interpolating in the measured dependence of time to failure vs. actual tensile stress for individual tested specimens.
+
+Note: It is expressed in hours (h).</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/ontofnct">https://w3id.org/ontofnct</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/characteristic"
+               target="_blank"
+               title="https://w3id.org/pmd/co/characteristic">characteristic</a> 
+            <span class="logic">some</span> 
+            <a href="#/ReferenceTensileStress" title="https://w3id.org/ontofnct/ReferenceTensileStress">Reference Tensile Stress</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Duration"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Duration">duration</a>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+</div>
+</div>
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

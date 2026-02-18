@@ -1,0 +1,774 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/ontofnct#"
+     xml:base="https://w3id.org/ontofnct"
+     xmlns:co="https://w3id.org/pmd/co/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/ontofnct">
+        <owl:versionIRI rdf:resource="https://w3id.org/ontofnct/1.0.0"/>
+        <owl:imports rdf:resource="https://w3id.org/pmd/co/2.0.8"/>
+        <dc:creator rdf:resource="https://orcid.org/0000-0001-9753-345X"/>
+        <dc:creator rdf:resource="https://orcid.org/0000-0002-4970-7627"/>
+        <dc:creator rdf:resource="https://orcid.org/0000-0002-7094-5371"/>
+        <dc:creator rdf:resource="https://orcid.org/0009-0001-0315-3964"/>
+        <dc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <terms:bibliographicCitation xml:lang="en">Markus Schilling, Niklas Marschall, Ute Niebergall, Martin Böhning. (December 04th, 2023) OntoFNCT: full-notch creep test ontology. Version 1.0.0, https://w3id.org/ontofnct/</terms:bibliographicCitation>
+        <terms:created>2023-12</terms:created>
+        <terms:title xml:lang="en">Full-notch creep test ontology (OntoFNCT)</terms:title>
+        <rdfs:comment xml:lang="en">This is the stable version of the full-notch creep test ontology (OntoFNCT) that ontologically represents the full-notch creep test. OntoFNCT has been developed in accordance with the corresponding test standard ISO 16770:2019-09 Plastics - Determination of environmental stress cracking (ESC) of polyethylene - Full-notch creep test (FNCT). 
+
+The OntoFNCT provides conceptualizations that are supposed to be valid for the description of full-notch creep tests and associated data in accordance with the corresponding test standard. By using OntoFNCT for storing full-notch creep test data, all data will be well structured and based on a common vocabulary agreed on by an expert group (generation of FAIR data) which is meant to lead to enhanced data interoperability. This comprises several data categories such as primary data, secondary data and metadata. Data will be human and machine readable. The usage of OntoFNCT facilitates data retrieval and downstream usage. Due to a close connection to the mid-level PMD core ontology (PMDco), the interoperability of full-notch creep test data is enhanced and querying in combination with other aspects and data within the broad field of materials science and engineering (MSE) is facilitated.
+
+The class structure of OntoFNCT forms a comprehensible and semantic layer for unified storage of data generated in a full-notch creep test including the possibility to record data from analysis and re-evaluation. Furthermore, extensive metadata allows to assess data quality and reliability. Following the open world assumption, object properties are deliberately low restrictive and sparse.
+
+OntoFNCT at GitHub: https://github.com/MarkusSchilling/ontoFNCT</rdfs:comment>
+        <owl:versionInfo>1.0.0</owl:versionInfo>
+        <prov:editorialNote xml:lang="en">The full-notch creep test ontology (OntoFNCT) is based on the mid-level PMD Core Ontology (PMDco) that was created in the frame of the joint project of platform MaterialDigital (PMD). Therefore, OntoFNCT imports the PMDco, the namespace of which is to be found on: https://w3id.org/pmd/co.</prov:editorialNote>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/ontofnct/ActualTensileStress -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontofnct/ActualTensileStress">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/pmd/co/characteristic"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/ontofnct/MeasuredLigamentArea"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/pmd/co/characteristic"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/Force"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontofnct/TensileStress"/>
+        <rdfs:comment>Symbol: sigma_L</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ontofnct"/>
+        <rdfs:label xml:lang="en">Actual Tensile Stress</rdfs:label>
+        <rdfs:label xml:lang="de">Diese Klasse beschreibt die Normalkraft pro Flächeneinheit der gemessenen Ligamentfläche des Prüfkörpers.
+
+Anmerkung: Sie wird in Megapascal (MPa) angegeben.</rdfs:label>
+        <rdfs:label xml:lang="de">Tatsächliche Zugspannung</rdfs:label>
+        <rdfs:label xml:lang="en">This class describes the normal force per unit area of the measured ligament area of the test specimen.
+
+Note: It is expressed in megapascals (MPa).</rdfs:label>
+        <co:definitionSource>ISO 16770:2019-09</co:definitionSource>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontofnct/BatchNumber -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontofnct/BatchNumber">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/Identifier"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ontofnct"/>
+        <rdfs:label xml:lang="en">Batch Number</rdfs:label>
+        <rdfs:label xml:lang="de">Chargennummer</rdfs:label>
+        <skos:definition xml:lang="de">Diese Klasse bezieht sich auf eine eindeutige Kennung, die einer Gruppe von Artikeln zugewiesen wird, die unter ähnlichen Bedingungen hergestellt oder produziert werden, typischerweise innerhalb desselben Produktionslaufs oder Zeitrahmens. Die Chargennummer hilft bei der Verfolgung und Verwaltung dieser Artikel während ihres gesamten Lebenszyklus, einschließlich Produktion, Vertrieb und Aktivitäten nach dem Verkauf wie Rückrufe oder Qualitätskontrollmaßnahmen.</skos:definition>
+        <skos:definition xml:lang="en">This class refers to a unique identifier assigned to a group of items manufactured or produced together under similar conditions, typically within the same production run or timeframe. The batch number helps track and manage these items throughout their lifecycle, including production, distribution, and post-sale activities such as recalls or quality control measures.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontofnct/BrittleFailure -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontofnct/BrittleFailure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontofnct/Failure"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/ontofnct/DuctileFailure"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ontofnct"/>
+        <rdfs:label xml:lang="en">Brittle Failure</rdfs:label>
+        <rdfs:label xml:lang="de">Sprödbruch</rdfs:label>
+        <skos:definition xml:lang="de">Diese Klasse beschreibt eine Art des Versagens, bei der die Bruchfläche mit bloßem Auge keine bleibende Materialverformung, wie z. B. Dehnung, Streckung oder Einschnürung, erkennen lässt.
+
+Anmerkung: Wenn die spröde Fläche weniger als 20 % des gesamten Ligaments ausmacht, wird das Versagen als duktil eingestuft.
+
+Anmerkung: Der Beginn des Übergangs zum duktilen Versagensverhalten kann durch ein verlängertes Ligament angezeigt werden, das sich in der Mitte bilden kann (Zentralligament).</skos:definition>
+        <skos:definition xml:lang="en">This class describes a sort of failure, in which the fracture surface exhibits no permanent material deformation to the naked human eye, such as, e.g. stretching, elongation or necking down
+
+Note: If the brittle area is less than 20 % of the total ligament, the failure is ranked as ductile.
+Note: The beginning of the transition to ductile failure behaviour may be indicated by an extended ligament, which may form in the centre.</skos:definition>
+        <co:definitionSource>ISO 16770:2019-09</co:definitionSource>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontofnct/ConditioningTime -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontofnct/ConditioningTime">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/Time"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ontofnct"/>
+        <rdfs:label xml:lang="en">Conditioning Time</rdfs:label>
+        <rdfs:label xml:lang="de">Konditionierungszeit</rdfs:label>
+        <skos:definition xml:lang="de">Diese Klasse beschreibt die Zeit (Dauer), die verwendet wird, um ein Material vor der Prüfung kontrollierten Standard-Umgebungs- und/oder Belastungsbedingungen auszusetzen.</skos:definition>
+        <skos:definition xml:lang="en">This class describes the time (duration) that is used to subject a material to standard and controlled environmental and/or stress conditions prior to testing.</skos:definition>
+        <co:definitionSource rdf:resource="https://maclellanrubber.com/definitions/conditioning"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontofnct/CriterionOfBrittleness -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontofnct/CriterionOfBrittleness">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/ValueObject"/>
+        <rdfs:comment>Symbol: B</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ontofnct"/>
+        <rdfs:label xml:lang="en">Criterion of brittleness</rdfs:label>
+        <rdfs:label xml:lang="de">Kriterium der Sprödigkeit</rdfs:label>
+        <skos:definition xml:lang="de">Diese Klasse beschreibt ein Maß für die Sprödigkeit des Bruchs eines FNCT-Prüfkörpers, das auf Parametern der Bruchflächenrauheit, der Höhe ausgeprägter Bruchflächenmerkmale sowie deren Anteilen auf Bruchflächenbereichen beruht. Dieses Maß kann als Kriterium für die Bewertung eines durch den FNCT erfolgten Bruchs verwendet werden.
+
+Anmerkung: Das Kriterium der Sprödigkeit ist ein vergleichender skalarer Wert, der ohne Einheit angegeben wird.</skos:definition>
+        <skos:definition xml:lang="en">This class describes a measure of the brittleness of the fracture of an FNCT test piece that is based on fracture surface roughness parameters, heights of distinct fracture surface features, and proportions of fracture surface areas. This measure can be used as a criterion for evaluating a fracture caused by the FNCT.
+
+Note: The criterion of brittleness is a comparative scalar, given without unit.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontofnct/Depth -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontofnct/Depth">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/ValueObject"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ontofnct"/>
+        <rdfs:label xml:lang="en">Depth</rdfs:label>
+        <rdfs:label xml:lang="de">Tiefe</rdfs:label>
+        <skos:definition xml:lang="de">Diese Klasse beschreibt eine Dimension, die durch ein Objekt oder einen Körper aus einem Material genommen wird, normalerweise von einer oberen Oberfläche nach unten, von einer äußeren Oberfläche horizontal nach innen oder von oben nach unten von etwas, das als eine von mehreren Schichten betrachtet wird.
+
+
+Anmerkung: Tiefe bezeichnet die Eigenschaft, tief zu sein.</skos:definition>
+        <skos:definition xml:lang="en">This class describes a dimension taken through an object or body of material, usually downward from an upper surface, horizontally inward from an outer surface, or from top to bottom of something regarded as one of several layers.
+
+Note: Depth also denotes the quality of being deep.</skos:definition>
+        <co:definitionSource rdf:resource="https://www.dictionary.com/browse/depth"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontofnct/DuctileFailure -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontofnct/DuctileFailure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontofnct/Failure"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ontofnct"/>
+        <rdfs:label xml:lang="en">Ductile Failure</rdfs:label>
+        <rdfs:label xml:lang="de">Duktilbruch</rdfs:label>
+        <skos:definition xml:lang="de">Diese Klasse beschreibt eine Art des Versagens, bei der die Bruchfläche deutlich eine dauerhafte Materialverformung mit Dehnung, Streckung und Einschnürung aufweist.</skos:definition>
+        <skos:definition xml:lang="en">This class describes a sort of failure, in which the fracture surface clearly exhibits permanent material deformation with stretching, elongation and necking down.</skos:definition>
+        <co:definitionSource>ISO 16770:2019-09</co:definitionSource>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontofnct/Elongation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontofnct/Elongation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/ValueObject"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ontofnct"/>
+        <rdfs:label xml:lang="en">Elongation</rdfs:label>
+        <rdfs:label xml:lang="de">Verlängerung</rdfs:label>
+        <skos:definition xml:lang="de">Diese Klasse beschreibt die Zunahme der ursprünglichen Länge eines Objekts, z. B. eines Prüfkörpers, zu einem beliebigen Zeitpunkt während einer Prüfung.</skos:definition>
+        <skos:definition xml:lang="en">This class describes the increase in the original length of an object, such as a test specimen, at any moment during a test.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontofnct/ExtensometerCapacity -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontofnct/ExtensometerCapacity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/ValueObject"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ontofnct"/>
+        <rdfs:label xml:lang="en">Extensometer Capacity</rdfs:label>
+        <rdfs:label xml:lang="de">Extensometer-Kapazität</rdfs:label>
+        <skos:definition xml:lang="de">Diese Klasse beschreibt die maximale Kapazität eines Längenänderungsaufnehmers, die Längenänderung eines Objekts, z. B. eines Probekörpers, zu messen. 
+
+Hinweis: Üblicherweise wird die maximale Länge des Aufnehmers (maximaler Messbereich) angegeben.</skos:definition>
+        <skos:definition xml:lang="en">This class describes the maximal capability of an extensometer to measure changes in the length of an object, such as a test specimen. 
+
+Note: Typically, the maximum extensometer length (maximal measurement range) is given.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontofnct/Failure -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontofnct/Failure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/ValueObject"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ontofnct"/>
+        <rdfs:label xml:lang="de">Bruch</rdfs:label>
+        <rdfs:label xml:lang="en">Failure</rdfs:label>
+        <skos:definition xml:lang="de">Diese Klasse beschreibt qualitativ die vollständige Trennung der beiden Hälften des Prüfkörpers. Diese qualitative Angabe soll durch einen booleschen Wert beschrieben werden, der angibt, ob der Probekörper vollständig versagt hat oder nicht.</skos:definition>
+        <skos:definition xml:lang="en">This class describes qualitatively the complete separation of the two halves of the test specimen. The quality is intended to be described by a boolean value representing wheter or not the test specimen showed entire failure.</skos:definition>
+        <co:definitionSource>ISO 16770:2019-09</co:definitionSource>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontofnct/FinalElongation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontofnct/FinalElongation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontofnct/Elongation"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ontofnct"/>
+        <rdfs:label xml:lang="de">Enddehnung</rdfs:label>
+        <rdfs:label xml:lang="en">Final Elongation</rdfs:label>
+        <skos:definition xml:lang="de">Diese Klasse beschreibt die Dehnung eines Prüfkörpers am Ende einer Prüfung. Diese Dehnung kann je nach Materialverhalten für das betrachtete Objekt permanent sein oder nicht.</skos:definition>
+        <skos:definition xml:lang="en">This class describes the elongation of a test specimen at the end of a test. This elongation may or may not be permanent to the object under consideration, depending on the associated material behavior.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontofnct/FractureTypeTransitionPoint -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontofnct/FractureTypeTransitionPoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/ValueObject"/>
+        <rdfs:label rdf:resource="https://w3id.org/ontofnct"/>
+        <rdfs:label xml:lang="de">Brucharten-Übergangspunkt</rdfs:label>
+        <rdfs:label xml:lang="en">Fracture Type Transition Point</rdfs:label>
+        <skos:definition xml:lang="de">Diese Klasse beschreibt den Spannungswert, der den Übergang von Spröd- zu Zähbruch bei FNCT-Prüfkörpern für eine bestimmte, eindeutige Kombination von Material und Umgebungsflüssigkeit angibt, wie sie typischerweise in einer Reihe von FNCT-Versuchen ermittelt wird.</skos:definition>
+        <skos:definition xml:lang="en">This class describes the stress value denoting the transition from brittle to ductile fracture occurring to FNCT specimens valid for a specific, distinct material and environmental fluid combination as typically determined in a series of FNCT experiments.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontofnct/FullNotchCreepTest -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontofnct/FullNotchCreepTest">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/pmd/co/participant"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/ontofnct/FullNotchCreepTestDevice"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/pmd/co/participant"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/Specimen"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/MechanicalTestingProcess"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ontofnct"/>
+        <rdfs:label xml:lang="en">Full-Notch Creep Test</rdfs:label>
+        <rdfs:label xml:lang="de">Medien-Zeitstand-Zugversuch</rdfs:label>
+        <skos:definition xml:lang="de">Der Medien-Zeitstand-Zugversuch (FNCT) ist ein mechanisches Prüfverfahren, das zur Charakterisierung des Verhaltens von Polyethylen (PE) gegenüber des umgebungsbedingten Spannungsrisses verwendet wird. 
+Ein Probekörper in Form eines Vierkantstabs mit mittig (zentral) angebrachten koplanaren Kerben auf jeder Seite wird in einer temperaturgeregelten Umgebung, die eine oberflächenaktive Netzmittellösung enthält, einer statischen Belastung ausgesetzt. Die Geometrie des Probekörpers ist so beschaffen, dass sich ebene Dehnungsbedingungen ergeben und unter geeigneten Zugbelastungs- und Temperaturbedingungen ein Sprödbruch auftritt. Die Zeit bis zum Auftreten dieses Sprödbruchs infolge der Belastung wird aufgezeichnet.
+
+Anmerkung: Destilliertes Wasser ist ebenfalls eine geeignete Umgebung für die Durchführung dieser Prüfung.
+Hinweis: Für die Prüfung von Behältermaterialien auf PE-Basis können auch andere Umgebungen verwendet werden, z. B. Gefahrgut und Chemikalien oder geeignete flüssige Prüfmedien.</skos:definition>
+        <skos:definition xml:lang="en">The full-notch creep test (FNCT) is a mechanical test method that is used to characterize the environmental stress cracking (ESC) behavior of polyethylene (PE) materials. 
+A test specimen in the form of a square-section bar with coplanar notches in each face at the centre is subjected to a static load in a temperature-controlled environment containing a surface-active detergent solution. The geometry of the test specimen is such that plane strain conditions are obtained, and brittle failure occurs under appropriate tensile load and temperature conditions. The time for this brittle failure to occur after loading is recorded.
+
+Note: Distilled water is also a suitable environment for carrying out this test.
+Note: For testing of PE-based container materials, other environments can also be used, such as dangerous goods and chemicals or suitable liquid test media.</skos:definition>
+        <co:definitionSource>ISO 16770:2019-09</co:definitionSource>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontofnct/FullNotchCreepTestDevice -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontofnct/FullNotchCreepTestDevice">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/TestingMachine"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ontofnct"/>
+        <rdfs:label xml:lang="en">Full-notch creep test device</rdfs:label>
+        <rdfs:label xml:lang="de">Medien-Zeitstand-Zugprüfmaschine</rdfs:label>
+        <skos:definition xml:lang="de">Eine Medien-Zeitstand-Zugprüfmaschine ist eine Maschine zur Durchführung eines Medien-Zeitstand-Zugversuchs. Die Steuerung und Überwachung des Versuchs, die Messungen und die Datenverarbeitung erfolgen in der Regel per Computer. Dies kann jedoch auch manuell erfolgen.</skos:definition>
+        <skos:definition xml:lang="en">The full-notch creep test device is a machine to conduct a full-notch creep test. The control and monitoring of the test, the measurements, and the data processing are usually performed by computer. However, this may also be performed manually.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontofnct/LeverArmRatio -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontofnct/LeverArmRatio">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/ValueObject"/>
+        <rdfs:comment xml:lang="de">Der Abstand zwischen dem Drehpunkt eines Hebels und dem Punkt, an dem die Kraft aufgebracht wird, ist wichtig für die Bestimmung des mechanischen Vorteils eines Hebels, da er die Höhe der Kraft, die ausgeübt werden kann, und den Abstand, über den diese Kraft aufgebracht wird, beeinflusst.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The distance between the pivot point (or fulcrum) of a lever and the point where the force is applied is important in determining the mechanical advantage of a lever, as it affects the amount of force that can be exerted and the distance over which that force is applied.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ontofnct"/>
+        <rdfs:label xml:lang="de">Hebelarmverhältnis</rdfs:label>
+        <rdfs:label xml:lang="en">Lever-arm Ratio</rdfs:label>
+        <skos:definition xml:lang="de">Diese Klasse beschreibt das Verhältnis eines Hebelarms. Dieser Begriff wird in der Physik verwendet, um den Abstand zwischen dem Punkt, an dem eine Kraft angreift, und dem Punkt, an dem diese Kraft eine Rotationswirkung erzeugt, zu beschreiben. Mit anderen Worten ist es der Abstand zwischen dem Drehpunkt eines Hebels und dem Punkt, an dem die Kraft angreift.</skos:definition>
+        <skos:definition xml:lang="en">This class describes the ratio of a lever arm which is a term used in physics to describe the distance between the point where a force is applied and the point where that force is producing a rotational effect. In other words, it is the distance between the pivot point (or fulcrum) of a lever and the point where the force is applied.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontofnct/MeasuredLigamentArea -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontofnct/MeasuredLigamentArea">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/CrossSectionArea"/>
+        <rdfs:comment>Symbol: A_L</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ontofnct"/>
+        <rdfs:label xml:lang="de">Gemessene Ligamentfläche</rdfs:label>
+        <rdfs:label xml:lang="en">Measured Ligament Area</rdfs:label>
+        <skos:definition xml:lang="de">Diese Klasse beschreibt die nach der Prüfung ermittelte tatsächliche verbleibenden Querschnittsfläche des Probekörpers nach der Kerbung .
+
+Anmerkung: Sie wird in Quadratmillimetern (mm2) angegeben.</skos:definition>
+        <skos:definition xml:lang="en">This class describes the actual cross-sectional area of the test specimen remaining after notching determined after testing.
+
+Note: It is expressed in square millimetres (mm2).</skos:definition>
+        <co:definitionSource>ISO 16770:2019-09</co:definitionSource>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontofnct/NominalLigamentArea -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontofnct/NominalLigamentArea">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/CrossSectionArea"/>
+        <rdfs:comment>Symbol: A_n</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ontofnct"/>
+        <rdfs:label xml:lang="en">Nominal Ligament Area</rdfs:label>
+        <rdfs:label xml:lang="de">Nominelle Ligamentfläche</rdfs:label>
+        <skos:definition xml:lang="de">Diese Klasse beschreibt die nach der Kerbung verbleibende Querschnittsfläche des Probekörpers.</skos:definition>
+        <skos:definition xml:lang="en">This class describes the cross-sectional area of the test specimen remaining after notching.</skos:definition>
+        <co:definitionSource>ISO 16770:2019-09</co:definitionSource>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontofnct/NominalTensileStress -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontofnct/NominalTensileStress">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/pmd/co/characteristic"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/ontofnct/NominalLigamentArea"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/pmd/co/characteristic"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/Force"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontofnct/TensileStress"/>
+        <rdfs:comment>Symbol: sigma_n</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ontofnct"/>
+        <rdfs:label xml:lang="en">Nominal Tensile Stress</rdfs:label>
+        <rdfs:label xml:lang="de">Nominelle Zugspannung</rdfs:label>
+        <skos:definition xml:lang="de">Diese Klasse beschreibt die Normalkraft pro Flächeneinheit der nominalen Ligamentfläche eines Prüfkörpers.
+
+Anmerkung: Sie wird in Megapascal (MPa) angegeben.</skos:definition>
+        <skos:definition xml:lang="en">This class describes the normal force per unit area of the nominal ligament area of the test specimen.
+
+Note: It is expressed in megapascals (MPa).</skos:definition>
+        <co:definitionSource>ISO 16770:2019-09</co:definitionSource>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontofnct/Notch -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontofnct/Notch">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/Object"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ontofnct"/>
+        <rdfs:label xml:lang="de">Kerbe</rdfs:label>
+        <rdfs:label xml:lang="en">Notch</rdfs:label>
+        <skos:definition xml:lang="de">Im Bereich der Materialwissenschaft und Werkstofftechnik bezeichnet eine Kerbe einen V-förmigen, U-förmigen oder halbkreisförmigen Defekt, der absichtlich in ein planes Material eingebracht wird. In Bauteilen verursacht eine Kerbe eine Spannungskonzentration, die zur Entstehung und zum Wachstum von Ermüdungsrissen führen kann. Kerben werden bei der Materialcharakterisierung verwendet, um bruchmechanische Eigenschaften wie die Bruchzähigkeit und die Wachstumsrate von Ermüdungsrissen zu bestimmen.</skos:definition>
+        <skos:definition xml:lang="en">In mechanical engineering and materials science, a notch refers to a V-shaped, U-shaped, or semi-circular defect deliberately introduced into a planar material. In structural components, a notch causes a stress concentration which can result in the initiation and growth of fatigue cracks. Notches are used in materials characterization to determine fracture mechanics related properties such as fracture toughness and rates of fatigue crack growth.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontofnct/NotchDepth -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontofnct/NotchDepth">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontofnct/Depth"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ontofnct"/>
+        <rdfs:label xml:lang="de">Kerbtiefe</rdfs:label>
+        <rdfs:label xml:lang="en">Notch Depth</rdfs:label>
+        <skos:definition xml:lang="de">Diese Klasse beschreibt die Tiefe einer Kerbe, die absichtlich oder unabsichtlich in ein Objekt, wie z. B. in einen Prüfkörper, eingebracht worden sein kann.</skos:definition>
+        <skos:definition xml:lang="en">This class describes the depth of a notch that may have been introduced to an object, such as, e.g., a test specimen, deliberately or unintentionally.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontofnct/NotchingSpeed -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontofnct/NotchingSpeed">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/ValueObject"/>
+        <rdfs:comment xml:lang="en">In accordance with the corresponding test standard, the notching speed of FNCT specimens is measured in mm/min.</rdfs:comment>
+        <rdfs:comment xml:lang="de">In Übereinstimmung mit der entsprechenden Prüfnorm wird die Kerbgeschwindigkeit von FNCT-Proben in mm/min gemessen.</rdfs:comment>
+        <rdfs:label rdf:resource="https://w3id.org/ontofnct"/>
+        <rdfs:label xml:lang="de">Kerbgeschwindigkeit</rdfs:label>
+        <rdfs:label xml:lang="en">Notching Speed</rdfs:label>
+        <skos:definition xml:lang="de">Diese Klasse beschreibt die Geschwindigkeit, mit der das Material während des Kerbvorgangs geschnitten wird. Beim Kerben wird ein Schnitt in einem Material erzeugt. Die Kerbgeschwindigkeit gibt an, wie schnell dieser Schnitt erfolgt.</skos:definition>
+        <skos:definition xml:lang="en">This class describes the rate at which the material iscut during the notching process. Notching involves creating a cut in a material. The notching speed indicates how quickly this cutting action occurs.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontofnct/Preload -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontofnct/Preload">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/Force"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ontofnct"/>
+        <rdfs:label xml:lang="en">Preload</rdfs:label>
+        <rdfs:label xml:lang="de">Vorkraft</rdfs:label>
+        <skos:definition xml:lang="de">Diese Klasse beschreibt die Kraft, die zur Belastung eines Prüfkörpers vor der Durchführung einer Prüfung verwendet wird.</skos:definition>
+        <skos:definition xml:lang="en">This class describes the force used to load a test specimen prior to the performance of a test procedure.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontofnct/PreloadTime -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontofnct/PreloadTime">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/Time"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ontofnct"/>
+        <rdfs:label xml:lang="en">Preload Time</rdfs:label>
+        <rdfs:label xml:lang="de">Vorkraft-Belastungszeit</rdfs:label>
+        <skos:definition xml:lang="de">Diese Klasse beschreibt die Zeit (Dauer), für die eine Vorlast (Kraft, die zur Belastung eines Probekörpers vor der Durchführung eines Prüfverfahrens verwendet wird) aufgebracht wird.</skos:definition>
+        <skos:definition xml:lang="en">This class describes the time (duration) for which a preload (force used to load a test specimen prior to the performance of a test procedure) is applied.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontofnct/ReferenceTensileStress -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontofnct/ReferenceTensileStress">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontofnct/TensileStress"/>
+        <rdfs:comment>Symbol: sigma_L,ref</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ontofnct"/>
+        <rdfs:label xml:lang="en">Reference Tensile Stress</rdfs:label>
+        <rdfs:label xml:lang="de">Referenz-Zugspannung</rdfs:label>
+        <skos:definition xml:lang="de">Diese Klasse beschreibt die ermittelte Normalkraft pro Flächeneinheit der gemessenen Ligamentfläche der Prüfkröper, die zur Bestimmung der vergleichbaren Zeit bis zum Versagen verwendet wurden.
+
+Anmerkung: Sie wird in Megapascal (MPa) angegeben.</skos:definition>
+        <skos:definition xml:lang="en">This class describes the selected normal force per unit area of the measured ligament area of the test specimen used for determination of comparable time to failure.
+
+Note: It is expressed in megapascals (MPa).</skos:definition>
+        <co:definitionSource>ISO 16770:2019-09</co:definitionSource>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontofnct/TensileStress -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontofnct/TensileStress">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/Stress"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ontofnct"/>
+        <rdfs:label xml:lang="en">Tensile Stress</rdfs:label>
+        <rdfs:label xml:lang="de">Zugspannung</rdfs:label>
+        <skos:definition xml:lang="de">Der Begriff Zugspannung ist eine physikalische Größe, die eine Kraft beschreibt, die auf einen Bereich eines betrachteten, auseinanderzuziehenden Objekts während eines Verformungsprozesses einwirkt. Wenn ein Objekt auseinandergezogen wird, unterliegt es einer Zugspannung und kann eine Dehnung erfahren.</skos:definition>
+        <skos:definition xml:lang="en">The entity tensile stress is a physical quantity that describes a force imposed on an area of a considered object present during a drawing (tensile) deformation process. When an object is pulled apart, it is subject to tensile stress and may undergo elongation.</skos:definition>
+        <co:definitionSource>ISO 16770:2019-09</co:definitionSource>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontofnct/TestContainer -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontofnct/TestContainer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/ProcessingNode"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ontofnct"/>
+        <rdfs:label xml:lang="de">Prüfbehälter</rdfs:label>
+        <rdfs:label xml:lang="en">Test Container</rdfs:label>
+        <skos:definition xml:lang="de">Diese Klasse beschreibt ein hohles Objekt, wie z. B. eine Schachtel, eine Flasche oder einen Zylinder, das zur Aufnahme von etwas verwendet werden kann, insbesondere um es zu tragen oder aufzubewahren (Behälter), und das an einem Prüfverfahren beteiligt ist.</skos:definition>
+        <skos:definition xml:lang="en">This class describes a hollow object, such as a box, a cylinder, or a bottle, that can be used for holding something, especially to carry or store it (container) and which is involved in a testing procedure.</skos:definition>
+        <co:definitionSource rdf:resource="https://dictionary.cambridge.org/dictionary/english/container"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontofnct/TestForceIncreaseRate -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontofnct/TestForceIncreaseRate">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/TestingRate"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ontofnct"/>
+        <rdfs:isDefinedBy xml:lang="en">This class describes the rate of the increase of the force applied to a test specimen during a test.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Test Force Increase Rate</rdfs:label>
+        <rdfs:label xml:lang="de">Test-Kraftanstiegsrate</rdfs:label>
+        <skos:definition xml:lang="de">Diese Klasse beschreibt die Steigerungsrate der Kraft, die während einer Prüfung auf einen Probekörper aufgebracht wird und einwirkt.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontofnct/TimeToFailure -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontofnct/TimeToFailure">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/pmd/co/characteristic"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/ontofnct/ActualTensileStress"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/Duration"/>
+        <rdfs:comment xml:lang="de">Versagenszeit</rdfs:comment>
+        <rdfs:comment>Symbol: t_f</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ontofnct"/>
+        <rdfs:label xml:lang="en">Time To Failure</rdfs:label>
+        <skos:definition xml:lang="de">Diese Klasse beschreibt die Zeit bis zum Versagen eines einzelnen Prüfkörpers, die der tatsächlichen Zugspannung für diesen einzeln geprüften Prüfkörper zugeordnet wird.
+
+Anmerkung: Die Versagenszeit wird in Stunden (h) angegeben.</skos:definition>
+        <skos:definition xml:lang="en">This class describes the time to failure of an individual test specimen, which is assigned to the actual tensile stress for this individually tested test specimen.
+
+Note: The time to failure time is expressed in hours (h).</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontofnct/TimeToFailureAtTheReferenceTensileStress -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontofnct/TimeToFailureAtTheReferenceTensileStress">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/pmd/co/characteristic"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/ontofnct/ReferenceTensileStress"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/Duration"/>
+        <rdfs:comment>Symbol: t_f,ref</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/ontofnct"/>
+        <rdfs:label xml:lang="en">Time To Failure At The Reference Tensile Stress</rdfs:label>
+        <rdfs:label xml:lang="de">Versagenszeit bei der Referenz-Zugspannung</rdfs:label>
+        <skos:definition xml:lang="de">Diese Klasse beschreibt die Zeit bis zum Versagen, die der Referenz-Zugspannung zugeordnet ist und durch Interpolation der gemessenen Zeit bis zum Versagen in Abhängigkeit von der tatsächlichen Zugspannung für einzelne geprüfte Proben ermittelt wird.
+
+Anmerkung: Sie wird in Stunden (h) angegeben.</skos:definition>
+        <skos:definition xml:lang="en">This class describes the time to failure corresponding to the reference tensile stress, calculated by interpolating in the measured dependence of time to failure vs. actual tensile stress for individual tested specimens.
+
+Note: It is expressed in hours (h).</skos:definition>
+        <co:definitionSource>ISO 16770:2019-09</co:definitionSource>
+    </owl:Class>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="https://w3id.org/ontofnct/criterion">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/ontofnct/v">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment>This rule is supposed to check whether a brittle or ductile failure was obtained from an FNCT procedure by checking the value of the criterion of brittleness. If the value of the criterion of brittleness is greater than 0.5, a new entity (individual) of ontofnct:DuctileFailure is created.</rdfs:comment>
+        <rdfs:label>CriterionOfBrittlenessDuctile_Check</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://w3id.org/ontofnct/CriterionOfBrittleness"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/ontofnct/criterion"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/pmd/co/value"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/ontofnct/criterion"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/ontofnct/v"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="https://w3id.org/ontofnct/v"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://w3id.org/ontofnct/DuctileFailure"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/ontofnct/criterion"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment>This rule is supposed to check whether a brittle or ductile failure was obtained from an FNCT procedure by checking the value of the criterion of brittleness. If this is the case, a new entity (individual) of ontofnct:BrittleFailure is created.</rdfs:comment>
+        <rdfs:label>CriterionOfBrittleness_Check</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/pmd/co/value"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/ontofnct/criterion"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/ontofnct/v"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                <swrl:arguments>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:resource="https://w3id.org/ontofnct/v"/>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </swrl:arguments>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="https://w3id.org/ontofnct/v"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="https://w3id.org/ontofnct/CriterionOfBrittleness"/>
+                                                <swrl:argument1 rdf:resource="https://w3id.org/ontofnct/criterion"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://w3id.org/ontofnct/BrittleFailure"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/ontofnct/criterion"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
